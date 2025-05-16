@@ -1,4 +1,10 @@
 {
+  "commom": {
+    "titlePage": {
+      "home": "Home",
+      "settings": "Configuración"
+    }
+  },
   "home": {
     "title": "Bienvenido",
     "goToSettings": "Ir a Configuración"

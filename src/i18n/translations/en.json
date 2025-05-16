@@ -1,4 +1,10 @@
 {
+  "commom": {
+    "titlePage": {
+      "home": "Home",
+      "settings": "Settings"
+    }
+  },
   "home": {
     "title": "Welcome",
     "goToSettings": "Go to Settings"

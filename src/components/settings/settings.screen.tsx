@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import LanguageSelectorModal from '@shared/components/languageSelector/language-selector';
 import { useTranslation } from 'react-i18next';
+import { useScreenTitle } from '@shared/hooks/useScreenTitle';
 
 const SettingsScreen = () => {
+  useScreenTitle('commom.titlePage.settings');
+
   const [modalVisible, setModalVisible] = useState(false);
-  const { t, i18n } = useTranslation(); 
+  const { t, i18n } = useTranslation();
 
   return (
     <View style={styles.container}>

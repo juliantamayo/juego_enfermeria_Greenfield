@@ -14,11 +14,9 @@ export const screens: ScreenEntry[] = [
   {
     name: 'Home',
     component: HomeScreen,
-    options: { headerShown: false },
   },
   {
     name: 'Settings',
     component: SettingsScreen,
-    options: { title: 'Configuración' },
   },
 ];

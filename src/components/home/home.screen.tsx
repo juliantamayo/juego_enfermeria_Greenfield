@@ -2,8 +2,11 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';
+import { useScreenTitle } from '@shared/hooks/useScreenTitle';
 
 const HomeScreen = () => {
+  useScreenTitle('commom.titlePage.home');
+
   const navigation = useNavigation();
   const { t } = useTranslation();
 
