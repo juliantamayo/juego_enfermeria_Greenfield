@@ -1,0 +1,24 @@
+{
+  "commom": {
+    "titlePage": {
+      "home": "Juego Valoración",
+      "settings": "Configuración"
+    }
+  },
+  "home": {
+    "title": "Bienvenido",
+    "goToSettings": "Ir a Configuración"
+  },
+  "settings": {
+    "title": "Configuración",
+    "changeLanguage": "Cambiar idioma",
+    "close": "Cerrar",
+    "credits": {
+      "developer": "developer julian T"
+    }
+  },
+  "language": {
+    "spanish": "Español",
+    "english": "Inglés"
+  }
+}

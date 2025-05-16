@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "test_ts",
-    "slug": "test_ts",
+    "name": "juego_enfermeria_greenfield",
+    "slug": "juego_enfermeria_greenfield",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

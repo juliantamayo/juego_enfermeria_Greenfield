@@ -1,0 +1,26 @@
+{
+  "commom": {
+    "titlePage": {
+      "home": "Evaluation Game",
+      "settings": "Settings"
+    }
+  },
+  "home": {
+    "title": "Welcome",
+    "goToSettings": "Go to Settings"
+  },
+  "settings": {
+    "title": "Settings",
+    "changeLanguage": "Change language",
+    "spanish": "Spanish",
+    "english": "English",
+    "close": "Close",
+    "credits": {
+      "developer": "developer julian T"
+    }
+  },
+  "language": {
+    "spanish": "Spanish",
+    "english": "English"
+  }
+}
