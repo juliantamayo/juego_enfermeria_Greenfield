@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next';
 import { useScreenTitle } from '@shared/hooks/useScreenTitle';
 
 const HomeScreen = () => {
-  useScreenTitle('commom.titlePage.home');
-
   const navigation = useNavigation();
   const { t } = useTranslation();
-
+  
+  useScreenTitle('commom.titlePage.home');
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{t('home.title')}</Text>

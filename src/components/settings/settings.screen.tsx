@@ -5,11 +5,11 @@ import { useTranslation } from 'react-i18next';
 import { useScreenTitle } from '@shared/hooks/useScreenTitle';
 
 const SettingsScreen = () => {
-  useScreenTitle('commom.titlePage.settings');
-
   const [modalVisible, setModalVisible] = useState(false);
   const { t, i18n } = useTranslation();
-
+  
+  useScreenTitle('commom.titlePage.settings');
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{t('settings.title')}</Text>
