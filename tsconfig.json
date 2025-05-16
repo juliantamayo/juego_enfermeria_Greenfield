@@ -6,7 +6,8 @@
     "paths": {
       "@components/*": ["components/*"],
       "@navigation/*": ["navigation/*"],
-      "@shared/*": ["shared/*"],
-    }
+      "@shared/*": ["shared/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   }
 }

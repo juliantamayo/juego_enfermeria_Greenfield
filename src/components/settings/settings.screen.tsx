@@ -1,30 +1,29 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import LanguageSelectorModal from '@shared/components/languageSelector/language-selector';
-
+import { useTranslation } from 'react-i18next';
 
 const SettingsScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const { t, i18n } = useTranslation(); 
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Credits</Text>
-      <Text style={styles.developer}>Developed by Julian</Text>
+      <Text style={styles.title}>{t('settings.title')}</Text>
+      <Text style={styles.developer}>{t('settings.credits.developer')}</Text>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => setModalVisible(true)}
       >
-        <Text style={styles.buttonText}>Change Language</Text>
+        <Text style={styles.buttonText}>{t('settings.changeLanguage')}</Text>
       </TouchableOpacity>
 
       <LanguageSelectorModal
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
         onSelectLanguage={(lang) => {
-          // Temporalmente, puedes solo cerrar el modal
-          // Luego cuando agreguemos i18n, lo configuramos aquí
-          console.log('Selected language:', lang);
+          i18n.changeLanguage(lang);
           setModalVisible(false);
         }}
       />

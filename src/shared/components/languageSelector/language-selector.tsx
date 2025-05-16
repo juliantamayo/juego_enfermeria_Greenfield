@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Language } from '../../enums/language.enum';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   visible: boolean;
@@ -9,22 +10,24 @@ interface Props {
 }
 
 const LanguageSelectorModal: React.FC<Props> = ({ visible, onClose, onSelectLanguage }) => {
+  const { t } = useTranslation();
+
   return (
     <Modal visible={visible} transparent animationType="slide">
       <View style={styles.overlay}>
         <View style={styles.container}>
-          <Text style={styles.title}>Change Language</Text>
+          <Text style={styles.title}>{t('settings.changeLanguage')}</Text>
 
           <TouchableOpacity style={styles.button} onPress={() => onSelectLanguage(Language.SPANISH)}>
-            <Text style={styles.buttonText}>Español</Text>
+            <Text style={styles.buttonText}>{t('language.spanish')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.button} onPress={() => onSelectLanguage(Language.ENGLISH)}>
-            <Text style={styles.buttonText}>English</Text>
+            <Text style={styles.buttonText}>{t('language.english')}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={[styles.button, styles.closeButton]} onPress={onClose}>
-            <Text style={styles.buttonText}>Close</Text>
+            <Text style={styles.buttonText}>{t('settings.close')}</Text>
           </TouchableOpacity>
         </View>
       </View>

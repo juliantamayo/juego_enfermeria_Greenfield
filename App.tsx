@@ -1,20 +1,28 @@
+import 'intl-pluralrules';
+import './src/i18n';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { screens } from '@navigation/screens';
+import type { RootStackParamList } from '@navigation/types';
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        {screens.map(({ name, component, options }) => (
+          <Stack.Screen
+            key={name}
+            name={name}
+            component={component}
+            options={options}
+          />
+        ))}
+      </Stack.Navigator>
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

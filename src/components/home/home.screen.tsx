@@ -1,20 +1,21 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-// import I18n from '@i18n'; // si aún no usas i18n, comenta esta línea
+import { useTranslation } from 'react-i18next';
 
 const HomeScreen = () => {
-  const navigation = useNavigation(); // sin tipado personalizado
+  const navigation = useNavigation();
+  const { t } = useTranslation();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
+      <Text style={styles.title}>{t('home.title')}</Text>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.navigate('Settings')}
       >
-        <Text style={styles.buttonText}>Go to Settings</Text>
+        <Text style={styles.buttonText}>{t('home.goToSettings')}</Text>
       </TouchableOpacity>
     </View>
   );
