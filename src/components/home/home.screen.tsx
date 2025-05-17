@@ -1,9 +1,11 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useTranslation } from "react-i18next";
-import { homeScreenStyles } from "./styles//home.screen.styles";
+import Button from "@shared/components/button/button";
+import { ButtonType } from "@shared/enums/button-type.enum";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
+import { useTranslation } from "react-i18next";
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { homeScreenStyles } from "./styles/home.screen.styles";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -14,11 +16,16 @@ const HomeScreen = () => {
   return (
     <ImageBackground source={require("../../assets/imgs/layout/background.png")} style={homeScreenStyles.container}>
       <View style={styles.container}>
-        <Text style={styles.title}>{t("home.title")}</Text>
-
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Settings")}>
           <Text style={styles.buttonText}>{t("home.goToSettings")}</Text>
         </TouchableOpacity>
+      </View>
+      <View style={styles.container2}>
+        <Button
+          image={require("../../assets/imgs/btn/btn_start.png")}
+          type={ButtonType.ACTION}
+          onPress={() => console.log("Start clicked")}
+        />
       </View>
     </ImageBackground>
   );
@@ -31,6 +38,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "red",
+  },
+  container2: {
+    flex: 1,
+    backgroundColor: "blue",
   },
   title: {
     fontSize: 24,
