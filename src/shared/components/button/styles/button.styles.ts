@@ -1,11 +1,11 @@
 import { StyleSheet, TextStyle, ViewStyle } from "react-native";
 import { ButtonType } from "../../../enums/button-type.enum";
-import { Colors } from "@styles-theme";
+import { Colors, Radius, Spacing } from "@styles-theme";
 
 const baseStyles = StyleSheet.create({
   button: {
-    padding: 12,
-    borderRadius: 8,
+    padding: Spacing.md,
+    borderRadius: Radius.md,
     justifyContent: "center",
     alignItems: "center",
   },

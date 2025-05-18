@@ -5,7 +5,7 @@ const Typography = {
     md: 16,
     lg: 20,
     xl: 24,
-    title: 32,
+    xxl: 32,
   },
   fontWeight: {
     regular: "400",

@@ -22,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <TouchableOpacity
+      activeOpacity={0.5}
       style={[baseStyles.button, variant.button, isImageOnly && { backgroundColor: "transparent" }, style]}
       onPress={onPress}
     >

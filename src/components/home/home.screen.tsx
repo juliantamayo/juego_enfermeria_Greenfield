@@ -1,6 +1,6 @@
 import React from "react";
 import { ImageBackground, View } from "react-native";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 import Header from "@shared/components/header/header.component";
 import Button from "@shared/components/button/button.component";
@@ -11,7 +11,7 @@ import { homeScreenStyles } from "./styles/home.screen.styles";
 
 const HomeScreen = () => {
   const navigation = useAppNavigation();
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   useScreenTitle("commom.titlePage.home");
 
@@ -24,7 +24,7 @@ const HomeScreen = () => {
             onPress: () => navigation.navigate("Settings"),
           },
           {
-            iconName: "help-circle-outline",
+            iconName: "help-outline",
             onPress: () => console.log("Help clicked"),
           },
         ]}

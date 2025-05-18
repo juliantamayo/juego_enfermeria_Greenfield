@@ -1,12 +1,10 @@
 const brand = {
   primary: "#00bcbc",
-  primaryDark: "#006d6d",
-  color_1: "#fbe122",
-  secondary: "#aaa",
+  primaryDark: "#007f7f",
+  secondary: "#fbe122",
 };
 
 const text = {
-  //primary: brand.primary,
   inverse: "#ffffff",
   default: "#000000",
 };
@@ -19,6 +17,10 @@ const background = {
 const backgroundButton = {
   primary: brand.primary,
   alt: "#f8f8f8",
+};
+
+const border = {
+  default: brand.primaryDark,
 };
 
 const grayscale = {
@@ -41,6 +43,7 @@ const Colors = {
   text,
   background,
   backgroundButton,
+  border,
   grayscale,
   status,
 };
