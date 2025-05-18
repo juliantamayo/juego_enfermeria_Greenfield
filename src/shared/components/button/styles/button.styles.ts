@@ -1,5 +1,6 @@
 import { StyleSheet, TextStyle, ViewStyle } from "react-native";
 import { ButtonType } from "../../../enums/button-type.enum";
+import { Colors } from "@styles-theme";
 
 const baseStyles = StyleSheet.create({
   button: {
@@ -13,9 +14,8 @@ const baseStyles = StyleSheet.create({
     fontSize: 20,
   },
   image: {
-    width: 40,
-    height: 40,
-    backgroundColor: "transparent",
+    width: "100%",
+    height: "100%",
   },
 });
 
@@ -26,7 +26,7 @@ type VariantStyles = {
 
 const buttonVariants: Record<ButtonType, VariantStyles> = {
   [ButtonType.PRIMARY]: StyleSheet.create({
-    button: { backgroundColor: "#00bcbc" },
+    button: { backgroundColor: Colors.backgroundButton.primary },
     text: { color: "#fff" },
   }),
   [ButtonType.SECONDARY]: StyleSheet.create({
@@ -36,6 +36,13 @@ const buttonVariants: Record<ButtonType, VariantStyles> = {
   [ButtonType.ACTION]: StyleSheet.create({
     button: { backgroundColor: "#fbe122" },
     text: { color: "blue" },
+  }),
+  [ButtonType.IMAGE]: StyleSheet.create({
+    button: {
+      backgroundColor: "transparent",
+      padding: 0,
+    },
+    text: {},
   }),
 };
 

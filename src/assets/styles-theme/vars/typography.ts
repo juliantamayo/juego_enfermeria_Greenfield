@@ -12,6 +12,15 @@ const Typography = {
     medium: "500",
     bold: "700",
   },
+  iconSize: {
+    xs: 12,
+    sm: 16,
+    md: 20,
+    lg: 24,
+    xl: 28,
+    xxl: 32,
+    xxxl: 40,
+  },
 };
 
 export default Typography;

@@ -1,5 +1,6 @@
 const brand = {
   primary: "#00bcbc",
+  primaryDark: "#006d6d",
   color_1: "#fbe122",
   secondary: "#aaa",
 };
@@ -12,7 +13,11 @@ const text = {
 
 const background = {
   default: "#ffffff",
+  alt: "#f8f8f8",
+};
 
+const backgroundButton = {
+  primary: brand.primary,
   alt: "#f8f8f8",
 };
 
@@ -35,6 +40,7 @@ const Colors = {
   brand,
   text,
   background,
+  backgroundButton,
   grayscale,
   status,
 };
