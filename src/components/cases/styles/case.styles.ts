@@ -1,8 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Colors, Radius, Spacing } from "@styles-theme";
 
-export const FIRST_BUTTON_MARGIN_TOP = Spacing.xl;
-
 const casebaseStyles = StyleSheet.create({
   button: {
     backgroundColor: Colors.backgroundButton.primaryTransparent,

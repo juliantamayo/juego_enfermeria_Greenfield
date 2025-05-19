@@ -8,7 +8,7 @@ import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { CASE_SCREENS } from "@navigation/caseScreens";
 import { GlobalStyles } from "@styles-theme";
-import { casebaseStyles, FIRST_BUTTON_MARGIN_TOP } from "./styles/case.styles";
+import { casebaseStyles } from "./styles/case.styles";
 
 const CaseMenuScreen = () => {
   const navigation = useAppNavigation();
