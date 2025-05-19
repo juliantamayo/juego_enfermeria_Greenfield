@@ -1,25 +1,22 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import LanguageSelectorModal from '@shared/components/languageSelector/language-selector';
-import { useTranslation } from 'react-i18next';
-import { useScreenTitle } from '@shared/hooks/useScreenTitle';
+import React, { useState } from "react";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import LanguageSelectorModal from "@shared/components/languageSelector/languageSelector.component";
+import { useTranslation } from "react-i18next";
+import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 
 const SettingsScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const { t, i18n } = useTranslation();
-  
-  useScreenTitle('commom.titlePage.settings');
-  
+
+  useScreenTitle("commom.titlePage.settings");
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{t('settings.title')}</Text>
-      <Text style={styles.developer}>{t('settings.credits.developer')}</Text>
+      <Text style={styles.title}>{t("settings.title")}</Text>
+      <Text style={styles.developer}>{t("settings.credits.developer")}</Text>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => setModalVisible(true)}
-      >
-        <Text style={styles.buttonText}>{t('settings.changeLanguage')}</Text>
+      <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
+        <Text style={styles.buttonText}>{t("settings.changeLanguage")}</Text>
       </TouchableOpacity>
 
       <LanguageSelectorModal
@@ -40,12 +37,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 24,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   developer: {
     fontSize: 16,
@@ -53,11 +50,11 @@ const styles = StyleSheet.create({
   },
   button: {
     padding: 12,
-    backgroundColor: '#36b1f0',
+    backgroundColor: "#36b1f0",
     borderRadius: 8,
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
   },
 });

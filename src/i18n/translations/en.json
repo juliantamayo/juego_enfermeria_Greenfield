@@ -2,12 +2,12 @@
   "commom": {
     "titlePage": {
       "home": "Evaluation Game",
-      "settings": "Settings"
+      "settings": "Settings",
+      "caseMenu": "Case Studies Menu"
     }
   },
-  "home": {
-    "title": "Welcome",
-    "goToSettings": "Go to Settings"
+  "cases": {
+    "case": "Case"
   },
   "settings": {
     "title": "Settings",
@@ -22,5 +22,11 @@
   "language": {
     "spanish": "Spanish",
     "english": "English"
+  },
+  "exit": {
+    "title": "Exit",
+    "message": "Do you want to exit the app?",
+    "cancel": "Cancel",
+    "confirm": "Yes"
   }
 }

@@ -2,12 +2,12 @@
   "commom": {
     "titlePage": {
       "home": "Juego Valoración",
-      "settings": "Configuración"
+      "settings": "Configuración",
+      "caseMenu": "Menú Casos de Estudio"
     }
   },
-  "home": {
-    "title": "Bienvenido",
-    "goToSettings": "Ir a Configuración"
+  "cases": {
+    "case": "Caso"
   },
   "settings": {
     "title": "Configuración",
@@ -20,5 +20,11 @@
   "language": {
     "spanish": "Español",
     "english": "Inglés"
+  },
+  "exit": {
+    "title": "Salir",
+    "message": "¿Quieres salir de la app?",
+    "cancel": "Cancelar",
+    "confirm": "Sí"
   }
 }

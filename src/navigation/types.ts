@@ -4,4 +4,7 @@
 export type RootStackParamList = {
   Home: undefined;
   Settings: undefined;
+  CaseMenu: undefined;
+  Case1Menu: undefined;
+  Case2Menu: undefined;
 };
