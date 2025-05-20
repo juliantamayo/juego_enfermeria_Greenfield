@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageBackground, View } from "react-native";
+import { Alert, BackHandler, ImageBackground, View } from "react-native";
 // import { useTranslation } from "react-i18next";
 
 import Header from "@shared/components/header/header.component";
@@ -7,16 +7,18 @@ import Button from "@shared/components/button/button.component";
 import { ButtonType } from "@shared/enums/button-type.enum";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
+import { useExitOnBack } from "@navigation/hooks/useExitOnBack";
+import { GlobalStyles } from "@styles-theme";
 import { homeScreenStyles } from "./styles/home.screen.styles";
 
 const HomeScreen = () => {
   const navigation = useAppNavigation();
-  // const { t } = useTranslation();
 
   useScreenTitle("commom.titlePage.home");
+  useExitOnBack();
 
   return (
-    <ImageBackground source={require("../../assets/imgs/layout/background.png")} style={homeScreenStyles.container}>
+    <ImageBackground source={require("../../assets/imgs/layout/background.png")} style={GlobalStyles.container}>
       <Header
         leftButtons={[
           {
@@ -39,12 +41,12 @@ const HomeScreen = () => {
           },
         ]}
       />
-      <View style={homeScreenStyles.body}>
+      <View style={GlobalStyles.body}>
         <Button
           image={require("../../assets/imgs/btn/btn_start.png")}
           style={homeScreenStyles.button_home}
           type={ButtonType.IMAGE}
-          onPress={() => console.log("Start clicked")}
+          onPress={() => navigation.navigate("CaseMenu")}
         />
       </View>
     </ImageBackground>

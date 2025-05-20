@@ -1,6 +1,8 @@
 const brand = {
   primary: "#00bcbc",
   primaryDark: "#007f7f",
+  primaryTransparent: "rgba(3, 110, 101, 0.7)",
+  primaryTransparentLight: "rgba(0, 185, 188, 0.37)",
   secondary: "#fbe122",
 };
 
@@ -16,6 +18,8 @@ const background = {
 
 const backgroundButton = {
   primary: brand.primary,
+  primaryTransparent: brand.primaryTransparent,
+  primaryTransparentLight: brand.primaryTransparentLight,
   alt: "#f8f8f8",
 };
 
