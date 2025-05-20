@@ -3,7 +3,8 @@
     "titlePage": {
       "home": "Evaluation Game",
       "settings": "Settings",
-      "caseMenu": "Case Studies Menu"
+      "caseMenu": "Case Studies Menu",
+      "Case1Menu": "Menu Case 1"
     }
   },
   "cases": {

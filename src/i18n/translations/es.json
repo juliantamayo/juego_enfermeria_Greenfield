@@ -3,7 +3,8 @@
     "titlePage": {
       "home": "Juego Valoración",
       "settings": "Configuración",
-      "caseMenu": "Menú Casos de Estudio"
+      "caseMenu": "Menú Casos de Estudio",
+      "Case1Menu": "Menú Caso 1"
     }
   },
   "cases": {
