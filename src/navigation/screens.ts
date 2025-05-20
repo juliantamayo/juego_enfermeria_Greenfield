@@ -36,6 +36,9 @@ export const screens: ScreenEntry[] = [
   {
     name: "Case1Menu",
     component: Case1MenuScreen,
+    options: {
+      headerBackVisible: false,
+    },
   },
   {
     name: "Case2Menu",
