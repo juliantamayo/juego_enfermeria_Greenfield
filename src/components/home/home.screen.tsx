@@ -18,7 +18,7 @@ const HomeScreen = () => {
   useExitOnBack();
 
   return (
-    <ImageBackground source={require("../../assets/imgs/layout/background.png")} style={GlobalStyles.container}>
+    <ImageBackground source={require("@images/layout/background.png")} style={GlobalStyles.container}>
       <Header
         leftButtons={[
           {

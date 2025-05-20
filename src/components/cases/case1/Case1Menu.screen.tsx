@@ -1,11 +1,32 @@
-import * as React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React from "react";
+import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import Header from "@shared/components/header/header.component";
+import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
+import { GlobalStyles } from "@styles-theme";
 
 const Case1MenuScreen = () => {
+  const navigation = useAppNavigation();
+
   return (
-    <View style={styles.container}>
-      <Text>componentName</Text>
-    </View>
+    <ImageBackground source={require("@images/layout/background.png")} style={GlobalStyles.container}>
+      <Header
+        leftButtons={[
+          {
+            iconName: "arrow-undo-outline",
+            onPress: () => navigation.goBack(),
+          },
+        ]}
+        rightButtons={[
+          {
+            iconName: "game-controller-outline",
+            onPress: () => console.log("Minigames clicked"),
+          },
+        ]}
+      />
+      <View style={styles.container}>
+        <Text>componentName</Text>
+      </View>
+    </ImageBackground>
   );
 };
 

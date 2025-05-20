@@ -22,14 +22,14 @@ const CaseMenuScreen = () => {
 
   return (
     <ImageBackground
-      source={require("../../assets/imgs/layout/background.png")}
+      source={require("@images/layout/background.png")}
       style={GlobalStyles.container}
       resizeMode="contain"
     >
       <Header
         leftButtons={[
           {
-            iconName: "return-up-back-outline",
+            iconName: "arrow-undo-outline",
             onPress: () => navigation.goBack(),
           },
           {
@@ -43,7 +43,7 @@ const CaseMenuScreen = () => {
             onPress: () => console.log("Minigames clicked"),
           },
           {
-            iconName: "document-text-outline",
+            iconName: "book-outline",
             onPress: () => console.log("Theory clicked"),
           },
         ]}
