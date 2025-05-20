@@ -7,7 +7,8 @@
       "@components/*": ["components/*"],
       "@navigation/*": ["navigation/*"],
       "@shared/*": ["shared/*"],
-      "@styles-theme": ["assets/styles-theme"]
+      "@styles-theme": ["assets/styles-theme"],
+      "@images/*": ["assets/imgs/*"]
     },
     "typeRoots": ["./node_modules/@types", "./src/types"]
   }

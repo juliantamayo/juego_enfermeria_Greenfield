@@ -12,6 +12,7 @@ module.exports = function (api) {
             "@navigation": "./src/navigation",
             "@shared": "./src/shared",
             "@styles-theme": "./src/assets/styles-theme",
+            "@images": "./src/assets/imgs",
           },
           extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
         },
