@@ -11,6 +11,13 @@ const casebaseStyles = StyleSheet.create({
     height: 80,
     width: "46%",
   },
+  buttonScenes: {
+    marginVertical: Spacing.md,
+    width: "80%",
+  },
+  buttonOdd: {
+    backgroundColor: Colors.backgroundButton.secondaryDark,
+  },
 });
 
 export { casebaseStyles };

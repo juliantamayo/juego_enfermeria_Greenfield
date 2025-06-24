@@ -8,4 +8,7 @@ export type RootStackParamList = {
   Case1Menu: undefined;
   Case2Menu: undefined;
   Case3Menu: undefined;
+  Scene1Screen: undefined;
+  Scene2Screen: undefined;
+  Scene3Screen: undefined;
 };

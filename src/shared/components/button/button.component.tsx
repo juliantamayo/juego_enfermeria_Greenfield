@@ -15,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   text,
   textStyle,
   style,
+  disabled,
   onPress,
 }) => {
   const variant = buttonVariants[type as ButtonType];
@@ -25,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       activeOpacity={0.5}
       style={[baseStyles.button, variant.button, isImageOnly && { backgroundColor: "transparent" }, style]}
       onPress={onPress}
+      disabled={disabled}
     >
       {iconName && <Ionicons name={iconName} size={iconSize} color={iconColor} />}
       {image && <Image source={image} style={baseStyles.image} />}

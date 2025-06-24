@@ -34,8 +34,11 @@ const buttonVariants: Record<ButtonType, VariantStyles> = {
     text: { color: "#000" },
   }),
   [ButtonType.ACTION]: StyleSheet.create({
-    button: { backgroundColor: "#fbe122" },
-    text: { color: "blue" },
+    button: {
+      backgroundColor: Colors.backgroundButton.secondary,
+      borderRadius: Radius.xl,
+    },
+    text: { color: Colors.text.bodyText },
   }),
   [ButtonType.IMAGE]: StyleSheet.create({
     button: {

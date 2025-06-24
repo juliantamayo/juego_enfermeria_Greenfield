@@ -10,6 +10,7 @@ export interface ButtonProps {
   image?: ImageSourcePropType;
   text?: string;
   textStyle?: TextStyle;
-  style?: ViewStyle;
+  style?: ViewStyle | ViewStyle[];
+  disabled?: boolean;
   onPress: () => void;
 }
