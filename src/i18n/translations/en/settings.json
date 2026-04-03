@@ -2,8 +2,10 @@
   "settings": {
     "title": "Settings",
     "changeLanguage": "Change language",
+  "language": {
     "spanish": "Spanish",
-    "english": "English",
+    "english": "English"
+  },
     "close": "Close",
     "credits": {
       "developer": "developer julian T"

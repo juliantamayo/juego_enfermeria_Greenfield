@@ -10,10 +10,6 @@
       "nurse": "ENFERMERA"
     }
   },
-  "language": {
-    "spanish": "Español",
-    "english": "Inglés"
-  },
   "exit": {
     "title": "Salir",
     "message": "¿Quieres salir de la app?",
