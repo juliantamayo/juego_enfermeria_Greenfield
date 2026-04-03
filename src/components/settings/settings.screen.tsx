@@ -8,7 +8,7 @@ const SettingsScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const { t, i18n } = useTranslation();
 
-  useScreenTitle("commom.titlePage.settings");
+  useScreenTitle("common.titlePage.settings");
 
   return (
     <View style={styles.container}>

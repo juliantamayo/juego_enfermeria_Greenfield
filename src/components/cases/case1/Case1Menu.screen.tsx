@@ -15,7 +15,7 @@ const Case1MenuScreen = () => {
   const navigation = useAppNavigation();
   const { t } = useTranslation();
   const [unlockedScenes, setUnlockedScenes] = useState<string[]>(["scene1"]);
-  useScreenTitle("commom.titlePage.Case1Menu");
+  useScreenTitle("common.titlePage.Case1Menu");
 
   useEffect(() => {
     const loadProgress = async () => {

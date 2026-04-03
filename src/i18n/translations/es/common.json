@@ -1,0 +1,23 @@
+{
+  "common": {
+    "titlePage": {
+      "home": "Juego Valoración",
+      "settings": "Configuración",
+      "caseMenu": "Menú Casos de Estudio",
+      "Case1Menu": "Menú Caso 1"
+    },
+    "roles": {
+      "nurse": "ENFERMERA"
+    }
+  },
+  "language": {
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+  "exit": {
+    "title": "Salir",
+    "message": "¿Quieres salir de la app?",
+    "cancel": "Cancelar",
+    "confirm": "Sí"
+  }
+}

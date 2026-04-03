@@ -14,7 +14,7 @@ import { homeScreenStyles } from "./styles/home.screen.styles";
 const HomeScreen = () => {
   const navigation = useAppNavigation();
 
-  useScreenTitle("commom.titlePage.home");
+  useScreenTitle("common.titlePage.home");
   useExitOnBack();
 
   return (

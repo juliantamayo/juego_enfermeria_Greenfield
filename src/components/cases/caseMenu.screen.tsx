@@ -12,7 +12,7 @@ import { casebaseStyles } from "./styles/case.styles";
 
 const CaseMenuScreen = () => {
   const navigation = useAppNavigation();
-  useScreenTitle("commom.titlePage.caseMenu");
+  useScreenTitle("common.titlePage.caseMenu");
   const { t } = useTranslation();
 
   // useExitOnBack({

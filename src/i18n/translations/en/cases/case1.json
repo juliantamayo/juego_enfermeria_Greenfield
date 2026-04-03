@@ -1,0 +1,21 @@
+{
+  "case1": {
+    "scene1": {
+      "title": "Case introduction",
+      "dialog": {
+        "0": "Hi, I am nurse Leidy",
+        "1": "Are you the new nursing student starting the assessment practice?",
+        "2": "Your mission will be to help me assess the patients assigned to us.",
+        "3": "And identify the priority nursing diagnosis according to the patient's needs.",
+        "4": "To give you some context, let me explain. Mr. C.J.M, 58 years old, had a stroke 3 months ago.",
+        "5": "He is hospitalized due to a urinary infection that is almost resolved with the intravenous pharmacological treatment received.",
+        "6": "His companion, who is his wife, says he is only a few days away from leaving the hospital, but she is worried about other needs he has right now.",
+        "7": "Come with me to assess the patient, and read the case questions and answers carefully."
+      }
+    },
+    "scene2": "Questions for the patient",
+    "scene3": "Assessment tests",
+    "scene4": "Assessment",
+    "scene5": "Quiz"
+  }
+}

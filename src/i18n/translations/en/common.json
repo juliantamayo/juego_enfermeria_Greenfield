@@ -1,0 +1,23 @@
+{
+  "common": {
+    "titlePage": {
+      "home": "Evaluation Game",
+      "settings": "Settings",
+      "caseMenu": "Case Studies Menu",
+      "Case1Menu": "Menu Case 1"
+    },
+    "roles": {
+      "nurse": "NURSE"
+    }
+  },
+  "language": {
+    "spanish": "Spanish",
+    "english": "English"
+  },
+  "exit": {
+    "title": "Exit",
+    "message": "Do you want to exit the app?",
+    "cancel": "Cancel",
+    "confirm": "Yes"
+  }
+}
