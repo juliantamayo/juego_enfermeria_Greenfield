@@ -43,7 +43,7 @@ const HomeScreen = () => {
       />
       <View style={GlobalStyles.body}>
         <Button
-          image={require("../../assets/imgs/btn/btn_start.png")}
+          image={require("@images/btn/btn_start.png")}
           style={homeScreenStyles.button_home}
           type={ButtonType.IMAGE}
           onPress={() => navigation.navigate("CaseMenu")}
