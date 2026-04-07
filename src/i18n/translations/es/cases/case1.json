@@ -13,7 +13,18 @@
         "7": "Bien pues acompáñeme a valorar al paciente, lea atentamente las preguntas y respuestas del caso."
       }
     },
-    "scene2": "Preguntas al paciente",
+    "scene2": {
+      "title": "Preguntas al paciente",
+      "questions": {
+        "question1": "1. ¿Cómo se encuentra?",
+        "question2": "2. ¿Sabe usted en qué lugar se encuentra?",
+        "question3": "3. ¿Qué elementos de los que observa aquí en su habitación los encuentra también en la sala de su hogar?",
+        "question4": "4. ¿Sabe cuánto tendría ahorrado en total?",
+        "question5": "5. ¿Cuáles son los nombres de sus hijas desde la mayor a la menor?",
+        "question6": "6. ¿Podría por favor levantar sus brazos?",
+        "question7": "7. ¿Puede cerrar los ojos y me puede indicar hacia qué dirección le estoy movilizando su brazo derecho e izquierdo?"
+      }
+    },
     "scene3": "Pruebas de valoración",
     "scene4": "Valoración",
     "scene5": "Quiz"

@@ -13,7 +13,18 @@
         "7": "Come with me to assess the patient, and read the case questions and answers carefully."
       }
     },
-    "scene2": "Questions for the patient",
+    "scene2": {
+      "title": "Questions for the patient",
+      "questions": {
+        "question1": "1. How are you feeling?",
+        "question2": "2. Do you know where you are?",
+        "question3": "3. Which objects that you see here in your room do you also find in your living room at home?",
+        "question4": "4. Do you know how much money you would have saved in total?",
+        "question5": "5. What are your daughters' names from oldest to youngest?",
+        "question6": "6. Could you please raise your arms?",
+        "question7": "7. Can you close your eyes and tell me which direction I am moving your right and left arm?"
+      }
+    },
     "scene3": "Assessment tests",
     "scene4": "Assessment",
     "scene5": "Quiz"
