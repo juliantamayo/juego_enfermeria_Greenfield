@@ -6,6 +6,7 @@ const brand = {
   secondary: "#f9e67a",
   secondaryDark: "#f9a94b",
   secondaryLight: "#fbe122",
+  red: "#ff0000",
 };
 
 const text = {
