@@ -49,10 +49,7 @@ const CaseMenuScreen = () => {
         ]}
       />
       <View style={GlobalStyles.body}>
-        <ScrollView
-          style={[GlobalStyles.scroll, { paddingTop: 60 }]}
-          contentContainerStyle={GlobalStyles.scrollContent}
-        >
+        <ScrollView style={GlobalStyles.scroll} contentContainerStyle={GlobalStyles.scrollContent}>
           {CASE_SCREENS.map((item, index) => (
             <Button
               key={item.name}
