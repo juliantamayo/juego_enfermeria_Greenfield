@@ -1,6 +1,7 @@
 {
   "case1": {
     "scene1": {
+      "screenTitle": "Caso 1. Introducción al Caso",
       "title": "Introducción al caso",
       "dialog": {
         "0": "Hola, soy la enfermera Leidy",
@@ -14,6 +15,7 @@
       }
     },
     "scene2": {
+      "screenTitle": "Caso 1. Preguntas a Paciente",
       "title": "Preguntas al paciente",
       "questions": {
         "question1": "1. ¿Cómo se encuentra?",

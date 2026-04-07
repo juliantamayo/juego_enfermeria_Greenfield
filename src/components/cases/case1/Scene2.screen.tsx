@@ -4,6 +4,7 @@ import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import Header from "@shared/components/header/header.component";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
+import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { Colors, GlobalStyles, Spacing } from "@styles-theme";
 import CaseQuestionRowItem from "../shared/components/CaseQuestionRowItem.component";
 import case1Scene2Questions from "../data/case1/scene2Questions";
@@ -16,6 +17,7 @@ const Scene2Screen = () => {
   const navigation = useAppNavigation();
   const { t } = useTranslation();
   const [completedQuestionIds, setCompletedQuestionIds] = useState<string[]>([]);
+  useScreenTitle("case1.scene2.screenTitle");
 
   const loadQuestionProgress = useCallback(async () => {
     try {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Text, View, ImageBackground, ScrollView } from "react-native";
 import Header from "@shared/components/header/header.component";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
+import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { useTranslation } from "react-i18next";
 import scene1Dialog from "../data/case1/scene1Dialog";
 import Button from "@shared/components/button/button.component";
@@ -13,6 +14,7 @@ const Scene1Screen = () => {
   const { t } = useTranslation();
   const navigation = useAppNavigation();
   const [step, setStep] = useState(0);
+  useScreenTitle("case1.scene1.screenTitle");
 
   const currentDialog = scene1Dialog[step];
 
