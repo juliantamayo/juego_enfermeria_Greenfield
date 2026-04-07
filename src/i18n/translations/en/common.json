@@ -8,6 +8,16 @@
     },
     "roles": {
       "nurse": "NURSE"
+    },
+    "sceneComplete": {
+      "title": "Scene completed",
+      "message": "Save your progress to unlock the next scene.",
+      "saveButton": "Save",
+      "savingButton": "Saving...",
+      "savedTitle": "Saved",
+      "savedMessage": "Progress saved successfully.",
+      "errorTitle": "Error",
+      "errorMessage": "Progress could not be saved. Try again."
     }
   },
   "exit": {

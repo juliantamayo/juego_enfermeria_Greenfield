@@ -1,6 +1,6 @@
-import type { RootStackParamList } from "./types";
+import type { CaseMenuScreenName } from "./types";
 
-export const CASE_SCREENS: { name: string; label: string; screen: keyof RootStackParamList }[] = [
+export const CASE_SCREENS: { name: string; label: string; screen: CaseMenuScreenName }[] = [
   { name: "Case1Menu", label: "case1", screen: "Case1Menu" },
   { name: "Case2Menu", label: "case2", screen: "Case2Menu" },
   { name: "Case3Menu", label: "case3", screen: "Case3Menu" },

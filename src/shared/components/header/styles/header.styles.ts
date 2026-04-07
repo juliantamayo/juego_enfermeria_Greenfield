@@ -4,7 +4,7 @@ import { Colors, Spacing, Radius } from "@styles-theme";
 const headerStyles = StyleSheet.create({
   header: {
     paddingVertical: Spacing.md,
-    paddingHorizontal: Spacing.base,
+    paddingHorizontal: Spacing.md,
     flexDirection: "row",
     justifyContent: "space-between",
   },

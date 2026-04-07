@@ -8,6 +8,16 @@
     },
     "roles": {
       "nurse": "ENFERMERA"
+    },
+    "sceneComplete": {
+      "title": "Escena completada",
+      "message": "Guarda tu progreso para habilitar la siguiente escena.",
+      "saveButton": "Guardar",
+      "savingButton": "Guardando...",
+      "savedTitle": "Guardado",
+      "savedMessage": "Progreso guardado correctamente.",
+      "errorTitle": "Error",
+      "errorMessage": "No se pudo guardar el progreso. Intentalo de nuevo."
     }
   },
   "exit": {

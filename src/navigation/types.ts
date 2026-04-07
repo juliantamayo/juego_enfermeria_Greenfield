@@ -1,6 +1,9 @@
 // This type defines the available screens in the root navigation stack.
 // It is used for type-safe navigation with React Navigation.
 
+export type CaseMenuScreenName = "Case1Menu" | "Case2Menu" | "Case3Menu";
+export type CaseSceneScreenName = "Scene1Screen" | "Scene2Screen" | "Scene3Screen";
+
 export type RootStackParamList = {
   Home: undefined;
   Settings: undefined;
@@ -8,6 +11,12 @@ export type RootStackParamList = {
   Case1Menu: undefined;
   Case2Menu: undefined;
   Case3Menu: undefined;
+  SceneCompleteScreen: {
+    caseId: string;
+    completedSceneId: string;
+    nextSceneId?: string;
+    returnScreen: CaseMenuScreenName;
+  };
   Scene1Screen: undefined;
   Scene2Screen: undefined;
   Scene3Screen: undefined;
