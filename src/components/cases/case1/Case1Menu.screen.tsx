@@ -30,13 +30,17 @@ const Case1MenuScreen = () => {
       };
 
       loadProgress();
-    }, [])
+    }, []),
   );
 
   const scenes = CASES_SCENES["case1"];
 
   return (
-    <ImageBackground source={require("@images/layout/background.png")} style={GlobalStyles.container}>
+    <ImageBackground
+      source={require("@images/layout/background.png")}
+      style={GlobalStyles.container}
+      resizeMode="contain"
+    >
       <Header
         leftButtons={[
           {
