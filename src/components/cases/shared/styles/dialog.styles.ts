@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors, Spacing, Typography } from "@styles-theme";
+import { Colors, Radius, Spacing, Typography } from "@styles-theme";
 
 const dialogStyles = StyleSheet.create({
   container: {
@@ -12,7 +12,7 @@ const dialogStyles = StyleSheet.create({
     height: "42%",
     backgroundColor: Colors.brand.primaryTransparentLight,
     paddingBottom: 40,
-    paddingHorizontal: Spacing.sm,
+    paddingHorizontal: Spacing.md,
   },
   dialogText: {
     width: "100%",
@@ -20,6 +20,7 @@ const dialogStyles = StyleSheet.create({
     fontSize: Typography.fontSize.mlg,
     fontWeight: Typography.fontWeight.medium,
     backgroundColor: Colors.brand.red,
+    borderRadius: Radius.sm,
     paddingHorizontal: Spacing.sm,
   },
   scroll: {

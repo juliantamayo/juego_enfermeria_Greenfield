@@ -3,16 +3,11 @@ import { Text, View, ImageBackground, ScrollView } from "react-native";
 import Header from "@shared/components/header/header.component";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { useTranslation } from "react-i18next";
-import scene1Dialog from "../data/case1/dialog";
+import scene1Dialog from "../data/case1/scene1Dialog";
 import Button from "@shared/components/button/button.component";
 import { ButtonType } from "@shared/enums/button-type.enum";
 import { GlobalStyles } from "@styles-theme";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { dialogStyles } from "../styles/dialog.styles";
-
-const saveSceneProgress = async (caseId: string, nextSceneId: string) => {
-  await AsyncStorage.setItem(`${caseId}_progress`, JSON.stringify(["scene1", nextSceneId]));
-};
+import { dialogStyles } from "../shared/styles/dialog.styles";
 
 const Scene1Screen = () => {
   const { t } = useTranslation();
@@ -25,8 +20,12 @@ const Scene1Screen = () => {
     const nextStep = step + 1;
 
     if (nextStep >= scene1Dialog.length) {
-      await saveSceneProgress("case1", "scene2");
-      navigation.navigate("Case1Menu");
+      navigation.navigate("SceneCompleteScreen", {
+        caseId: "case1",
+        completedSceneId: "scene1",
+        nextSceneId: "scene2",
+        returnScreen: "Case1Menu",
+      });
     } else {
       setStep(nextStep);
     }

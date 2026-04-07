@@ -7,6 +7,7 @@ import HomeScreen from "@components/home/home.screen";
 import SettingsScreen from "@components/settings/settings.screen";
 import CaseMenuScreen from "@components/cases/caseMenu.screen";
 import Case1MenuScreen from "@components/cases/case1/Case1Menu.screen";
+import SceneCompleteScreen from "@components/cases/SceneComplete.screen";
 import Scene1Screen from "@components/cases/case1/Scene1.screen";
 import Scene2Screen from "@components/cases/case1/Scene2.screen";
 import Scene3Screen from "@components/cases/case1/Scene3.screen";
@@ -54,6 +55,13 @@ export const screens: ScreenEntry[] = [
   {
     name: "Scene1Screen",
     component: Scene1Screen,
+    options: {
+      headerBackVisible: false,
+    },
+  },
+  {
+    name: "SceneCompleteScreen",
+    component: SceneCompleteScreen,
     options: {
       headerBackVisible: false,
     },

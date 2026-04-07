@@ -48,6 +48,12 @@ const status = {
   success: "#52c41a",
 };
 
+const question = {
+  primary: "#00b9bc",
+  secondary: "#77c6c6",
+  completed: "#82e0aa",
+};
+
 const Colors = {
   brand,
   text,
@@ -56,6 +62,7 @@ const Colors = {
   border,
   grayscale,
   status,
+  question,
 };
 
 export default Colors;

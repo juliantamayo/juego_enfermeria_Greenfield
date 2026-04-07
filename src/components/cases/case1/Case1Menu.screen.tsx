@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { View, StyleSheet, ImageBackground, ScrollView } from "react-native";
+import React, { useCallback, useState } from "react";
+import { View, ImageBackground, ScrollView } from "react-native";
+import { useFocusEffect } from "@react-navigation/native";
 import Header from "@shared/components/header/header.component";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
@@ -7,9 +8,9 @@ import Button from "@shared/components/button/button.component";
 import { ButtonType } from "@shared/enums/button-type.enum";
 import { useTranslation } from "react-i18next";
 import { CASES_SCENES } from "@navigation/caseSceneMap";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { GlobalStyles } from "@styles-theme";
-import { casebaseStyles } from "../styles/case.styles";
+import { casebaseStyles } from "../shared/styles/case.styles";
+import { getSavedScenes } from "../shared/utils/progress.utils";
 
 const Case1MenuScreen = () => {
   const navigation = useAppNavigation();
@@ -17,21 +18,20 @@ const Case1MenuScreen = () => {
   const [unlockedScenes, setUnlockedScenes] = useState<string[]>(["scene1"]);
   useScreenTitle("common.titlePage.Case1Menu");
 
-  useEffect(() => {
-    const loadProgress = async () => {
-      try {
-        const data = await AsyncStorage.getItem("case1_progress");
-        if (data) {
-          const saved = JSON.parse(data);
+  useFocusEffect(
+    useCallback(() => {
+      const loadProgress = async () => {
+        try {
+          const saved = await getSavedScenes("case1");
           setUnlockedScenes(saved);
+        } catch (error) {
+          console.error("Error loading progress", error);
         }
-      } catch (error) {
-        console.error("Error loading progress", error);
-      }
-    };
+      };
 
-    loadProgress();
-  }, []);
+      loadProgress();
+    }, [])
+  );
 
   const scenes = CASES_SCENES["case1"];
 
@@ -74,7 +74,3 @@ const Case1MenuScreen = () => {
 };
 
 export default Case1MenuScreen;
-
-const styles = StyleSheet.create({
-  container: {},
-});
