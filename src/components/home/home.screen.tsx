@@ -36,7 +36,7 @@ const HomeScreen = () => {
             onPress: () => console.log("Minigames clicked"),
           },
           {
-            iconName: "document-text-outline",
+            iconName: "book-outline",
             onPress: () => console.log("Theory clicked"),
           },
         ]}
