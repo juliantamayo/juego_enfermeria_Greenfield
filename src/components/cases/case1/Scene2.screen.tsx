@@ -1,18 +1,98 @@
-import * as React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, { useCallback, useState } from "react";
+import { Alert, ImageBackground, ScrollView, StyleSheet, View } from "react-native";
+import { useFocusEffect } from "@react-navigation/native";
+import { useTranslation } from "react-i18next";
+import Header from "@shared/components/header/header.component";
+import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
+import { Colors, GlobalStyles, Spacing } from "@styles-theme";
+import CaseQuestionRowItem from "../shared/components/CaseQuestionRowItem.component";
+import case1Scene2Questions from "../data/case1/scene2Questions";
+import { getSavedQuestionIds, saveQuestionProgress } from "../shared/utils/questionProgress.utils";
 
-interface componentNameProps {}
+const CASE_ID = "case1";
+const SCENE_ID = "scene2";
 
-const Scene2Screen = (props: componentNameProps) => {
+const Scene2Screen = () => {
+  const navigation = useAppNavigation();
+  const { t } = useTranslation();
+  const [completedQuestionIds, setCompletedQuestionIds] = useState<string[]>([]);
+
+  const loadQuestionProgress = useCallback(async () => {
+    try {
+      const savedQuestionIds = await getSavedQuestionIds(CASE_ID, SCENE_ID);
+      setCompletedQuestionIds(savedQuestionIds);
+    } catch (error) {
+      console.error("Error loading question progress", error);
+    }
+  }, []);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadQuestionProgress();
+    }, [loadQuestionProgress])
+  );
+
+  const handleQuestionPress = async (questionId: string) => {
+    try {
+      await saveQuestionProgress(CASE_ID, SCENE_ID, questionId);
+      await loadQuestionProgress();
+      Alert.alert("Pregunta seleccionada", "Cuando creemos la pantalla de dialogo, aqui navegaremos a esa pregunta.");
+    } catch (error) {
+      console.error("Error saving question progress", error);
+      Alert.alert("Error", "No se pudo actualizar el progreso de la pregunta.");
+    }
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>componentName</Text>
-    </View>
+    <ImageBackground source={require("@images/layout/background.png")} style={GlobalStyles.container}>
+      <Header
+        leftButtons={[
+          {
+            iconName: "arrow-undo-outline",
+            onPress: () => navigation.goBack(),
+          },
+        ]}
+        rightButtons={[
+          {
+            iconName: "help-outline",
+            onPress: () => console.log("Help clicked"),
+          },
+        ]}
+      />
+      <View style={styles.container}>
+        <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
+          {case1Scene2Questions.map((question) => {
+            const isCompleted = completedQuestionIds.includes(question.id);
+
+            return (
+              <CaseQuestionRowItem
+                key={question.id}
+                name={t(question.titleKey)}
+                color={isCompleted ? Colors.question.completed : Colors.question[question.colorVariant]}
+                onPress={() => handleQuestionPress(question.id)}
+              />
+            );
+          })}
+        </ScrollView>
+      </View>
+    </ImageBackground>
   );
 };
 
 export default Scene2Screen;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    width: "100%",
+  },
+  scroll: {
+    flex: 1,
+    width: "100%",
+  },
+  scrollContent: {
+    gap: Spacing.md,
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.lg,
+  },
 });
