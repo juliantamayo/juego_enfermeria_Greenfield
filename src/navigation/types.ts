@@ -3,6 +3,7 @@
 
 export type CaseMenuScreenName = "Case1Menu" | "Case2Menu" | "Case3Menu";
 export type CaseSceneScreenName = "Scene1Screen" | "Scene2Screen" | "Scene3Screen";
+export type SceneCompleteReturnScreenName = CaseMenuScreenName | "Scene2Screen";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -15,9 +16,12 @@ export type RootStackParamList = {
     caseId: string;
     completedSceneId: string;
     nextSceneId?: string;
-    returnScreen: CaseMenuScreenName;
+    returnScreen: SceneCompleteReturnScreenName;
   };
   Scene1Screen: undefined;
   Scene2Screen: undefined;
+  Scene2QuestionDialogScreen: {
+    questionId: string;
+  };
   Scene3Screen: undefined;
 };

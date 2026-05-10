@@ -4,11 +4,11 @@ import Header from "@shared/components/header/header.component";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { useTranslation } from "react-i18next";
-import scene1Dialog from "../data/case1/scene1Dialog";
+import scene1Dialog from "./data/scene1Dialog";
 import Button from "@shared/components/button/button.component";
 import { ButtonType } from "@shared/enums/button-type.enum";
 import { GlobalStyles } from "@styles-theme";
-import { dialogStyles } from "../shared/styles/dialog.styles";
+import { dialogStyles } from "../../../shared/styles/dialog.styles";
 
 const Scene1Screen = () => {
   const { t } = useTranslation();

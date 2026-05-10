@@ -2,6 +2,7 @@ type Case1Scene2Question = {
   id: string;
   titleKey: string;
   colorVariant: "primary" | "secondary";
+  dialogId?: string;
 };
 
 const case1Scene2Questions: Case1Scene2Question[] = [
@@ -9,6 +10,7 @@ const case1Scene2Questions: Case1Scene2Question[] = [
     id: "question1",
     titleKey: "case1.scene2.questions.question1",
     colorVariant: "secondary",
+    dialogId: "question1",
   },
   {
     id: "question2",

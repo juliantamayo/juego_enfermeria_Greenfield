@@ -6,9 +6,9 @@ import Header from "@shared/components/header/header.component";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { Colors, GlobalStyles, Spacing } from "@styles-theme";
-import CaseQuestionRowItem from "../shared/components/CaseQuestionRowItem.component";
-import case1Scene2Questions from "../data/case1/scene2Questions";
-import { getSavedQuestionIds, saveQuestionProgress } from "../shared/utils/questionProgress.utils";
+import CaseQuestionRowItem from "../../../shared/components/CaseQuestionRowItem.component";
+import case1Scene2Questions from "./data/scene2Questions";
+import { getSavedQuestionIds, saveQuestionProgress } from "../../../shared/utils/questionProgress.utils";
 
 const CASE_ID = "case1";
 const SCENE_ID = "scene2";
@@ -35,6 +35,13 @@ const Scene2Screen = () => {
   );
 
   const handleQuestionPress = async (questionId: string) => {
+    const question = case1Scene2Questions.find((item) => item.id === questionId);
+
+    if (question?.dialogId) {
+      navigation.navigate("Scene2QuestionDialogScreen", { questionId: question.dialogId });
+      return;
+    }
+
     try {
       await saveQuestionProgress(CASE_ID, SCENE_ID, questionId);
       await loadQuestionProgress();
