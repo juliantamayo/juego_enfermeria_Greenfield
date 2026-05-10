@@ -25,6 +25,38 @@
         "question5": "5. ¿Cuáles son los nombres de sus hijas desde la mayor a la menor?",
         "question6": "6. ¿Podría por favor levantar sus brazos?",
         "question7": "7. ¿Puede cerrar los ojos y me puede indicar hacia qué dirección le estoy movilizando su brazo derecho e izquierdo?"
+      },
+      "questionDialogs": {
+        "question1": {
+          "screenTitle": "Caso 1. Pregunta 1",
+          "dialog": {
+            "0": "Buen día Señor C.J.M, ¿Cómo se encuentra?",
+            "1": "...enfer-mo no puu-ee-do hacer na-dda."
+          },
+          "followUpDialog": {
+            "0": "El paciente presenta una marcha hemipléjica."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Cálculo.",
+                "2": "Percepción.",
+                "3": "Pensamiento.",
+                "4": "Conciencia."
+              }
+            },
+            "1": {
+              "question": "¿Cómo se define la conciencia?",
+              "answers": {
+                "1": "Capacidad para fijar, retener una experiencia en el sistema nervioso central y la habilidad para evocar esa experiencia registrada anteriormente.",
+                "2": "Capacidad para generalizar, juzgar situaciones reales y actuar con base en valores culturales establecidos.",
+                "3": "Estado en el que la persona tiene la capacidad de reconocer su propia existencia a través de la percepción de estímulos internos y externos que lo afectan y de sus procesos mentales.",
+                "4": "Es la orientación hacia un objetivo específico o la conducción a sacar conclusiones reales a partir de la producción de ideas, símbolos y asociaciones."
+              }
+            }
+          }
+        }
       }
     },
     "scene3": "Pruebas de valoración",

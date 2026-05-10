@@ -7,7 +7,8 @@
       "Case1Menu": "Menu Case 1"
     },
     "roles": {
-      "nurse": "NURSE"
+      "nurse": "NURSE",
+      "patientCjm": "MR. C.J.M"
     },
     "sceneComplete": {
       "title": "Scene completed",

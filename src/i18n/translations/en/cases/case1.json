@@ -25,6 +25,38 @@
         "question5": "5. What are your daughters' names from oldest to youngest?",
         "question6": "6. Could you please raise your arms?",
         "question7": "7. Can you close your eyes and tell me which direction I am moving your right and left arm?"
+      },
+      "questionDialogs": {
+        "question1": {
+          "screenTitle": "Case 1. Question 1",
+          "dialog": {
+            "0": "Good morning Mr. C.J.M, how are you feeling?",
+            "1": "...si-ck I caa-nn't do any-thi-ng."
+          },
+          "followUpDialog": {
+            "0": "The patient presents a hemiplegic gait."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Calculation.",
+                "2": "Perception.",
+                "3": "Thought.",
+                "4": "Consciousness."
+              }
+            },
+            "1": {
+              "question": "How is consciousness defined?",
+              "answers": {
+                "1": "The ability to fix and retain an experience in the central nervous system and the ability to recall that previously recorded experience.",
+                "2": "The ability to generalize, judge real situations, and act based on established cultural values.",
+                "3": "A state in which a person has the ability to recognize their own existence through the perception of internal and external stimuli that affect them and their mental processes.",
+                "4": "Orientation toward a specific objective or the process of drawing real conclusions from the production of ideas, symbols, and associations."
+              }
+            }
+          }
+        }
       }
     },
     "scene3": "Assessment tests",
