@@ -1,4 +1,4 @@
-{
+﻿{
   "case1": {
     "scene1": {
       "screenTitle": "Case 1. Case Introduction",
@@ -56,6 +56,38 @@
               }
             }
           }
+        },
+        "question2": {
+          "screenTitle": "Case 1. Question 2",
+          "dialog": {
+            "0": "Do you know where you are?",
+            "1": "In my house? (He says it with difficulty)",
+            "2": "Do you know what year it is?",
+            "3": "We are... in... 2007?. (He says it with difficulty)"
+          },
+          "followUpDialog": {
+            "0": "The patient is allopsychically disoriented in time and place."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Calculation.",
+                "2": "Orientation.",
+                "3": "Thought.",
+                "4": "Consciousness."
+              }
+            },
+            "1": {
+              "question": "Which organs of Mr. C.J.M.'s nervous system are altered and intervene in the cognitive function of orientation?",
+              "answers": {
+                "1": "Right cerebral hemisphere.",
+                "2": "Right cerebellar hemisphere.",
+                "3": "Pons.",
+                "4": "Medulla oblongata."
+              }
+            }
+          }
         }
       }
     },
@@ -64,3 +96,4 @@
     "scene5": "Quiz"
   }
 }
+

@@ -10,7 +10,8 @@ import Case1MenuScreen from "@components/cases/case1/Case1Menu.screen";
 import SceneCompleteScreen from "@components/cases/SceneComplete.screen";
 import Scene1Screen from "@components/cases/case1/scenes/scene1/Scene1.screen";
 import Scene2Screen from "@components/cases/case1/scenes/scene2/Scene2.screen";
-import Scene2QuestionDialogScreen from "@components/cases/case1/scenes/scene2/Scene2QuestionDialog.screen";
+import Scene2Question1FlowScreen from "@components/cases/case1/scenes/scene2/Scene2Question1Flow.screen";
+import Scene2Question2FlowScreen from "@components/cases/case1/scenes/scene2/Scene2Question2Flow.screen";
 import Scene3Screen from "@components/cases/case1/Scene3.screen";
 import Case2MenuScreen from "@components/cases/case2/Case2Menu.screen";
 import Case3MenuScreen from "@components/cases/case3/Case3Menu.screen";
@@ -75,8 +76,15 @@ export const screens: ScreenEntry[] = [
     },
   },
   {
-    name: "Scene2QuestionDialogScreen",
-    component: Scene2QuestionDialogScreen,
+    name: "Scene2Question1FlowScreen",
+    component: Scene2Question1FlowScreen,
+    options: {
+      headerBackVisible: false,
+    },
+  },
+  {
+    name: "Scene2Question2FlowScreen",
+    component: Scene2Question2FlowScreen,
     options: {
       headerBackVisible: false,
     },

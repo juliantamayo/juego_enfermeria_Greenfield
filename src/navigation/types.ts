@@ -20,7 +20,10 @@ export type RootStackParamList = {
   };
   Scene1Screen: undefined;
   Scene2Screen: undefined;
-  Scene2QuestionDialogScreen: {
+  Scene2Question1FlowScreen: {
+    questionId: string;
+  };
+  Scene2Question2FlowScreen: {
     questionId: string;
   };
   Scene3Screen: undefined;

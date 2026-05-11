@@ -1,4 +1,4 @@
-{
+﻿{
   "case1": {
     "scene1": {
       "screenTitle": "Caso 1. Introducción al Caso",
@@ -56,6 +56,38 @@
               }
             }
           }
+        },
+        "question2": {
+          "screenTitle": "Caso 1. Pregunta 2",
+          "dialog": {
+            "0": "¿Sabe usted en qué lugar se encuentra?",
+            "1": "¿En mi casa? (Lo dice con dificultad)",
+            "2": "¿Sabe en qué año estamos?",
+            "3": "Estamos... en el... 2007?. (Lo dice con dificultad)"
+          },
+          "followUpDialog": {
+            "0": "El paciente se encuentra desorientado alopsiquicamente en tiempo y lugar"
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Calculo.",
+                "2": "Orientación.",
+                "3": "Pensamiento.",
+                "4": "Conciencia."
+              }
+            },
+            "1": {
+              "question": "¿Qué órganos del sistema nervioso del señor C.J.M. se encuentran alterados y que intervienen en la función cognoscitiva de orientación?",
+              "answers": {
+                "1": "Hemisferio cerebral derecho.",
+                "2": "Hemisferio cerebeloso derecho.",
+                "3": "Puente de varolio.",
+                "4": "Bulbo raquídeo."
+              }
+            }
+          }
         }
       }
     },
@@ -64,3 +96,4 @@
     "scene5": "Quiz"
   }
 }
+

@@ -9,9 +9,11 @@ import { Colors, GlobalStyles, Spacing } from "@styles-theme";
 import CaseQuestionRowItem from "../../../shared/components/CaseQuestionRowItem.component";
 import case1Scene2Questions from "./data/scene2Questions";
 import { getSavedQuestionIds, saveQuestionProgress } from "../../../shared/utils/questionProgress.utils";
+import { getSavedScenes } from "../../../shared/utils/progress.utils";
 
 const CASE_ID = "case1";
 const SCENE_ID = "scene2";
+const implementedQuestionIds = case1Scene2Questions.filter((question) => question.dialogId).map((question) => question.id);
 
 const Scene2Screen = () => {
   const navigation = useAppNavigation();
@@ -21,12 +23,30 @@ const Scene2Screen = () => {
 
   const loadQuestionProgress = useCallback(async () => {
     try {
-      const savedQuestionIds = await getSavedQuestionIds(CASE_ID, SCENE_ID);
+      const [savedQuestionIds, savedScenes] = await Promise.all([
+        getSavedQuestionIds(CASE_ID, SCENE_ID),
+        getSavedScenes(CASE_ID),
+      ]);
+
       setCompletedQuestionIds(savedQuestionIds);
+
+      const hasCompletedAllQuestions = implementedQuestionIds.every((questionId) =>
+        savedQuestionIds.includes(questionId)
+      );
+      const sceneAlreadyCompleted = savedScenes.includes(SCENE_ID);
+
+      if (hasCompletedAllQuestions && !sceneAlreadyCompleted) {
+        navigation.navigate("SceneCompleteScreen", {
+          caseId: CASE_ID,
+          completedSceneId: SCENE_ID,
+          nextSceneId: "scene3",
+          returnScreen: "Scene2Screen",
+        });
+      }
     } catch (error) {
       console.error("Error loading question progress", error);
     }
-  }, []);
+  }, [navigation]);
 
   useFocusEffect(
     useCallback(() => {
@@ -37,8 +57,8 @@ const Scene2Screen = () => {
   const handleQuestionPress = async (questionId: string) => {
     const question = case1Scene2Questions.find((item) => item.id === questionId);
 
-    if (question?.dialogId) {
-      navigation.navigate("Scene2QuestionDialogScreen", { questionId: question.dialogId });
+    if (question?.dialogId && question.flowScreen) {
+      navigation.navigate(question.flowScreen, { questionId: question.dialogId });
       return;
     }
 

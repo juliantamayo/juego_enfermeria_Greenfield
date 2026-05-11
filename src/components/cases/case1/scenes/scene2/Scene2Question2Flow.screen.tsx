@@ -1,5 +1,5 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
-import { ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, ScrollView, Text, View } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import type { RouteProp } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
@@ -10,17 +10,20 @@ import { ButtonType } from "@shared/enums/button-type.enum";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import type { RootStackParamList } from "@navigation/types";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
-import { Colors, GlobalStyles, Radius, Spacing, Typography } from "@styles-theme";
-import scene2QuestionDialogs from "./data/questionDialogs";
+import { GlobalStyles } from "@styles-theme";
+import scene2Question2Dialogs from "./data/question2Flow";
+import case1Scene2Questions from "./data/scene2Questions";
 import { dialogStyles } from "../../../shared/styles/dialog.styles";
-import { saveQuestionProgress } from "../../../shared/utils/questionProgress.utils";
+import { questionFlowStyles } from "./styles/question-flow.styles";
+import { getSavedQuestionIds, saveQuestionProgress } from "../../../shared/utils/questionProgress.utils";
 
 const CASE_ID = "case1";
 const SCENE_ID = "scene2";
 const quizBackgroundImage = require("@images/layout/background.png");
 const FEEDBACK_DELAY_MS = 800;
+const implementedQuestionIds = case1Scene2Questions.filter((question) => question.dialogId).map((question) => question.id);
 
-type Scene2QuestionDialogRouteProp = RouteProp<RootStackParamList, "Scene2QuestionDialogScreen">;
+type Scene2Question2FlowRouteProp = RouteProp<RootStackParamList, "Scene2Question2FlowScreen">;
 type QuestionPhase = "dialog" | "quiz" | "followUpDialog";
 
 const shuffleAnswers = <T,>(answers: T[]) => {
@@ -34,10 +37,10 @@ const shuffleAnswers = <T,>(answers: T[]) => {
   return shuffledAnswers;
 };
 
-const Scene2QuestionDialogScreen = () => {
+const Scene2Question2FlowScreen = () => {
   const { t } = useTranslation();
   const navigation = useAppNavigation();
-  const route = useRoute<Scene2QuestionDialogRouteProp>();
+  const route = useRoute<Scene2Question2FlowRouteProp>();
   const { questionId } = route.params;
   const [dialogStep, setDialogStep] = useState(0);
   const [quizStep, setQuizStep] = useState(0);
@@ -47,7 +50,7 @@ const Scene2QuestionDialogScreen = () => {
   const feedbackTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useScreenTitle(`case1.scene2.questionDialogs.${questionId}.screenTitle`);
 
-  const currentQuestionFlow = scene2QuestionDialogs[questionId];
+  const currentQuestionFlow = scene2Question2Dialogs[questionId];
   const showQuiz = phase === "quiz";
   const activeDialogEntries =
     phase === "followUpDialog" ? currentQuestionFlow.followUpDialog ?? currentQuestionFlow.dialog : currentQuestionFlow.dialog;
@@ -60,14 +63,24 @@ const Scene2QuestionDialogScreen = () => {
     [currentQuiz.answers, questionId, quizStep, phase],
   );
 
-  const navigateToSceneComplete = async () => {
+  const finishQuestionFlow = async () => {
     await saveQuestionProgress(CASE_ID, SCENE_ID, questionId);
-    navigation.navigate("SceneCompleteScreen", {
-      caseId: CASE_ID,
-      completedSceneId: SCENE_ID,
-      nextSceneId: "scene3",
-      returnScreen: "Scene2Screen",
-    });
+    const savedQuestionIds = await getSavedQuestionIds(CASE_ID, SCENE_ID);
+    const hasCompletedAllImplementedQuestions = implementedQuestionIds.every((implementedQuestionId) =>
+      savedQuestionIds.includes(implementedQuestionId)
+    );
+
+    if (hasCompletedAllImplementedQuestions) {
+      navigation.navigate("SceneCompleteScreen", {
+        caseId: CASE_ID,
+        completedSceneId: SCENE_ID,
+        nextSceneId: "scene3",
+        returnScreen: "Scene2Screen",
+      });
+      return;
+    }
+
+    navigation.goBack();
   };
 
   const handleDialogNext = () => {
@@ -75,7 +88,7 @@ const Scene2QuestionDialogScreen = () => {
       const nextStep = followUpDialogStep + 1;
 
       if (nextStep >= activeDialogEntries.length) {
-        navigateToSceneComplete().catch((error) => console.error("Error navigating to scene complete", error));
+        finishQuestionFlow().catch((error) => console.error("Error finishing question flow", error));
       } else {
         setFollowUpDialogStep(nextStep);
       }
@@ -123,7 +136,7 @@ const Scene2QuestionDialogScreen = () => {
           setFollowUpDialogStep(0);
           setPhase("followUpDialog");
         } else {
-          await navigateToSceneComplete();
+          await finishQuestionFlow();
         }
       } else {
         setQuizStep(nextQuizStep);
@@ -153,28 +166,28 @@ const Scene2QuestionDialogScreen = () => {
           ]}
         />
       )}
-      <View style={showQuiz ? styles.quizContainer : dialogStyles.container}>
-        <View style={showQuiz ? styles.quizPanel : dialogStyles.panel}>
+      <View style={showQuiz ? questionFlowStyles.quizContainer : dialogStyles.container}>
+        <View style={showQuiz ? questionFlowStyles.quizPanel : dialogStyles.panel}>
           {showQuiz ? (
-            <ScrollView style={dialogStyles.scroll} contentContainerStyle={styles.quizContent}>
-              <Text style={styles.quizQuestion}>{t(currentQuiz.questionKey)}</Text>
+            <ScrollView style={dialogStyles.scroll} contentContainerStyle={questionFlowStyles.quizContent}>
+              <Text style={questionFlowStyles.quizQuestion}>{t(currentQuiz.questionKey)}</Text>
               {shuffledAnswers.map((answer) => (
                 <Button
                   key={answer.id}
-                  style={styles.answerButton}
+                  style={questionFlowStyles.answerButton}
                   text={t(answer.textKey)}
-                  textStyle={styles.answerText}
+                  textStyle={questionFlowStyles.answerText}
                   type={ButtonType.PRIMARY_TRANSPARENT}
                   disabled={!!feedback}
                   onPress={() => handleAnswerPress(answer.correct)}
                 />
               ))}
-              <Text style={styles.quizCounter}>{`${correctCount}/${totalCount}`}</Text>
+              <Text style={questionFlowStyles.quizCounter}>{`${correctCount}/${totalCount}`}</Text>
             </ScrollView>
           ) : (
             <ScrollView style={dialogStyles.scroll} contentContainerStyle={dialogStyles.scrollContent}>
               <Text
-                style={[dialogStyles.dialogText, currentDialog.speaker === "patientCjm" && styles.patientRoleLabel]}
+                style={[dialogStyles.dialogText, currentDialog.speaker === "patientCjm" && dialogStyles.patientDialogText]}
               >
                 {t(`common.roles.${currentDialog.speaker}`)}
               </Text>
@@ -197,63 +210,10 @@ const Scene2QuestionDialogScreen = () => {
   const backgroundImage = showQuiz ? quizBackgroundImage : currentDialog.image;
 
   return (
-    <ImageBackground
-      source={backgroundImage}
-      style={GlobalStyles.container}
-      resizeMode={showQuiz ? "cover" : "contain"}
-    >
+    <ImageBackground source={backgroundImage} style={GlobalStyles.container} resizeMode={showQuiz ? "cover" : "contain"}>
       {screenContent}
     </ImageBackground>
   );
 };
 
-export default Scene2QuestionDialogScreen;
-
-const styles = StyleSheet.create({
-  patientRoleLabel: {
-    backgroundColor: "#880e4f",
-  },
-  quizContainer: {
-    flex: 1,
-    width: "100%",
-  },
-  quizPanel: {
-    backgroundColor: "transparent",
-    flex: 1,
-    paddingHorizontal: Spacing.lg,
-    width: "100%",
-  },
-  quizContent: {
-    flexGrow: 1,
-    gap: Spacing.sm,
-    justifyContent: "flex-start",
-    paddingBottom: Spacing.lg,
-  },
-  quizCounter: {
-    alignSelf: "center",
-    color: Colors.brand.primary,
-    fontSize: Typography.fontSize.xl,
-    fontWeight: Typography.fontWeight.bold,
-    marginTop: Spacing.sm,
-  },
-  quizQuestion: {
-    backgroundColor: Colors.brand.primaryDark,
-    borderRadius: Radius.md,
-    color: Colors.text.inverse,
-    fontSize: Typography.fontSize.mlg,
-    fontWeight: Typography.fontWeight.bold,
-    padding: Spacing.md,
-    textAlign: "center",
-  },
-  answerButton: {
-    width: "100%",
-    paddingVertical: Spacing.md,
-  },
-  answerText: {
-    fontSize: Typography.fontSize.md,
-    textAlign: "center",
-  },
-});
-
-
-
+export default Scene2Question2FlowScreen;

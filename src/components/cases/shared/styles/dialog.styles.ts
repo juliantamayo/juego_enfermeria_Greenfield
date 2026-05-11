@@ -23,6 +23,9 @@ const dialogStyles = StyleSheet.create({
     borderRadius: Radius.sm,
     paddingHorizontal: Spacing.sm,
   },
+  patientDialogText: {
+    backgroundColor: "#880e4f",
+  },
   scroll: {
     flex: 1,
     width: "100%",
