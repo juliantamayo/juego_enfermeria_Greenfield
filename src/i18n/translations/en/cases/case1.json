@@ -88,6 +88,37 @@
               }
             }
           }
+        },
+        "question3": {
+          "screenTitle": "Case 1. Question 3",
+          "dialog": {
+            "0": "Which objects that you observe here in the room do you also find in your living room at home?",
+            "1": "It is hard... for me to think... I feel... my thou...ghts are slow..., I think chair and com...puter "
+          },
+          "followUpDialog": {
+            "0": "Patient with slowness in the process of perception and thought, producing circumstantial ideas and responses that still correspond to reality.",
+            "1": "The patient presents bradypsychia: a decrease in the speed of thought."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Affect and psychomotor sphere",
+                "2": "Thought and perception",
+                "3": "Facies",
+                "4": "Consciousness"
+              }
+            },
+            "1": {
+              "question": "What is perception?",
+              "answers": {
+                "1": "It is the orientation toward a specific objective or the process of drawing real conclusions from the production of ideas, symbols, and associations.",
+                "2": "The ability to fix and retain an experience in the central nervous system and the ability to recall that previously recorded experience.",
+                "3": "The ability to recognize an object and how the information received through external visual, auditory, and tactile stimuli that correspond to reality is interpreted and understood.",
+                "4": "The ability to generalize, judge real situations, and act based on established cultural values."
+              }
+            }
+          }
         }
       }
     },

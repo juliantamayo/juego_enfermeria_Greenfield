@@ -3,7 +3,7 @@ type Case1Scene2Question = {
   titleKey: string;
   colorVariant: "primary" | "secondary";
   dialogId?: string;
-  flowScreen?: "Scene2Question1FlowScreen" | "Scene2Question2FlowScreen";
+  flowScreen?: "Scene2Question1FlowScreen" | "Scene2Question2FlowScreen" | "Scene2Question3FlowScreen";
 };
 
 const case1Scene2Questions: Case1Scene2Question[] = [
@@ -25,6 +25,8 @@ const case1Scene2Questions: Case1Scene2Question[] = [
     id: "question3",
     titleKey: "case1.scene2.questions.question3",
     colorVariant: "secondary",
+    dialogId: "question3",
+    flowScreen: "Scene2Question3FlowScreen",
   },
   {
     id: "question4",
