@@ -1,33 +1,10 @@
-import type { ImageSourcePropType } from "react-native";
-
-export type Scene2QuestionDialogEntry = {
-  id: string;
-  speaker: "nurse" | "patientCjm";
-  image: ImageSourcePropType;
-};
-
-export type Scene2QuestionQuizAnswer = {
-  id: string;
-  textKey: string;
-  correct?: boolean;
-};
-
-export type Scene2QuestionQuizEntry = {
-  id: string;
-  questionKey: string;
-  answers: Scene2QuestionQuizAnswer[];
-};
-
-export type Scene2QuestionFlow = {
-  dialog: Scene2QuestionDialogEntry[];
-  quiz: Scene2QuestionQuizEntry[];
-  followUpDialog?: Scene2QuestionDialogEntry[];
-};
+import type { Scene2QuestionFlow } from "./questionFlow.types";
 
 const nurseImage = require("@images/enfermera.png");
+const nurseThinkingImage = require("@images/enfermera_pensando.png");
 const patientCjmImage = require("@images/CASO_1_SEÑOR_CJM_58_AÑOS.png");
 
-const scene2QuestionDialogs: Record<string, Scene2QuestionFlow> = {
+const scene2Question1Dialogs: Record<string, Scene2QuestionFlow> = {
   question1: {
     dialog: [
       { id: "0", speaker: "nurse", image: nurseImage },
@@ -55,8 +32,8 @@ const scene2QuestionDialogs: Record<string, Scene2QuestionFlow> = {
         ],
       },
     ],
-    followUpDialog: [{ id: "0", speaker: "nurse", image: nurseImage }],
+    followUpDialog: [{ id: "0", speaker: "nurse", image: nurseThinkingImage }],
   },
 };
 
-export default scene2QuestionDialogs;
+export default scene2Question1Dialogs;

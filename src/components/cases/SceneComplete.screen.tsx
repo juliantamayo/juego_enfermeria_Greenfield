@@ -26,7 +26,7 @@ const SceneCompleteScreen = () => {
       Alert.alert(t("common.sceneComplete.savedTitle"), t("common.sceneComplete.savedMessage"), [
         {
           text: "OK",
-          onPress: () => navigation.navigate(params.returnScreen),
+          onPress: () => navigation.popTo(params.returnScreen),
         },
       ]);
     } catch (error) {
