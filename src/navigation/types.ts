@@ -32,6 +32,9 @@ export type RootStackParamList = {
   Scene2Question2FlowScreen: {
     questionId: string;
   };
+  Scene2Question3FlowScreen: {
+    questionId: string;
+  };
   Scene3Screen: undefined;
   Scene4Screen: undefined;
   Scene5Screen: undefined;

@@ -88,6 +88,37 @@
               }
             }
           }
+        },
+        "question3": {
+          "screenTitle": "Caso 1. Pregunta 3",
+          "dialog": {
+            "0": "¿Qué elementos de los que observa aquí en la habitación, los encuentra también en la sala de su hogar?",
+            "1": "Me cues...ta pensar... siento... mis pensa...mien..tos lentos..., creo que silla y com...putador "
+          },
+          "followUpDialog": {
+            "0": "Paciente con lentitud en el proceso de percepción y pensamiento, produciendo ideas y respuestas con rodeos pero que corresponden a la realidad.",
+            "1": "El paciente presenta bradipsiquia: Disminución de la velocidad del pensamiento."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Afecto y esfera psicomotora",
+                "2": "Pensamiento y percepción",
+                "3": "Fascies",
+                "4": "Conciencia"
+              }
+            },
+            "1": {
+              "question": "¿Qué es la percepción?",
+              "answers": {
+                "1": "Es la orientación hacia un objetivo específico o la conducción a sacar conclusiones reales a partir de la producción de ideas, símbolos y asociaciones.",
+                "2": "Capacidad para fijar, retener una experiencia en el sistema nervioso central y la habilidad para evocar esa experiencia registrada anteriormente.",
+                "3": "Capacidad de conocer un objeto un objeto o cómo se interpreta y se entiende la información que ha recibido mediante estímulos externos visuales, sonoros, táctiles que corresponden a la realidad.",
+                "4": "Capacidad para generalizar, juzgar situaciones reales y actuar con base en valores culturales establecidos."
+              }
+            }
+          }
         }
       }
     },
@@ -97,4 +128,5 @@
     "scene6": "Proceso de Atención de Enfermería"
   }
 }
+
 
