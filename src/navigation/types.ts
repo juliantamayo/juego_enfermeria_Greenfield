@@ -2,7 +2,13 @@
 // It is used for type-safe navigation with React Navigation.
 
 export type CaseMenuScreenName = "Case1Menu" | "Case2Menu" | "Case3Menu";
-export type CaseSceneScreenName = "Scene1Screen" | "Scene2Screen" | "Scene3Screen";
+export type CaseSceneScreenName =
+  | "Scene1Screen"
+  | "Scene2Screen"
+  | "Scene3Screen"
+  | "Scene4Screen"
+  | "Scene5Screen"
+  | "Scene6Screen";
 export type SceneCompleteReturnScreenName = CaseMenuScreenName | "Scene2Screen";
 
 export type RootStackParamList = {
@@ -27,4 +33,7 @@ export type RootStackParamList = {
     questionId: string;
   };
   Scene3Screen: undefined;
+  Scene4Screen: undefined;
+  Scene5Screen: undefined;
+  Scene6Screen: undefined;
 };
