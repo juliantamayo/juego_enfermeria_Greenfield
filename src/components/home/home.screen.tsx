@@ -14,11 +14,11 @@ import { homeScreenStyles } from "./styles/home.screen.styles";
 const HomeScreen = () => {
   const navigation = useAppNavigation();
 
-  useScreenTitle("commom.titlePage.home");
+  useScreenTitle("common.titlePage.home");
   useExitOnBack();
 
   return (
-    <ImageBackground source={require("../../assets/imgs/layout/background.png")} style={GlobalStyles.container}>
+    <ImageBackground source={require("@images/layout/background.png")} style={GlobalStyles.container}>
       <Header
         leftButtons={[
           {
@@ -36,14 +36,14 @@ const HomeScreen = () => {
             onPress: () => console.log("Minigames clicked"),
           },
           {
-            iconName: "document-text-outline",
+            iconName: "book-outline",
             onPress: () => console.log("Theory clicked"),
           },
         ]}
       />
       <View style={GlobalStyles.body}>
         <Button
-          image={require("../../assets/imgs/btn/btn_start.png")}
+          image={require("@images/btn/btn_start.png")}
           style={homeScreenStyles.button_home}
           type={ButtonType.IMAGE}
           onPress={() => navigation.navigate("CaseMenu")}

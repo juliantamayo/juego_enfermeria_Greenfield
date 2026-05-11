@@ -29,13 +29,24 @@ const buttonVariants: Record<ButtonType, VariantStyles> = {
     button: { backgroundColor: Colors.backgroundButton.primary },
     text: { color: "#fff" },
   }),
+  [ButtonType.PRIMARY_TRANSPARENT]: StyleSheet.create({
+    button: { backgroundColor: Colors.backgroundButton.primaryTransparent },
+    text: { color: "#fff" },
+  }),
+  [ButtonType.PRIMARY_TRANSPARENT_LIGHT]: StyleSheet.create({
+    button: { backgroundColor: Colors.backgroundButton.primaryTransparentLight },
+    text: { color: "#fff" },
+  }),
   [ButtonType.SECONDARY]: StyleSheet.create({
     button: { backgroundColor: "#aaa" },
     text: { color: "#000" },
   }),
   [ButtonType.ACTION]: StyleSheet.create({
-    button: { backgroundColor: "#fbe122" },
-    text: { color: "blue" },
+    button: {
+      backgroundColor: Colors.backgroundButton.secondary,
+      borderRadius: Radius.xl,
+    },
+    text: { color: Colors.text.bodyText },
   }),
   [ButtonType.IMAGE]: StyleSheet.create({
     button: {

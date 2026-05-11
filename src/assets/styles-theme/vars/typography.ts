@@ -3,6 +3,7 @@ const Typography = {
     xs: 12,
     sm: 14,
     md: 16,
+    mlg: 18,
     lg: 20,
     xl: 24,
     xxl: 32,
@@ -21,6 +22,6 @@ const Typography = {
     xxl: 32,
     xxxl: 40,
   },
-};
+} as const;
 
 export default Typography;

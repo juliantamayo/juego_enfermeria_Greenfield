@@ -1,0 +1,14 @@
+{
+  "settings": {
+    "title": "Configuración",
+    "changeLanguage": "Cambiar idioma",
+    "language": {
+    "spanish": "Español",
+    "english": "Inglés",
+    },
+    "close": "Cerrar",
+    "credits": {
+      "developer": "developer julian T"
+    }
+  }
+}

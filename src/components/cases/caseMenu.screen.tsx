@@ -8,11 +8,11 @@ import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { CASE_SCREENS } from "@navigation/caseScreens";
 import { GlobalStyles } from "@styles-theme";
-import { casebaseStyles } from "./styles/case.styles";
+import { casebaseStyles } from "./shared/styles/case.styles";
 
 const CaseMenuScreen = () => {
   const navigation = useAppNavigation();
-  useScreenTitle("commom.titlePage.caseMenu");
+  useScreenTitle("common.titlePage.caseMenu");
   const { t } = useTranslation();
 
   // useExitOnBack({
@@ -22,14 +22,14 @@ const CaseMenuScreen = () => {
 
   return (
     <ImageBackground
-      source={require("../../assets/imgs/layout/background.png")}
+      source={require("@images/layout/background.png")}
       style={GlobalStyles.container}
       resizeMode="contain"
     >
       <Header
         leftButtons={[
           {
-            iconName: "return-up-back-outline",
+            iconName: "arrow-undo-outline",
             onPress: () => navigation.goBack(),
           },
           {
@@ -43,16 +43,13 @@ const CaseMenuScreen = () => {
             onPress: () => console.log("Minigames clicked"),
           },
           {
-            iconName: "document-text-outline",
+            iconName: "book-outline",
             onPress: () => console.log("Theory clicked"),
           },
         ]}
       />
       <View style={GlobalStyles.body}>
-        <ScrollView
-          style={[GlobalStyles.scroll, { paddingTop: 60 }]}
-          contentContainerStyle={GlobalStyles.scrollContent}
-        >
+        <ScrollView style={GlobalStyles.scroll} contentContainerStyle={GlobalStyles.scrollContent}>
           {CASE_SCREENS.map((item, index) => (
             <Button
               key={item.name}

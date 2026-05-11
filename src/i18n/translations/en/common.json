@@ -1,0 +1,30 @@
+{
+  "common": {
+    "titlePage": {
+      "home": "Evaluation Game",
+      "settings": "Settings",
+      "caseMenu": "Case Studies Menu",
+      "Case1Menu": "Menu Case 1"
+    },
+    "roles": {
+      "nurse": "NURSE",
+      "patientCjm": "MR. C.J.M"
+    },
+    "sceneComplete": {
+      "title": "Scene completed",
+      "message": "Save your progress to unlock the next scene.",
+      "saveButton": "Save",
+      "savingButton": "Saving...",
+      "savedTitle": "Saved",
+      "savedMessage": "Progress saved successfully.",
+      "errorTitle": "Error",
+      "errorMessage": "Progress could not be saved. Try again."
+    }
+  },
+  "exit": {
+    "title": "Exit",
+    "message": "Do you want to exit the app?",
+    "cancel": "Cancel",
+    "confirm": "Yes"
+  }
+}

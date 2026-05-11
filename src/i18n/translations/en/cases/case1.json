@@ -1,0 +1,99 @@
+﻿{
+  "case1": {
+    "scene1": {
+      "screenTitle": "Case 1. Case Introduction",
+      "title": "Case introduction",
+      "dialog": {
+        "0": "Hi, I am nurse Leidy",
+        "1": "Are you the new nursing student starting the assessment practice?",
+        "2": "Your mission will be to help me assess the patients assigned to us.",
+        "3": "And identify the priority nursing diagnosis according to the patient's needs.",
+        "4": "To give you some context, let me explain. Mr. C.J.M, 58 years old, had a stroke 3 months ago.",
+        "5": "He is hospitalized due to a urinary infection that is almost resolved with the intravenous pharmacological treatment received.",
+        "6": "His companion, who is his wife, says he is only a few days away from leaving the hospital, but she is worried about other needs he has right now.",
+        "7": "Come with me to assess the patient, and read the case questions and answers carefully."
+      }
+    },
+    "scene2": {
+      "screenTitle": "Case 1. Questions for the Patient",
+      "title": "Questions for the patient",
+      "questions": {
+        "question1": "1. How are you feeling?",
+        "question2": "2. Do you know where you are?",
+        "question3": "3. Which objects that you see here in your room do you also find in your living room at home?",
+        "question4": "4. Do you know how much money you would have saved in total?",
+        "question5": "5. What are your daughters' names from oldest to youngest?",
+        "question6": "6. Could you please raise your arms?",
+        "question7": "7. Can you close your eyes and tell me which direction I am moving your right and left arm?"
+      },
+      "questionDialogs": {
+        "question1": {
+          "screenTitle": "Case 1. Question 1",
+          "dialog": {
+            "0": "Good morning Mr. C.J.M, how are you feeling?",
+            "1": "...si-ck I caa-nn't do any-thi-ng."
+          },
+          "followUpDialog": {
+            "0": "The patient presents a hemiplegic gait."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Calculation.",
+                "2": "Perception.",
+                "3": "Thought.",
+                "4": "Consciousness."
+              }
+            },
+            "1": {
+              "question": "How is consciousness defined?",
+              "answers": {
+                "1": "The ability to fix and retain an experience in the central nervous system and the ability to recall that previously recorded experience.",
+                "2": "The ability to generalize, judge real situations, and act based on established cultural values.",
+                "3": "A state in which a person has the ability to recognize their own existence through the perception of internal and external stimuli that affect them and their mental processes.",
+                "4": "Orientation toward a specific objective or the process of drawing real conclusions from the production of ideas, symbols, and associations."
+              }
+            }
+          }
+        },
+        "question2": {
+          "screenTitle": "Case 1. Question 2",
+          "dialog": {
+            "0": "Do you know where you are?",
+            "1": "In my house? (He says it with difficulty)",
+            "2": "Do you know what year it is?",
+            "3": "We are... in... 2007?. (He says it with difficulty)"
+          },
+          "followUpDialog": {
+            "0": "The patient is allopsychically disoriented in time and place."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Calculation.",
+                "2": "Orientation.",
+                "3": "Thought.",
+                "4": "Consciousness."
+              }
+            },
+            "1": {
+              "question": "Which organs of Mr. C.J.M.'s nervous system are altered and intervene in the cognitive function of orientation?",
+              "answers": {
+                "1": "Right cerebral hemisphere.",
+                "2": "Right cerebellar hemisphere.",
+                "3": "Pons.",
+                "4": "Medulla oblongata."
+              }
+            }
+          }
+        }
+      }
+    },
+    "scene3": "Assessment tests",
+    "scene4": "Assessment",
+    "scene5": "Quiz"
+  }
+}
+

@@ -1,0 +1,99 @@
+﻿{
+  "case1": {
+    "scene1": {
+      "screenTitle": "Caso 1. Introducción al Caso",
+      "title": "Introducción al caso",
+      "dialog": {
+        "0": "Hola, soy la enfermera Leidy",
+        "1": "¿Usted es el nuevo estudiante de enfermería que inicia la práctica de valoración, verdad?",
+        "2": "Su misión será acompañarme a valorar los pacientes que nos asignen.",
+        "3": "E identificar el diagnóstico de enfermería prioritario según las necesidades del paciente.",
+        "4": "Para que entre en contexto, le explico. El Señor C.J.M de 58 años presentó un accidente cerebrovascular hace 3 meses.",
+        "5": "Está hospitalizado por presentar una infección urinaria que está casi resuelta con el tratamiento farmacológico endovenoso recibido.",
+        "6": "Su acompañante que es su esposa refiere que está a pocos días de salir del hospital, pero le preocupa otras necesidades de su esposo en estos momentos.",
+        "7": "Bien pues acompáñeme a valorar al paciente, lea atentamente las preguntas y respuestas del caso."
+      }
+    },
+    "scene2": {
+      "screenTitle": "Caso 1. Preguntas a Paciente",
+      "title": "Preguntas al paciente",
+      "questions": {
+        "question1": "1. ¿Cómo se encuentra?",
+        "question2": "2. ¿Sabe usted en qué lugar se encuentra?",
+        "question3": "3. ¿Qué elementos de los que observa aquí en su habitación los encuentra también en la sala de su hogar?",
+        "question4": "4. ¿Sabe cuánto tendría ahorrado en total?",
+        "question5": "5. ¿Cuáles son los nombres de sus hijas desde la mayor a la menor?",
+        "question6": "6. ¿Podría por favor levantar sus brazos?",
+        "question7": "7. ¿Puede cerrar los ojos y me puede indicar hacia qué dirección le estoy movilizando su brazo derecho e izquierdo?"
+      },
+      "questionDialogs": {
+        "question1": {
+          "screenTitle": "Caso 1. Pregunta 1",
+          "dialog": {
+            "0": "Buen día Señor C.J.M, ¿Cómo se encuentra?",
+            "1": "...enfer-mo no puu-ee-do hacer na-dda."
+          },
+          "followUpDialog": {
+            "0": "El paciente presenta una marcha hemipléjica."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Cálculo.",
+                "2": "Percepción.",
+                "3": "Pensamiento.",
+                "4": "Conciencia."
+              }
+            },
+            "1": {
+              "question": "¿Cómo se define la conciencia?",
+              "answers": {
+                "1": "Capacidad para fijar, retener una experiencia en el sistema nervioso central y la habilidad para evocar esa experiencia registrada anteriormente.",
+                "2": "Capacidad para generalizar, juzgar situaciones reales y actuar con base en valores culturales establecidos.",
+                "3": "Estado en el que la persona tiene la capacidad de reconocer su propia existencia a través de la percepción de estímulos internos y externos que lo afectan y de sus procesos mentales.",
+                "4": "Es la orientación hacia un objetivo específico o la conducción a sacar conclusiones reales a partir de la producción de ideas, símbolos y asociaciones."
+              }
+            }
+          }
+        },
+        "question2": {
+          "screenTitle": "Caso 1. Pregunta 2",
+          "dialog": {
+            "0": "¿Sabe usted en qué lugar se encuentra?",
+            "1": "¿En mi casa? (Lo dice con dificultad)",
+            "2": "¿Sabe en qué año estamos?",
+            "3": "Estamos... en el... 2007?. (Lo dice con dificultad)"
+          },
+          "followUpDialog": {
+            "0": "El paciente se encuentra desorientado alopsiquicamente en tiempo y lugar"
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Calculo.",
+                "2": "Orientación.",
+                "3": "Pensamiento.",
+                "4": "Conciencia."
+              }
+            },
+            "1": {
+              "question": "¿Qué órganos del sistema nervioso del señor C.J.M. se encuentran alterados y que intervienen en la función cognoscitiva de orientación?",
+              "answers": {
+                "1": "Hemisferio cerebral derecho.",
+                "2": "Hemisferio cerebeloso derecho.",
+                "3": "Puente de varolio.",
+                "4": "Bulbo raquídeo."
+              }
+            }
+          }
+        }
+      }
+    },
+    "scene3": "Pruebas de valoración",
+    "scene4": "Valoración",
+    "scene5": "Quiz"
+  }
+}
+

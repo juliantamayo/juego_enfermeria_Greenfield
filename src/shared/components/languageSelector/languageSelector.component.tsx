@@ -1,7 +1,7 @@
-import React from 'react';
-import { Modal, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { Language } from '../../enums/language.enum';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { Modal, View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { Language } from "../../enums/language.enum";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   visible: boolean;
@@ -16,18 +16,18 @@ const LanguageSelectorModal: React.FC<Props> = ({ visible, onClose, onSelectLang
     <Modal visible={visible} transparent animationType="slide">
       <View style={styles.overlay}>
         <View style={styles.container}>
-          <Text style={styles.title}>{t('settings.changeLanguage')}</Text>
+          <Text style={styles.title}>{t("settings.changeLanguage")}</Text>
 
           <TouchableOpacity style={styles.button} onPress={() => onSelectLanguage(Language.SPANISH)}>
-            <Text style={styles.buttonText}>{t('language.spanish')}</Text>
+            <Text style={styles.buttonText}>{t("settings.language.spanish")}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.button} onPress={() => onSelectLanguage(Language.ENGLISH)}>
-            <Text style={styles.buttonText}>{t('language.english')}</Text>
+            <Text style={styles.buttonText}>{t("settings.language.english")}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={[styles.button, styles.closeButton]} onPress={onClose}>
-            <Text style={styles.buttonText}>{t('settings.close')}</Text>
+            <Text style={styles.buttonText}>{t("settings.close")}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -40,36 +40,36 @@ export default LanguageSelectorModal;
 const styles = StyleSheet.create({
   overlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: "rgba(0,0,0,0.5)",
+    justifyContent: "center",
+    alignItems: "center",
   },
   container: {
     width: 300,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 10,
     padding: 20,
-    alignItems: 'center',
+    alignItems: "center",
   },
   title: {
     fontSize: 18,
     marginBottom: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   button: {
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: '#00bcbc',
+    backgroundColor: "#00bcbc",
     borderRadius: 6,
     marginTop: 10,
-    width: '100%',
-    alignItems: 'center',
+    width: "100%",
+    alignItems: "center",
   },
   closeButton: {
-    backgroundColor: '#aaa',
+    backgroundColor: "#aaa",
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
   },
 });

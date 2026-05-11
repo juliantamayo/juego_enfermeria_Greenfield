@@ -1,15 +1,17 @@
-import { TextStyle, ViewStyle, ImageSourcePropType } from "react-native";
+import type { ComponentProps } from "react";
+import { TextStyle, ViewStyle, ImageSourcePropType, StyleProp } from "react-native";
 import { ButtonType } from "../enums/button-type.enum";
 import { Ionicons } from "@expo/vector-icons";
 
 export interface ButtonProps {
   type?: ButtonType;
-  iconName?: React.ComponentProps<typeof Ionicons>["name"];
+  iconName?: ComponentProps<typeof Ionicons>["name"];
   iconSize?: number;
   iconColor?: string;
   image?: ImageSourcePropType;
   text?: string;
-  textStyle?: TextStyle;
-  style?: ViewStyle;
+  textStyle?: StyleProp<TextStyle>;
+  style?: StyleProp<ViewStyle>;
+  disabled?: boolean;
   onPress: () => void;
 }

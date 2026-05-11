@@ -1,0 +1,30 @@
+{
+  "common": {
+    "titlePage": {
+      "home": "Juego Valoración",
+      "settings": "Configuración",
+      "caseMenu": "Menú Casos de Estudio",
+      "Case1Menu": "Menú Caso 1"
+    },
+    "roles": {
+      "nurse": "ENFERMERA",
+      "patientCjm": "SEÑOR C.J.M"
+    },
+    "sceneComplete": {
+      "title": "Escena completada",
+      "message": "Guarda tu progreso para habilitar la siguiente escena.",
+      "saveButton": "Guardar",
+      "savingButton": "Guardando...",
+      "savedTitle": "Guardado",
+      "savedMessage": "Progreso guardado correctamente.",
+      "errorTitle": "Error",
+      "errorMessage": "No se pudo guardar el progreso. Intentalo de nuevo."
+    }
+  },
+  "exit": {
+    "title": "Salir",
+    "message": "¿Quieres salir de la app?",
+    "cancel": "Cancelar",
+    "confirm": "Sí"
+  }
+}
