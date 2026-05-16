@@ -119,6 +119,36 @@
               }
             }
           }
+        },
+        "question4": {
+          "screenTitle": "Caso 1. Pregunta 4",
+          "dialog": {
+            "0": "Por favor, dígame si usted tiene $1.000.000 de pesos en un banco, $2.000.000 de pesos en otro y en un tercero $750.000 pesos ¿sabe cuánto tendría ahorrado en total?.",
+            "1": "Tendríamos…. no se…. $4.000.000? (Lo dice con dificultad)"
+          },
+          "followUpDialog": {
+            "0": "El paciente se evidencia atento, presenta dificultad para usar los números o hacer cálculos, presenta acalculia."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Pensamiento",
+                "2": "Lenguaje y evocación",
+                "3": "Orientación",
+                "4": "Atención y cálculo"
+              }
+            },
+            "1": {
+              "question": "¿Qué prueba puede realizar en la valoración de la atención?",
+              "answers": {
+                "1": "Inversión de series automáticas (días de la semana o meses del año en forma inversa o deletrear la palabra MUNDO al revés.)",
+                "2": "Dibujar un cubo o figuras cúbicas.",
+                "3": "Memorizar palabras (3-5) luego de 3-5 minutos preguntar.",
+                "4": "Acontecimientos pasados verificables."
+              }
+            }
+          }
         }
       }
     },
@@ -128,5 +158,6 @@
     "scene6": "Proceso de Atención de Enfermería"
   }
 }
+
 
 

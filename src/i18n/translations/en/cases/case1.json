@@ -119,6 +119,36 @@
               }
             }
           }
+        },
+        "question4": {
+          "screenTitle": "Case 1. Question 4",
+          "dialog": {
+            "0": "Please tell me, if you had $1,000,000 pesos in one bank, $2,000,000 pesos in another, and $750,000 pesos in a third one, do you know how much you would have saved in total?.",
+            "1": "We would have.... I do not know.... $4,000,000? (He says it with difficulty)"
+          },
+          "followUpDialog": {
+            "0": "The patient appears attentive, presents difficulty using numbers or performing calculations, and shows acalculia."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Thought",
+                "2": "Language and recall",
+                "3": "Orientation",
+                "4": "Attention and calculation"
+              }
+            },
+            "1": {
+              "question": "Which test can be performed when assessing attention?",
+              "answers": {
+                "1": "Reversal of automatic series (days of the week or months of the year in reverse order, or spelling the word WORLD backward.)",
+                "2": "Draw a cube or cubic figures.",
+                "3": "Memorize words (3-5) and ask again after 3-5 minutes.",
+                "4": "Verifiable past events."
+              }
+            }
+          }
         }
       }
     },
@@ -128,4 +158,5 @@
     "scene6": "Nursing Care Process"
   }
 }
+
 
