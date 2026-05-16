@@ -149,6 +149,45 @@
               }
             }
           }
+        },
+        "question5": {
+          "screenTitle": "Caso 1. Pregunta 5",
+          "dialog": {
+            "0": "¿Cuáles son los nombres de sus hijas desde la mayor a la menor? ",
+            "1": "L-l-o-r-e-n-a-a-a, L-l a-a-u-u-r-a-a y L-l-u-u-c-i-a. (Los dice de manera incomprensible, con dificultad y de manera lenta) "
+          },
+          "followUpDialog": {
+            "0": "Afasia de expresión y apraxia verbal (El lenguaje pierde fluidez y es incomprensible. El paciente puede entender lo que se le dice y tienen conciencia de su déficit)."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Pensamiento",
+                "2": "Lenguaje y evocación",
+                "3": "Fascies",
+                "4": "Orientación"
+              }
+            },
+            "1": {
+              "question": "¿Qué órganos del sistema nervioso del señor C.J.M se encuentran alterados y que intervienen en la función cognoscitiva de lenguaje?",
+              "answers": {
+                "1": "Hemisferio cerebral derecho y área de Wernicke.",
+                "2": "Hemisferio cerebral izquierdo, área de broca, fibras nerviosas eferentes.",
+                "3": "Fibras nerviosas eferentes y área de Wernicke.",
+                "4": "Hemisferio cerebeloso derecho y área de broca."
+              }
+            },
+            "2": {
+              "question": "¿Cuáles son las estructuras del sistema nervioso que intervienen para que el señor C.J.M pueda recordar en orden de mayor a menor el nombre de sus hijas y evocar esos recuerdos?",
+              "answers": {
+                "1": "Cerebelo, corteza motora.",
+                "2": "Hipocampo, lóbulo parietal.",
+                "3": "Sistema límbico, lóbulo temporal medial.",
+                "4": "Amígdala, Epitálamo."
+              }
+            }
+          }
         }
       }
     },
