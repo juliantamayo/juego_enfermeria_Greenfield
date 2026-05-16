@@ -57,8 +57,8 @@ const Scene2Screen = () => {
   const handleQuestionPress = async (questionId: string) => {
     const question = case1Scene2Questions.find((item) => item.id === questionId);
 
-    if (question?.dialogId && question.flowScreen) {
-      navigation.navigate(question.flowScreen, { questionId: question.dialogId });
+    if (question?.dialogId) {
+      navigation.navigate("Scene2QuestionFlowScreen", { questionId: question.dialogId });
       return;
     }
 

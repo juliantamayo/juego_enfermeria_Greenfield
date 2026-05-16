@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ImageBackground, ScrollView, Text, View } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import type { RouteProp } from "@react-navigation/native";
@@ -11,7 +11,7 @@ import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import type { RootStackParamList } from "@navigation/types";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { GlobalStyles } from "@styles-theme";
-import scene2Question2Dialogs from "./data/question2Flow";
+import scene2QuestionFlows from "./data/questionFlows";
 import case1Scene2Questions from "./data/scene2Questions";
 import { dialogStyles } from "../../../shared/styles/dialog.styles";
 import { questionFlowStyles } from "./styles/question-flow.styles";
@@ -23,7 +23,7 @@ const quizBackgroundImage = require("@images/layout/background.png");
 const FEEDBACK_DELAY_MS = 800;
 const implementedQuestionIds = case1Scene2Questions.filter((question) => question.dialogId).map((question) => question.id);
 
-type Scene2Question2FlowRouteProp = RouteProp<RootStackParamList, "Scene2Question2FlowScreen">;
+type Scene2QuestionFlowRouteProp = RouteProp<RootStackParamList, "Scene2QuestionFlowScreen">;
 type QuestionPhase = "dialog" | "quiz" | "followUpDialog";
 
 const shuffleAnswers = <T,>(answers: T[]) => {
@@ -37,10 +37,10 @@ const shuffleAnswers = <T,>(answers: T[]) => {
   return shuffledAnswers;
 };
 
-const Scene2Question2FlowScreen = () => {
+const Scene2QuestionFlowScreen = () => {
   const { t } = useTranslation();
   const navigation = useAppNavigation();
-  const route = useRoute<Scene2Question2FlowRouteProp>();
+  const route = useRoute<Scene2QuestionFlowRouteProp>();
   const { questionId } = route.params;
   const [dialogStep, setDialogStep] = useState(0);
   const [quizStep, setQuizStep] = useState(0);
@@ -50,7 +50,7 @@ const Scene2Question2FlowScreen = () => {
   const feedbackTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useScreenTitle(`case1.scene2.questionDialogs.${questionId}.screenTitle`);
 
-  const currentQuestionFlow = scene2Question2Dialogs[questionId];
+  const currentQuestionFlow = scene2QuestionFlows[questionId];
   const showQuiz = phase === "quiz";
   const activeDialogEntries =
     phase === "followUpDialog" ? currentQuestionFlow.followUpDialog ?? currentQuestionFlow.dialog : currentQuestionFlow.dialog;
@@ -216,4 +216,4 @@ const Scene2Question2FlowScreen = () => {
   );
 };
 
-export default Scene2Question2FlowScreen;
+export default Scene2QuestionFlowScreen;
