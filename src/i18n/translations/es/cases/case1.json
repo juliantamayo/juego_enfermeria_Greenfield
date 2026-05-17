@@ -188,6 +188,27 @@
               }
             }
           }
+        },
+        "question6": {
+          "screenTitle": "Caso 1. Pregunta 6",
+          "dialog": {
+            "0": "Por favor levante sus extremidades superiores (brazos) al frente.",
+            "1": "Se evidencia el brazo derecho espástico (no lo puede levantar), el brazo izquierdo con arco de movimiento completo contra gravedad y resistencia al tratar de bajarlos."
+          },
+          "followUpDialog": {
+            "0": "Fuerza muscular grado 2 en brazo derecho - hemiparesia derecha, espasticidad grado 3."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el área que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Fuerza Muscular.",
+                "2": "Lenguaje y evocación.",
+                "3": "Sensibilidad.",
+                "4": "Orientación."
+              }
+            }
+          }
         }
       }
     },
