@@ -119,6 +119,120 @@
               }
             }
           }
+        },
+        "question4": {
+          "screenTitle": "Case 1. Question 4",
+          "dialog": {
+            "0": "Please tell me, if you had $1,000,000 pesos in one bank, $2,000,000 pesos in another, and $750,000 pesos in a third one, do you know how much you would have saved in total?.",
+            "1": "We would have.... I do not know.... $4,000,000? (He says it with difficulty)"
+          },
+          "followUpDialog": {
+            "0": "The patient appears attentive, presents difficulty using numbers or performing calculations, and shows acalculia."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Thought",
+                "2": "Language and recall",
+                "3": "Orientation",
+                "4": "Attention and calculation"
+              }
+            },
+            "1": {
+              "question": "Which test can be performed when assessing attention?",
+              "answers": {
+                "1": "Reversal of automatic series (days of the week or months of the year in reverse order, or spelling the word WORLD backward.)",
+                "2": "Draw a cube or cubic figures.",
+                "3": "Memorize words (3-5) and ask again after 3-5 minutes.",
+                "4": "Verifiable past events."
+              }
+            }
+          }
+        },
+        "question5": {
+          "screenTitle": "Case 1. Question 5",
+          "dialog": {
+            "0": "What are your daughters' names from oldest to youngest?",
+            "1": "L-l-o-r-e-n-a-a-a, L-l a-a-u-u-r-a-a and L-l-u-u-c-i-a. (He says them incomprehensibly, with difficulty, and slowly)"
+          },
+          "followUpDialog": {
+            "0": "Expressive aphasia and verbal apraxia (Language loses fluency and becomes incomprehensible. The patient can understand what is said and is aware of their deficit)."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Thought",
+                "2": "Language and recall",
+                "3": "Facies",
+                "4": "Orientation"
+              }
+            },
+            "1": {
+              "question": "Which organs of Mr. C.J.M's nervous system are altered and intervene in the cognitive function of language?",
+              "answers": {
+                "1": "Right cerebral hemisphere and Wernicke's area.",
+                "2": "Left cerebral hemisphere, Broca's area, and efferent nerve fibers.",
+                "3": "Efferent nerve fibers and Wernicke's area.",
+                "4": "Right cerebellar hemisphere and Broca's area."
+              }
+            },
+            "2": {
+              "question": "Which nervous system structures intervene so Mr. C.J.M can remember his daughters' names from oldest to youngest and recall those memories?",
+              "answers": {
+                "1": "Cerebellum, motor cortex.",
+                "2": "Hippocampus, parietal lobe.",
+                "3": "Limbic system, medial temporal lobe.",
+                "4": "Amygdala, epithalamus."
+              }
+            }
+          }
+        },
+        "question6": {
+          "screenTitle": "Case 1. Question 6",
+          "dialog": {
+            "0": "Please raise your upper extremities (arms) forward.",
+            "1": "The right arm is observed to be spastic (he cannot lift it), while the left arm has a full range of motion against gravity and resistance when attempting to lower it."
+          },
+          "followUpDialog": {
+            "0": "Grade 2 muscle strength in the right arm - right hemiparesis, grade 3 spasticity."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which area is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Muscle strength.",
+                "2": "Language and recall.",
+                "3": "Sensitivity.",
+                "4": "Orientation."
+              }
+            }
+          }
+        },
+        "question7": {
+          "screenTitle": "Case 1. Question 7",
+          "dialog": {
+            "0": "Mr. C.J.M, can you close your eyes and tell me which direction I am moving your right arm?",
+            "1": ".......... ",
+            "2": "You... are rai...sing my le...left arm.... up."
+          },
+          "followUpDialog": {
+            "0": "The patient preserves sensation in the left upper limb. ",
+            "1": "However, he does not recognize his right arm as part of his body, nor the position and direction in which the nurse moves the limb. ",
+            "2": "The patient presents hemineglect and right hypoesthesia. "
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Sensitivity",
+                "2": "Facies",
+                "3": "Affect and psychomotor area",
+                "4": "Orientation"
+              }
+            }
+          }
         }
       }
     },
@@ -128,4 +242,5 @@
     "scene6": "Nursing Care Process"
   }
 }
+
 

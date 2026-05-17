@@ -26,13 +26,7 @@ export type RootStackParamList = {
   };
   Scene1Screen: undefined;
   Scene2Screen: undefined;
-  Scene2Question1FlowScreen: {
-    questionId: string;
-  };
-  Scene2Question2FlowScreen: {
-    questionId: string;
-  };
-  Scene2Question3FlowScreen: {
+  Scene2QuestionFlowScreen: {
     questionId: string;
   };
   Scene3Screen: undefined;

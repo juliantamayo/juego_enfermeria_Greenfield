@@ -119,6 +119,120 @@
               }
             }
           }
+        },
+        "question4": {
+          "screenTitle": "Caso 1. Pregunta 4",
+          "dialog": {
+            "0": "Por favor, dígame si usted tiene $1.000.000 de pesos en un banco, $2.000.000 de pesos en otro y en un tercero $750.000 pesos ¿sabe cuánto tendría ahorrado en total?.",
+            "1": "Tendríamos…. no se…. $4.000.000? (Lo dice con dificultad)"
+          },
+          "followUpDialog": {
+            "0": "El paciente se evidencia atento, presenta dificultad para usar los números o hacer cálculos, presenta acalculia."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Pensamiento",
+                "2": "Lenguaje y evocación",
+                "3": "Orientación",
+                "4": "Atención y cálculo"
+              }
+            },
+            "1": {
+              "question": "¿Qué prueba puede realizar en la valoración de la atención?",
+              "answers": {
+                "1": "Inversión de series automáticas (días de la semana o meses del año en forma inversa o deletrear la palabra MUNDO al revés.)",
+                "2": "Dibujar un cubo o figuras cúbicas.",
+                "3": "Memorizar palabras (3-5) luego de 3-5 minutos preguntar.",
+                "4": "Acontecimientos pasados verificables."
+              }
+            }
+          }
+        },
+        "question5": {
+          "screenTitle": "Caso 1. Pregunta 5",
+          "dialog": {
+            "0": "¿Cuáles son los nombres de sus hijas desde la mayor a la menor? ",
+            "1": "L-l-o-r-e-n-a-a-a, L-l a-a-u-u-r-a-a y L-l-u-u-c-i-a. (Los dice de manera incomprensible, con dificultad y de manera lenta) "
+          },
+          "followUpDialog": {
+            "0": "Afasia de expresión y apraxia verbal (El lenguaje pierde fluidez y es incomprensible. El paciente puede entender lo que se le dice y tienen conciencia de su déficit)."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Pensamiento",
+                "2": "Lenguaje y evocación",
+                "3": "Fascies",
+                "4": "Orientación"
+              }
+            },
+            "1": {
+              "question": "¿Qué órganos del sistema nervioso del señor C.J.M se encuentran alterados y que intervienen en la función cognoscitiva de lenguaje?",
+              "answers": {
+                "1": "Hemisferio cerebral derecho y área de Wernicke.",
+                "2": "Hemisferio cerebral izquierdo, área de broca, fibras nerviosas eferentes.",
+                "3": "Fibras nerviosas eferentes y área de Wernicke.",
+                "4": "Hemisferio cerebeloso derecho y área de broca."
+              }
+            },
+            "2": {
+              "question": "¿Cuáles son las estructuras del sistema nervioso que intervienen para que el señor C.J.M pueda recordar en orden de mayor a menor el nombre de sus hijas y evocar esos recuerdos?",
+              "answers": {
+                "1": "Cerebelo, corteza motora.",
+                "2": "Hipocampo, lóbulo parietal.",
+                "3": "Sistema límbico, lóbulo temporal medial.",
+                "4": "Amígdala, Epitálamo."
+              }
+            }
+          }
+        },
+        "question6": {
+          "screenTitle": "Caso 1. Pregunta 6",
+          "dialog": {
+            "0": "Por favor levante sus extremidades superiores (brazos) al frente.",
+            "1": "Se evidencia el brazo derecho espástico (no lo puede levantar), el brazo izquierdo con arco de movimiento completo contra gravedad y resistencia al tratar de bajarlos."
+          },
+          "followUpDialog": {
+            "0": "Fuerza muscular grado 2 en brazo derecho - hemiparesia derecha, espasticidad grado 3."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el área que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Fuerza Muscular.",
+                "2": "Lenguaje y evocación.",
+                "3": "Sensibilidad.",
+                "4": "Orientación."
+              }
+            }
+          }
+        },
+        "question7": {
+          "screenTitle": "Caso 1. Pregunta 7",
+          "dialog": {
+            "0": "Señor C.J.M puede cerrar los ojos y me puede indicar hacia qué dirección le estoy movilizando su brazo derecho?",
+            "1": ".......... ",
+            "2": "Me... está levan...tando el bra...brazo izquierdo.... arriba."
+          },
+          "followUpDialog": {
+            "0": "El paciente conserva su sensibilidad en miembro superior izquierdo. ",
+            "1": "Pero no reconoce su brazo derecho como una parte de su cuerpo y tampoco la posición y la dirección hacia donde el enfermero mueve la extremidad. ",
+            "2": "El paciente presenta heminegligencia e hipoestesia derecha. "
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Sensibilidad",
+                "2": "Fascies",
+                "3": "Afecto y área psicomotora",
+                "4": "Orientación"
+              }
+            }
+          }
         }
       }
     },
@@ -128,5 +242,6 @@
     "scene6": "Proceso de Atención de Enfermería"
   }
 }
+
 
 
