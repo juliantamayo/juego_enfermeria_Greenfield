@@ -188,6 +188,27 @@
               }
             }
           }
+        },
+        "question6": {
+          "screenTitle": "Case 1. Question 6",
+          "dialog": {
+            "0": "Please raise your upper extremities (arms) forward.",
+            "1": "The right arm is observed to be spastic (he cannot lift it), while the left arm has a full range of motion against gravity and resistance when attempting to lower it."
+          },
+          "followUpDialog": {
+            "0": "Grade 2 muscle strength in the right arm - right hemiparesis, grade 3 spasticity."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which area is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Muscle strength.",
+                "2": "Language and recall.",
+                "3": "Sensitivity.",
+                "4": "Orientation."
+              }
+            }
+          }
         }
       }
     },
