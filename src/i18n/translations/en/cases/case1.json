@@ -209,6 +209,30 @@
               }
             }
           }
+        },
+        "question7": {
+          "screenTitle": "Case 1. Question 7",
+          "dialog": {
+            "0": "Mr. C.J.M, can you close your eyes and tell me which direction I am moving your right arm?",
+            "1": ".......... ",
+            "2": "You... are rai...sing my le...left arm.... up."
+          },
+          "followUpDialog": {
+            "0": "The patient preserves sensation in the left upper limb. ",
+            "1": "However, he does not recognize his right arm as part of his body, nor the position and direction in which the nurse moves the limb. ",
+            "2": "The patient presents hemineglect and right hypoesthesia. "
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Sensitivity",
+                "2": "Facies",
+                "3": "Affect and psychomotor area",
+                "4": "Orientation"
+              }
+            }
+          }
         }
       }
     },

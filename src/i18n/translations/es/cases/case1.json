@@ -209,6 +209,30 @@
               }
             }
           }
+        },
+        "question7": {
+          "screenTitle": "Caso 1. Pregunta 7",
+          "dialog": {
+            "0": "Señor C.J.M puede cerrar los ojos y me puede indicar hacia qué dirección le estoy movilizando su brazo derecho?",
+            "1": ".......... ",
+            "2": "Me... está levan...tando el bra...brazo izquierdo.... arriba."
+          },
+          "followUpDialog": {
+            "0": "El paciente conserva su sensibilidad en miembro superior izquierdo. ",
+            "1": "Pero no reconoce su brazo derecho como una parte de su cuerpo y tampoco la posición y la dirección hacia donde el enfermero mueve la extremidad. ",
+            "2": "El paciente presenta heminegligencia e hipoestesia derecha. "
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Sensibilidad",
+                "2": "Fascies",
+                "3": "Afecto y área psicomotora",
+                "4": "Orientación"
+              }
+            }
+          }
         }
       }
     },
