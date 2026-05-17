@@ -34,6 +34,7 @@ const case1Scene2Questions: Case1Scene2Question[] = [
     id: "question5",
     titleKey: "case1.scene2.questions.question5",
     colorVariant: "secondary",
+    dialogId: "question5",
   },
   {
     id: "question6",

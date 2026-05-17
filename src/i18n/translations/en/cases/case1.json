@@ -149,6 +149,45 @@
               }
             }
           }
+        },
+        "question5": {
+          "screenTitle": "Case 1. Question 5",
+          "dialog": {
+            "0": "What are your daughters' names from oldest to youngest?",
+            "1": "L-l-o-r-e-n-a-a-a, L-l a-a-u-u-r-a-a and L-l-u-u-c-i-a. (He says them incomprehensibly, with difficulty, and slowly)"
+          },
+          "followUpDialog": {
+            "0": "Expressive aphasia and verbal apraxia (Language loses fluency and becomes incomprehensible. The patient can understand what is said and is aware of their deficit)."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental sphere is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Thought",
+                "2": "Language and recall",
+                "3": "Facies",
+                "4": "Orientation"
+              }
+            },
+            "1": {
+              "question": "Which organs of Mr. C.J.M's nervous system are altered and intervene in the cognitive function of language?",
+              "answers": {
+                "1": "Right cerebral hemisphere and Wernicke's area.",
+                "2": "Left cerebral hemisphere, Broca's area, and efferent nerve fibers.",
+                "3": "Efferent nerve fibers and Wernicke's area.",
+                "4": "Right cerebellar hemisphere and Broca's area."
+              }
+            },
+            "2": {
+              "question": "Which nervous system structures intervene so Mr. C.J.M can remember his daughters' names from oldest to youngest and recall those memories?",
+              "answers": {
+                "1": "Cerebellum, motor cortex.",
+                "2": "Hippocampus, parietal lobe.",
+                "3": "Limbic system, medial temporal lobe.",
+                "4": "Amygdala, epithalamus."
+              }
+            }
+          }
         }
       }
     },
