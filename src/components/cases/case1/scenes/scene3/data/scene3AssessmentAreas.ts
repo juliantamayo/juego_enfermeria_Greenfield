@@ -42,19 +42,22 @@ const scene3AssessmentAreas: Scene3AssessmentArea[] = [
     id: "area5",
     titleKey: "case1.scene3.assessmentAreas.area5.title",
     descriptionKey: "case1.scene3.assessmentAreas.area5.description",
-    iconName: "water-outline",
+    iconName: "body-outline",
+    flowId: "area5",
   },
   {
     id: "area6",
     titleKey: "case1.scene3.assessmentAreas.area6.title",
     descriptionKey: "case1.scene3.assessmentAreas.area6.description",
-    iconName: "walk-outline",
+    iconName: "footsteps-outline",
+    flowId: "area6",
   },
   {
     id: "area7",
     titleKey: "case1.scene3.assessmentAreas.area7.title",
     descriptionKey: "case1.scene3.assessmentAreas.area7.description",
-    iconName: "document-text-outline",
+    iconName: "finger-print-outline",
+    flowId: "area7",
   },
 ];
 

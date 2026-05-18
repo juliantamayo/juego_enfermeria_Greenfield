@@ -257,16 +257,16 @@
           "description": "Muscle spasticity"
         },
         "area5": {
-          "title": "Area 5",
-          "description": "Lower left zone"
+          "title": "Active mobility",
+          "description": "Functional limitation"
         },
         "area6": {
-          "title": "Area 6",
-          "description": "Lower right zone"
+          "title": "Gait assessment",
+          "description": "Hemiplegic gait"
         },
         "area7": {
-          "title": "Area 7",
-          "description": "Central zone"
+          "title": "Cortical sensitivity",
+          "description": "Tactile astereognosis"
         }
       },
       "assessmentDialogs": {
@@ -396,6 +396,94 @@
               "answers": {
                 "1": "Spastic right lower limb (contracted muscles) that he cannot lift, and left lower limb with full range of motion against gravity and resistance.",
                 "2": "Right and left lower limbs with full range of motion against gravity and resistance."
+              }
+            }
+          }
+        },
+        "area5": {
+          "screenTitle": "Case 1. Active Mobility",
+          "dialog": {
+            "0": "I must observe the patient very carefully.",
+            "1": "It is very important to make a good observation of the patient."
+          },
+          "followUpDialog": {
+            "0": "Dependent patient; at this time his autonomy is limited in activities of daily living such as personal grooming, dressing, and sitting.",
+            "1": "Because he does not have sufficient dominance and strength in his right hemibody, he appears irritable or in a bad mood and requires help from his wife."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Plantar reflex.",
+                "2": "Bicipital reflex.",
+                "3": "Palpation percussion.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Patient with limited movement in the right hemibody (arm, trunk, hip, and right leg).",
+                "2": "The patient is able to perform all movements with the required range and symmetry."
+              }
+            }
+          }
+        },
+        "area6": {
+          "screenTitle": "Case 1. Gait",
+          "dialog": {
+            "0": "Mr. C.J.M., could you please walk a short distance and come back?"
+          },
+          "followUpDialog": {
+            "0": "The patient presents a hemiplegic gait."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Plantar reflex.",
+                "2": "Dynamic posture and gait assessment.",
+                "3": "Palpation percussion.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "The lower extremity on the plegic side is extended and spastic; the foot is somewhat dropped and deviated medially. The affected leg advances in a semicircle and drags the outer edge and tip of the foot along its path. The plegic arm remains in contact with the trunk, the forearm flexed, and the hand pronated. When the other leg advances, it only reaches the position of the plegic leg and does not go beyond it. The previous statement is:",
+              "answers": {
+                "1": "Incorrect.",
+                "2": "Correct."
+              }
+            }
+          }
+        },
+        "area7": {
+          "screenTitle": "Case 1. Sensitivity",
+          "dialog": {
+            "0": "Mr. C.J.M. can you identify the object in your right hand?",
+            "1": "No",
+            "2": "Can you identify this object with your left hand?",
+            "3": "It is a ke...y..."
+          },
+          "followUpDialog": {
+            "0": "With his eyes closed and using only touch, the patient recognizes keys and coins with his left hand, but recognizes nothing with his right hand.",
+            "1": "Tactile astereognosis in the right upper limb and stereognosis in the left upper limb.",
+            "2": "Inability to identify objects through touch."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Cortical sensitivity.",
+                "2": "Muscle strength.",
+                "3": "Thermal and tactile sensation.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Tactile astereognosis in the left upper limb and stereognosis in the right upper limb.",
+                "2": "Tactile astereognosis in the right upper limb and stereognosis in the left upper limb."
               }
             }
           }
