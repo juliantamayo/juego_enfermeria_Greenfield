@@ -11,7 +11,8 @@ import SceneCompleteScreen from "@components/cases/SceneComplete.screen";
 import Scene1Screen from "@components/cases/case1/scenes/scene1/Scene1.screen";
 import Scene2Screen from "@components/cases/case1/scenes/scene2/Scene2.screen";
 import Scene2QuestionFlowScreen from "@components/cases/case1/scenes/scene2/Scene2QuestionFlow.screen";
-import Scene3Screen from "@components/cases/case1/Scene3.screen";
+import Scene3Screen from "@components/cases/case1/scenes/scene3/Scene3.screen";
+import Scene3AssessmentFlowScreen from "@components/cases/case1/scenes/scene3/Scene3AssessmentFlow.screen";
 import Scene4Screen from "@components/cases/case1/scenes/scene4/Scene4.screen";
 import Scene5Screen from "@components/cases/case1/scenes/scene5/Scene5.screen";
 import Scene6Screen from "@components/cases/case1/scenes/scene6/Scene6.screen";
@@ -87,6 +88,13 @@ export const screens: ScreenEntry[] = [
   {
     name: "Scene3Screen",
     component: Scene3Screen,
+    options: {
+      headerBackVisible: false,
+    },
+  },
+  {
+    name: "Scene3AssessmentFlowScreen",
+    component: Scene3AssessmentFlowScreen,
     options: {
       headerBackVisible: false,
     },

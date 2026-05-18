@@ -88,8 +88,11 @@ const Scene2Screen = () => {
           },
         ]}
       />
-      <View style={styles.container}>
-        <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
+      <View style={GlobalStyles.fullWidthContainer}>
+        <ScrollView
+          style={GlobalStyles.scrollBase}
+          contentContainerStyle={[GlobalStyles.scrollContentBase, styles.scrollContent]}
+        >
           {case1Scene2Questions.map((question) => {
             const isCompleted = completedQuestionIds.includes(question.id);
 
@@ -111,14 +114,6 @@ const Scene2Screen = () => {
 export default Scene2Screen;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: "100%",
-  },
-  scroll: {
-    flex: 1,
-    width: "100%",
-  },
   scrollContent: {
     gap: Spacing.md,
     paddingHorizontal: Spacing.xl,

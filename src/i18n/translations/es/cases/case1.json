@@ -236,7 +236,82 @@
         }
       }
     },
-    "scene3": "Pruebas de valoración",
+    "scene3": {
+      "screenTitle": "Caso 1. Pruebas de valoración",
+      "title": "Pruebas de valoración",
+      "assessmentAreas": {
+        "area1": {
+          "title": "Campo visual",
+          "description": "Valoración neurológica"
+        },
+        "area2": {
+          "title": "Área 2",
+          "description": "Zona superior derecha"
+        },
+        "area3": {
+          "title": "Área 3",
+          "description": "Zona media izquierda"
+        },
+        "area4": {
+          "title": "Área 4",
+          "description": "Zona media derecha"
+        },
+        "area5": {
+          "title": "Área 5",
+          "description": "Zona inferior izquierda"
+        },
+        "area6": {
+          "title": "Área 6",
+          "description": "Zona inferior derecha"
+        },
+        "area7": {
+          "title": "Área 7",
+          "description": "Zona central"
+        },
+        "area8": {
+          "title": "Área 8",
+          "description": "Zona complementaria"
+        },
+        "area9": {
+          "title": "Área 9",
+          "description": "Zona complementaria"
+        }
+      },
+      "assessmentDialogs": {
+        "area1": {
+          "screenTitle": "Caso 1. Campo visual",
+          "dialog": {
+            "0": "Señor C.J.M. ¿Puede por favor cubrirse el ojo izquierdo?",
+            "1": "Por favor avíseme cuando vea aparecer mi dedo en su campo visual.",
+            "2": "El paciente no distingue los movimientos que ocurren en el lado derecho.",
+            "3": "No da ningún tipo de manifestación cuando el estímulo está por el lado derecho...",
+            "4": "Es decir no ve aparecer el dedo o el bolígrafo en su campo visual derecho."
+          },
+          "followUpDialog": {
+            "0": "Hemianopsia homónima de un lado: en cada ojo se compromete la visión del mismo hemicampo.",
+            "1": "Hemianopsia homónima derecha en el caso del señor C.J.M."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Motilidad extrínseca del ojo.",
+                "2": "Campimetría por confrontación.",
+                "3": "Simetría y motilidad facial.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Hemianopsia homónima izquierda: en un solo ojo se compromete la visión del mismo hemicampo.",
+                "2": "Hemianopsia homónima derecha: en cada ojo se compromete la visión del mismo hemicampo."
+              }
+            }
+          }
+        }
+      }
+    },
     "scene4": "Valoración",
     "scene5": "Quiz",
     "scene6": "Proceso de Atención de Enfermería"

@@ -7,6 +7,11 @@ const brand = {
   secondaryDark: "#f9a94b",
   secondaryLight: "#fbe122",
   red: "#ff0000",
+  white: "#ffffff",
+  green: "#2E7D32",
+  greenDark: "#145A32",
+  beigeLight: "#F5E6D3",
+  yellowGold: "#FDB913",
 };
 
 const text = {

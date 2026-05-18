@@ -236,7 +236,82 @@
         }
       }
     },
-    "scene3": "Assessment tests",
+    "scene3": {
+      "screenTitle": "Case 1. Assessment Tests",
+      "title": "Assessment tests",
+      "assessmentAreas": {
+        "area1": {
+          "title": "Visual field",
+          "description": "Neurological assessment"
+        },
+        "area2": {
+          "title": "Area 2",
+          "description": "Upper right zone"
+        },
+        "area3": {
+          "title": "Area 3",
+          "description": "Middle left zone"
+        },
+        "area4": {
+          "title": "Area 4",
+          "description": "Middle right zone"
+        },
+        "area5": {
+          "title": "Area 5",
+          "description": "Lower left zone"
+        },
+        "area6": {
+          "title": "Area 6",
+          "description": "Lower right zone"
+        },
+        "area7": {
+          "title": "Area 7",
+          "description": "Central zone"
+        },
+        "area8": {
+          "title": "Area 8",
+          "description": "Additional zone"
+        },
+        "area9": {
+          "title": "Area 9",
+          "description": "Additional zone"
+        }
+      },
+      "assessmentDialogs": {
+        "area1": {
+          "screenTitle": "Case 1. Visual Field",
+          "dialog": {
+            "0": "Mr. C.J.M. Could you please cover your left eye?",
+            "1": "Please let me know when you see my finger appear in your visual field.",
+            "2": "The patient does not distinguish the movements occurring on the right side.",
+            "3": "He does not show any type of response when the stimulus is on the right side...",
+            "4": "In other words, he does not see the finger or pen appear in his right visual field."
+          },
+          "followUpDialog": {
+            "0": "Homonymous hemianopsia on one side: vision in the same hemifield is affected in each eye.",
+            "1": "Right homonymous hemianopsia in Mr. C.J.M.'s case."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Extraocular motility.",
+                "2": "Confrontation visual field test.",
+                "3": "Facial symmetry and motility.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Left homonymous hemianopsia: vision in the same hemifield is affected in only one eye.",
+                "2": "Right homonymous hemianopsia: vision in the same hemifield is affected in each eye."
+              }
+            }
+          }
+        }
+      }
+    },
     "scene4": "Assessment",
     "scene5": "Quiz",
     "scene6": "Nursing Care Process"
