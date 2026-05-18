@@ -4,6 +4,10 @@ const GlobalStyles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  fullWidthContainer: {
+    flex: 1,
+    width: "100%",
+  },
   body: {
     flex: 1,
     alignItems: "center",
@@ -15,6 +19,13 @@ const GlobalStyles = StyleSheet.create({
     flex: 1,
     width: "100%",
     paddingTop: 60,
+  },
+  scrollBase: {
+    flex: 1,
+    width: "100%",
+  },
+  scrollContentBase: {
+    width: "100%",
   },
   scrollContent: {
     flex: 1,
