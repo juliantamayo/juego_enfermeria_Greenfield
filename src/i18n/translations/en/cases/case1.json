@@ -245,8 +245,8 @@
           "description": "Neurological assessment"
         },
         "area2": {
-          "title": "Area 2",
-          "description": "Upper right zone"
+          "title": "Ocular motility",
+          "description": "Palpebral ptosis"
         },
         "area3": {
           "title": "Area 3",
@@ -306,6 +306,43 @@
               "answers": {
                 "1": "Left homonymous hemianopsia: vision in the same hemifield is affected in only one eye.",
                 "2": "Right homonymous hemianopsia: vision in the same hemifield is affected in each eye."
+              }
+            }
+          }
+        },
+        "area2": {
+          "screenTitle": "Case 1. Extraocular Motility",
+          "dialog": {
+            "0": "Mr. C.J.M. Please follow the position of the pencil with your eyes.",
+            "1": "I must observe the patient's facies.",
+            "2": "...",
+            "3": "..."
+          },
+          "followUpDialog": {
+            "0": "Patient assessment: right palpebral ptosis."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Extraocular motility.",
+                "2": "Facial symmetry and motility.",
+                "3": "Confrontation visual field test.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "A simple inspection of the facies shows that the palpebral opening, or the upper eyelid on the right side, is lower than the other.",
+                "2": "A simple inspection of the facies shows that both palpebral openings have the same width."
+              }
+            },
+            "2": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Left palpebral ptosis.",
+                "2": "Right palpebral ptosis."
               }
             }
           }

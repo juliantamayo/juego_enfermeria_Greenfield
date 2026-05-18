@@ -17,6 +17,11 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: Radius.md,
   },
+  checkIcon: {
+    position: "absolute",
+    top: Spacing.sm,
+    right: Spacing.sm,
+  },
   compactOption: {
     minHeight: 60,
     paddingHorizontal: Spacing.md,
@@ -49,12 +54,14 @@ const styles = StyleSheet.create({
     fontSize: Typography.fontSize.mlg,
     fontWeight: Typography.fontWeight.bold,
     marginBottom: Spacing.sm,
+    paddingHorizontal: Spacing.lg,
     textAlign: "center",
   },
   description: {
     color: Colors.text.bodyText,
     fontSize: Typography.fontSize.sm,
     fontWeight: Typography.fontWeight.regular,
+    paddingHorizontal: Spacing.md,
     textAlign: "center",
   },
 });

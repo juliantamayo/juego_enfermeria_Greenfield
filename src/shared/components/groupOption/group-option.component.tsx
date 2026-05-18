@@ -10,6 +10,7 @@ type GroupOptionProps = {
   iconName?: ComponentProps<typeof Ionicons>["name"];
   image?: ImageSourcePropType;
   compact?: boolean;
+  completed?: boolean;
   disabled?: boolean;
   style?: StyleProp<ViewStyle>;
   onPress?: () => void;
@@ -21,6 +22,7 @@ const GroupOption: FC<GroupOptionProps> = ({
   iconName,
   image,
   compact,
+  completed,
   disabled,
   style,
   onPress,
@@ -32,6 +34,14 @@ const GroupOption: FC<GroupOptionProps> = ({
       onPress={onPress}
       style={[styles.option, compact && styles.compactOption, disabled && styles.disabled, style]}
     >
+      {completed && (
+        <Ionicons
+          name="checkmark-outline"
+          size={Typography.iconSize.lg}
+          color={Colors.brand.primary}
+          style={styles.checkIcon}
+        />
+      )}
       {(image || iconName) && (
         <View style={[styles.media, compact && styles.compactMedia]}>
           {image ? (

@@ -21,7 +21,7 @@ const CASE_ID = "case1";
 const SCENE_ID = "scene2";
 const quizBackgroundImage = require("@images/layout/background.png");
 const FEEDBACK_DELAY_MS = 800;
-const implementedQuestionIds = case1Scene2Questions.filter((question) => question.dialogId).map((question) => question.id);
+const requiredQuestionIds = case1Scene2Questions.map((question) => question.id);
 
 type Scene2QuestionFlowRouteProp = RouteProp<RootStackParamList, "Scene2QuestionFlowScreen">;
 type QuestionPhase = "dialog" | "quiz" | "followUpDialog";
@@ -66,11 +66,11 @@ const Scene2QuestionFlowScreen = () => {
   const finishQuestionFlow = async () => {
     await saveQuestionProgress(CASE_ID, SCENE_ID, questionId);
     const savedQuestionIds = await getSavedQuestionIds(CASE_ID, SCENE_ID);
-    const hasCompletedAllImplementedQuestions = implementedQuestionIds.every((implementedQuestionId) =>
-      savedQuestionIds.includes(implementedQuestionId)
+    const hasCompletedAllQuestions = requiredQuestionIds.every((requiredQuestionId) =>
+      savedQuestionIds.includes(requiredQuestionId)
     );
 
-    if (hasCompletedAllImplementedQuestions) {
+    if (hasCompletedAllQuestions) {
       navigation.navigate("SceneCompleteScreen", {
         caseId: CASE_ID,
         completedSceneId: SCENE_ID,

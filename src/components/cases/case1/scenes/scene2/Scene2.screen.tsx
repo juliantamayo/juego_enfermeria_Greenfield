@@ -13,7 +13,7 @@ import { getSavedScenes } from "../../../shared/utils/progress.utils";
 
 const CASE_ID = "case1";
 const SCENE_ID = "scene2";
-const implementedQuestionIds = case1Scene2Questions.filter((question) => question.dialogId).map((question) => question.id);
+const requiredQuestionIds = case1Scene2Questions.map((question) => question.id);
 
 const Scene2Screen = () => {
   const navigation = useAppNavigation();
@@ -30,7 +30,7 @@ const Scene2Screen = () => {
 
       setCompletedQuestionIds(savedQuestionIds);
 
-      const hasCompletedAllQuestions = implementedQuestionIds.every((questionId) =>
+      const hasCompletedAllQuestions = requiredQuestionIds.every((questionId) =>
         savedQuestionIds.includes(questionId)
       );
       const sceneAlreadyCompleted = savedScenes.includes(SCENE_ID);
@@ -100,7 +100,8 @@ const Scene2Screen = () => {
               <CaseQuestionRowItem
                 key={question.id}
                 name={t(question.titleKey)}
-                color={isCompleted ? Colors.question.completed : Colors.question[question.colorVariant]}
+                color={Colors.question[question.colorVariant]}
+                completed={isCompleted}
                 onPress={() => handleQuestionPress(question.id)}
               />
             );

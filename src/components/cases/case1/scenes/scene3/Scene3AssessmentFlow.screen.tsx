@@ -14,12 +14,17 @@ import { GlobalStyles } from "@styles-theme";
 import { dialogStyles } from "../../../shared/styles/dialog.styles";
 import { questionFlowStyles } from "../scene2/styles/question-flow.styles";
 import scene3AssessmentFlows from "./data/assessmentFlows";
+import scene3AssessmentAreas from "./data/scene3AssessmentAreas";
+import { getSavedQuestionIds, saveQuestionProgress } from "../../../shared/utils/questionProgress.utils";
 
 type Scene3AssessmentFlowRouteProp = RouteProp<RootStackParamList, "Scene3AssessmentFlowScreen">;
 type AssessmentPhase = "dialog" | "quiz" | "followUpDialog";
 
+const CASE_ID = "case1";
+const SCENE_ID = "scene3";
 const quizBackgroundImage = require("@images/layout/background.png");
 const FEEDBACK_DELAY_MS = 800;
+const requiredAssessmentIds = scene3AssessmentAreas.map((area) => area.id);
 
 const shuffleAnswers = <T,>(answers: T[]) => {
   const shuffledAnswers = [...answers];
@@ -60,12 +65,32 @@ const Scene3AssessmentFlowScreen = () => {
     [currentQuiz.answers, assessmentId, quizStep, phase],
   );
 
+  const finishAssessmentFlow = async () => {
+    await saveQuestionProgress(CASE_ID, SCENE_ID, assessmentId);
+    const savedAssessmentIds = await getSavedQuestionIds(CASE_ID, SCENE_ID);
+    const hasCompletedAllAssessments = requiredAssessmentIds.every((requiredAssessmentId) =>
+      savedAssessmentIds.includes(requiredAssessmentId)
+    );
+
+    if (hasCompletedAllAssessments) {
+      navigation.navigate("SceneCompleteScreen", {
+        caseId: CASE_ID,
+        completedSceneId: SCENE_ID,
+        nextSceneId: "scene4",
+        returnScreen: "Scene3Screen",
+      });
+      return;
+    }
+
+    navigation.goBack();
+  };
+
   const handleDialogNext = () => {
     if (phase === "followUpDialog") {
       const nextStep = followUpDialogStep + 1;
 
       if (nextStep >= activeDialogEntries.length) {
-        navigation.goBack();
+        finishAssessmentFlow().catch((error) => console.error("Error finishing assessment flow", error));
       } else {
         setFollowUpDialogStep(nextStep);
       }
@@ -114,7 +139,7 @@ const Scene3AssessmentFlowScreen = () => {
           setFollowUpDialogStep(0);
           setPhase("followUpDialog");
         } else {
-          navigation.goBack();
+          finishAssessmentFlow().catch((error) => console.error("Error finishing assessment flow", error));
         }
       } else {
         setQuizStep(nextQuizStep);
