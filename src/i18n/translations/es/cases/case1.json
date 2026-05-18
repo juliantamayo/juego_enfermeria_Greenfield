@@ -249,8 +249,8 @@
           "description": "Ptosis palpebral"
         },
         "area3": {
-          "title": "Área 3",
-          "description": "Zona media izquierda"
+          "title": "Motilidad facial",
+          "description": "Asimetría facial"
         },
         "area4": {
           "title": "Área 4",
@@ -267,14 +267,6 @@
         "area7": {
           "title": "Área 7",
           "description": "Zona central"
-        },
-        "area8": {
-          "title": "Área 8",
-          "description": "Zona complementaria"
-        },
-        "area9": {
-          "title": "Área 9",
-          "description": "Zona complementaria"
         }
       },
       "assessmentDialogs": {
@@ -343,6 +335,57 @@
               "answers": {
                 "1": "Ptosis palpebral izquierda.",
                 "2": "Ptosis palpebral derecha."
+              }
+            }
+          }
+        },
+        "area3": {
+          "screenTitle": "Caso 1. Simetría y motilidad facial",
+          "dialog": {
+            "0": "Señor C.J.M. por favor frunza el ceño.",
+            "1": "Señor C.J.M ahora por favor ríase.",
+            "2": "Señor C.J.M por favor cierre fuertemente los ojos."
+          },
+          "followUpDialog": {
+            "0": "Al pedirle al señor C.J.M que sonría o muestre los dientes, la boca se desvía hacia el lado izquierdo que mantiene la fuerza muscular.",
+            "1": "Pero, al pedirle que arrugue la frente, que frunza el ceño, que cierre fuertemente los ojos, se encuentran sólo levemente afectados...",
+            "2": "En la piel del lado derecho alrededor de la nariz y boca no se hace el pliegue.",
+            "3": "Los músculos de la frente, superciliar y orbicular de los párpados se encuentran sólo levemente afectados, borramiento del surco nasogeniano."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Motilidad extrínseca del ojo.",
+                "2": "Sensibilidad facial.",
+                "3": "Campimetría por confrontación.",
+                "4": "Simetría y motilidad facial."
+              }
+            },
+            "1": {
+              "question": "Al pedirle al señor C.J.M. que sonría o muestre los dientes, los movimientos faciales son simétricos y sin dificultad. La anterior afirmación es:",
+              "answers": {
+                "1": "Correcta.",
+                "2": "Errónea."
+              }
+            }
+          }
+        },
+        "area4": {
+          "screenTitle": "Caso 1. Fuerza muscular",
+          "dialog": {
+            "0": "Bosquejo: iniciar la valoración de fuerza muscular.",
+            "1": "Bosquejo: registrar los hallazgos observados durante la prueba de fuerza muscular."
+          },
+          "followUpDialog": {
+            "0": "Bosquejo: agregar aquí la explicación clínica de la fuerza muscular."
+          },
+          "quiz": {
+            "0": {
+              "question": "Bosquejo: ¿cuál es el nombre de la prueba de valoración realizada?",
+              "answers": {
+                "1": "Fuerza muscular.",
+                "2": "Sensibilidad facial."
               }
             }
           }
