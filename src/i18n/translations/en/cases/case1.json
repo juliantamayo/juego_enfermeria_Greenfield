@@ -261,8 +261,8 @@
           "description": "Functional limitation"
         },
         "area6": {
-          "title": "Area 6",
-          "description": "Lower right zone"
+          "title": "Gait assessment",
+          "description": "Hemiplegic gait"
         },
         "area7": {
           "title": "Area 7",
@@ -425,6 +425,33 @@
               "answers": {
                 "1": "Patient with limited movement in the right hemibody (arm, trunk, hip, and right leg).",
                 "2": "The patient is able to perform all movements with the required range and symmetry."
+              }
+            }
+          }
+        },
+        "area6": {
+          "screenTitle": "Case 1. Gait",
+          "dialog": {
+            "0": "Mr. C.J.M., could you please walk a short distance and come back?"
+          },
+          "followUpDialog": {
+            "0": "The patient presents a hemiplegic gait."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Plantar reflex.",
+                "2": "Dynamic posture and gait assessment.",
+                "3": "Palpation percussion.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "The lower extremity on the plegic side is extended and spastic; the foot is somewhat dropped and deviated medially. The affected leg advances in a semicircle and drags the outer edge and tip of the foot along its path. The plegic arm remains in contact with the trunk, the forearm flexed, and the hand pronated. When the other leg advances, it only reaches the position of the plegic leg and does not go beyond it. The previous statement is:",
+              "answers": {
+                "1": "Incorrect.",
+                "2": "Correct."
               }
             }
           }

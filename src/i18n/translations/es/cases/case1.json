@@ -261,8 +261,8 @@
           "description": "Limitación funcional"
         },
         "area6": {
-          "title": "Área 6",
-          "description": "Zona inferior derecha"
+          "title": "Valoración de la marcha",
+          "description": "Marcha hemipléjica"
         },
         "area7": {
           "title": "Área 7",
@@ -425,6 +425,33 @@
               "answers": {
                 "1": "Paciente con limitación de movimientos en hemicuerpo derecho (brazo, tronco, cadera, pierna derecha).",
                 "2": "El paciente está en la capacidad de desarrollar todos los movimientos en la amplitud y simetría requerida."
+              }
+            }
+          }
+        },
+        "area6": {
+          "screenTitle": "Caso 1. Marcha",
+          "dialog": {
+            "0": "Señor C.J.M por favor ¿puede caminar un trayecto y regresar?"
+          },
+          "followUpDialog": {
+            "0": "El paciente presenta una marcha hemipléjica."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo plantar.",
+                "2": "Postura dinámica y valoración de la marcha.",
+                "3": "Palpación percusión.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "La extremidad inferior del lado pléjico se encuentra extendida y espástica; el pie está algo caído y desviado hacia medial. La pierna comprometida avanza efectuando un semicírculo y en su recorrido arrastra el borde externo y la punta del pie. El brazo pléjico permanece en contacto con el tronco, el antebrazo flexionado y la mano en pronación. Cuando la otra pierna avanza, sólo lo hace hasta alcanzar la posición de la pierna pléjica, sin avanzar más allá. La anterior afirmación es:",
+              "answers": {
+                "1": "Errónea.",
+                "2": "Correcta."
               }
             }
           }
