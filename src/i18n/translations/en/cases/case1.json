@@ -265,8 +265,8 @@
           "description": "Hemiplegic gait"
         },
         "area7": {
-          "title": "Area 7",
-          "description": "Central zone"
+          "title": "Cortical sensitivity",
+          "description": "Tactile astereognosis"
         }
       },
       "assessmentDialogs": {
@@ -452,6 +452,38 @@
               "answers": {
                 "1": "Incorrect.",
                 "2": "Correct."
+              }
+            }
+          }
+        },
+        "area7": {
+          "screenTitle": "Case 1. Sensitivity",
+          "dialog": {
+            "0": "Mr. C.J.M. can you identify the object in your right hand?",
+            "1": "No",
+            "2": "Can you identify this object with your left hand?",
+            "3": "It is a ke...y..."
+          },
+          "followUpDialog": {
+            "0": "With his eyes closed and using only touch, the patient recognizes keys and coins with his left hand, but recognizes nothing with his right hand.",
+            "1": "Tactile astereognosis in the right upper limb and stereognosis in the left upper limb.",
+            "2": "Inability to identify objects through touch."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Cortical sensitivity.",
+                "2": "Muscle strength.",
+                "3": "Thermal and tactile sensation.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Tactile astereognosis in the left upper limb and stereognosis in the right upper limb.",
+                "2": "Tactile astereognosis in the right upper limb and stereognosis in the left upper limb."
               }
             }
           }

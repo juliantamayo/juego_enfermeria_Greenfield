@@ -265,8 +265,8 @@
           "description": "Marcha hemipléjica"
         },
         "area7": {
-          "title": "Área 7",
-          "description": "Zona central"
+          "title": "Sensibilidad cortical",
+          "description": "Astereognosia táctil"
         }
       },
       "assessmentDialogs": {
@@ -452,6 +452,38 @@
               "answers": {
                 "1": "Errónea.",
                 "2": "Correcta."
+              }
+            }
+          }
+        },
+        "area7": {
+          "screenTitle": "Caso 1. Sensibilidad",
+          "dialog": {
+            "0": "Señor C.J.M. ¿puede distinguir el objeto en su mano derecha?",
+            "1": "No",
+            "2": "¿Con la mano izquierda puede distinguir este objeto?",
+            "3": "Es una LLa..ve.."
+          },
+          "followUpDialog": {
+            "0": "El paciente con sus ojos cerrados y solo al tacto en la mano izquierda reconoce llaves, monedas, pero con el derecho no reconoce nada.",
+            "1": "Astereognosia táctil en miembro superior derecho y estereognosia en miembro superior izquierdo.",
+            "2": "Incapacidad de identificar objetos a través del tacto."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Sensibilidad cortical.",
+                "2": "Fuerza muscular.",
+                "3": "Sensación térmica y táctil.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Astereognosia táctil en miembro superior izquierdo y estereognosia en miembro superior derecho.",
+                "2": "Astereognosia táctil en miembro superior derecho y estereognosia en miembro superior izquierdo."
               }
             }
           }

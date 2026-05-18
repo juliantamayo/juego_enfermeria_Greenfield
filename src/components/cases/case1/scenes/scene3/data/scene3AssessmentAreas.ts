@@ -56,7 +56,8 @@ const scene3AssessmentAreas: Scene3AssessmentArea[] = [
     id: "area7",
     titleKey: "case1.scene3.assessmentAreas.area7.title",
     descriptionKey: "case1.scene3.assessmentAreas.area7.description",
-    iconName: "document-text-outline",
+    iconName: "finger-print-outline",
+    flowId: "area7",
   },
 ];
 

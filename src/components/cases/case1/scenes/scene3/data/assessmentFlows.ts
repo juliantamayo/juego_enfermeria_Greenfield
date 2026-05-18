@@ -4,6 +4,7 @@ import area3Flow from "./area3Flow";
 import area4Flow from "./area4Flow";
 import area5Flow from "./area5Flow";
 import area6Flow from "./area6Flow";
+import area7Flow from "./area7Flow";
 
 const scene3AssessmentFlows = {
   ...area1Flow,
@@ -12,6 +13,7 @@ const scene3AssessmentFlows = {
   ...area4Flow,
   ...area5Flow,
   ...area6Flow,
+  ...area7Flow,
 };
 
 export default scene3AssessmentFlows;
