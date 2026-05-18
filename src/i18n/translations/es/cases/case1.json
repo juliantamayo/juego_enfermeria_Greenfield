@@ -257,8 +257,8 @@
           "description": "Espasticidad muscular"
         },
         "area5": {
-          "title": "Área 5",
-          "description": "Zona inferior izquierda"
+          "title": "Movilidad activa",
+          "description": "Limitación funcional"
         },
         "area6": {
           "title": "Área 6",
@@ -396,6 +396,35 @@
               "answers": {
                 "1": "Miembro inferior derecho espástico (músculos contraídos) que no puede levantar, miembro inferior izquierdo con arco de movimiento completo contra gravedad y resistencia.",
                 "2": "Miembro inferior derecho e izquierdo con arco de movimiento completo contra gravedad y resistencia."
+              }
+            }
+          }
+        },
+        "area5": {
+          "screenTitle": "Caso 1. Movilidad activa",
+          "dialog": {
+            "0": "Debo visualizar muy bien al paciente.",
+            "1": "Es muy importante hacer una buena observación del paciente."
+          },
+          "followUpDialog": {
+            "0": "Paciente dependiente, en estos momentos se ve limitada su autonomía en actividades de la vida diaria como su arreglo personal, vestirse, sentarse.",
+            "1": "Al no tener la dominancia y la fuerza suficiente en su hemicuerpo derecho, por eso se observa irritable o mal humorado y requiere la ayuda de su esposa."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo plantar.",
+                "2": "Reflejo bicipital.",
+                "3": "Palpación percusión.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Paciente con limitación de movimientos en hemicuerpo derecho (brazo, tronco, cadera, pierna derecha).",
+                "2": "El paciente está en la capacidad de desarrollar todos los movimientos en la amplitud y simetría requerida."
               }
             }
           }

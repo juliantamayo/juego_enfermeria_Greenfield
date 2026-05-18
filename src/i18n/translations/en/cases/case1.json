@@ -257,8 +257,8 @@
           "description": "Muscle spasticity"
         },
         "area5": {
-          "title": "Area 5",
-          "description": "Lower left zone"
+          "title": "Active mobility",
+          "description": "Functional limitation"
         },
         "area6": {
           "title": "Area 6",
@@ -396,6 +396,35 @@
               "answers": {
                 "1": "Spastic right lower limb (contracted muscles) that he cannot lift, and left lower limb with full range of motion against gravity and resistance.",
                 "2": "Right and left lower limbs with full range of motion against gravity and resistance."
+              }
+            }
+          }
+        },
+        "area5": {
+          "screenTitle": "Case 1. Active Mobility",
+          "dialog": {
+            "0": "I must observe the patient very carefully.",
+            "1": "It is very important to make a good observation of the patient."
+          },
+          "followUpDialog": {
+            "0": "Dependent patient; at this time his autonomy is limited in activities of daily living such as personal grooming, dressing, and sitting.",
+            "1": "Because he does not have sufficient dominance and strength in his right hemibody, he appears irritable or in a bad mood and requires help from his wife."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Plantar reflex.",
+                "2": "Bicipital reflex.",
+                "3": "Palpation percussion.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Patient with limited movement in the right hemibody (arm, trunk, hip, and right leg).",
+                "2": "The patient is able to perform all movements with the required range and symmetry."
               }
             }
           }

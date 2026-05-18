@@ -42,7 +42,8 @@ const scene3AssessmentAreas: Scene3AssessmentArea[] = [
     id: "area5",
     titleKey: "case1.scene3.assessmentAreas.area5.title",
     descriptionKey: "case1.scene3.assessmentAreas.area5.description",
-    iconName: "water-outline",
+    iconName: "body-outline",
+    flowId: "area5",
   },
   {
     id: "area6",
