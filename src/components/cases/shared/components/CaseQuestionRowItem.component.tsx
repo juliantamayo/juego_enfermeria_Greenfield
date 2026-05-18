@@ -10,9 +10,9 @@ type CaseQuestionRowItemProps = {
   onPress: () => void;
 };
 
-const CaseQuestionRowItem = ({ name, color, completed, onPress }: CaseQuestionRowItemProps) => (
+const CaseQuestionRowItem = ({ name, completed, onPress }: CaseQuestionRowItemProps) => (
   <TouchableOpacity onPress={onPress} activeOpacity={0.8} style={styles.touchable}>
-    <View style={[styles.row, completed ? styles.completedRow : { backgroundColor: color }]}>
+    <View style={[styles.row, completed && styles.completedRow]}>
       {completed && (
         <Ionicons
           name="checkmark-outline"
@@ -21,7 +21,7 @@ const CaseQuestionRowItem = ({ name, color, completed, onPress }: CaseQuestionRo
           style={styles.checkIcon}
         />
       )}
-      <Text style={[styles.text, completed && styles.completedText]}>{name}</Text>
+      <Text style={styles.text}>{name}</Text>
     </View>
   </TouchableOpacity>
 );
@@ -39,11 +39,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: Spacing.base,
     paddingVertical: Spacing.md,
-  },
-  completedRow: {
     backgroundColor: Colors.brand.white,
     borderColor: Colors.brand.primary,
     borderWidth: 1,
+  },
+  completedRow: {
     paddingRight: Typography.iconSize.lg + Spacing.xl,
   },
   checkIcon: {
@@ -52,12 +52,9 @@ const styles = StyleSheet.create({
     right: Spacing.sm,
   },
   text: {
-    color: Colors.text.inverse,
+    color: Colors.grayscale.gray600,
     fontSize: Typography.fontSize.mlg,
     fontWeight: Typography.fontWeight.medium,
     textAlign: "center",
-  },
-  completedText: {
-    color: Colors.grayscale.gray600,
   },
 });
