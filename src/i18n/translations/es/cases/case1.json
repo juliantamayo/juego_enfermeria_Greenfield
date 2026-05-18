@@ -245,8 +245,8 @@
           "description": "Valoración neurológica"
         },
         "area2": {
-          "title": "Área 2",
-          "description": "Zona superior derecha"
+          "title": "Motilidad ocular",
+          "description": "Ptosis palpebral"
         },
         "area3": {
           "title": "Área 3",
@@ -306,6 +306,43 @@
               "answers": {
                 "1": "Hemianopsia homónima izquierda: en un solo ojo se compromete la visión del mismo hemicampo.",
                 "2": "Hemianopsia homónima derecha: en cada ojo se compromete la visión del mismo hemicampo."
+              }
+            }
+          }
+        },
+        "area2": {
+          "screenTitle": "Caso 1. Motilidad extrínseca del ojo",
+          "dialog": {
+            "0": "Señor C.J.M. Por favor, siga con su vista la posición del lápiz.",
+            "1": "Debo visualizar las fascies del paciente.",
+            "2": "...",
+            "3": "..."
+          },
+          "followUpDialog": {
+            "0": "Valoración del paciente: ptosis palpebral derecha."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Motilidad extrínseca del ojo.",
+                "2": "Simetría y motilidad facial.",
+                "3": "Campimetría por confrontación.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "La simple inspección de la facies permite darse cuenta que la abertura palpebral o que el párpado superior del lado derecho está más descendido que el otro.",
+                "2": "La simple inspección de la facies permite darse cuenta que las dos aberturas palpebrales son de la misma amplitud."
+              }
+            },
+            "2": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Ptosis palpebral izquierda.",
+                "2": "Ptosis palpebral derecha."
               }
             }
           }
