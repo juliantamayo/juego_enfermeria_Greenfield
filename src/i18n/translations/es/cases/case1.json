@@ -249,12 +249,12 @@
           "description": "Ptosis palpebral"
         },
         "area3": {
-          "title": "Área 3",
-          "description": "Zona media izquierda"
+          "title": "Motilidad facial",
+          "description": "Asimetría facial"
         },
         "area4": {
-          "title": "Área 4",
-          "description": "Zona media derecha"
+          "title": "Fuerza muscular",
+          "description": "Espasticidad muscular"
         },
         "area5": {
           "title": "Área 5",
@@ -267,14 +267,6 @@
         "area7": {
           "title": "Área 7",
           "description": "Zona central"
-        },
-        "area8": {
-          "title": "Área 8",
-          "description": "Zona complementaria"
-        },
-        "area9": {
-          "title": "Área 9",
-          "description": "Zona complementaria"
         }
       },
       "assessmentDialogs": {
@@ -343,6 +335,67 @@
               "answers": {
                 "1": "Ptosis palpebral izquierda.",
                 "2": "Ptosis palpebral derecha."
+              }
+            }
+          }
+        },
+        "area3": {
+          "screenTitle": "Caso 1. Simetría y motilidad facial",
+          "dialog": {
+            "0": "Señor C.J.M. por favor frunza el ceño.",
+            "1": "Señor C.J.M ahora por favor ríase.",
+            "2": "Señor C.J.M por favor cierre fuertemente los ojos."
+          },
+          "followUpDialog": {
+            "0": "Al pedirle al señor C.J.M que sonría o muestre los dientes, la boca se desvía hacia el lado izquierdo que mantiene la fuerza muscular.",
+            "1": "Pero, al pedirle que arrugue la frente, que frunza el ceño, que cierre fuertemente los ojos, se encuentran sólo levemente afectados...",
+            "2": "En la piel del lado derecho alrededor de la nariz y boca no se hace el pliegue.",
+            "3": "Los músculos de la frente, superciliar y orbicular de los párpados se encuentran sólo levemente afectados, borramiento del surco nasogeniano."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Motilidad extrínseca del ojo.",
+                "2": "Sensibilidad facial.",
+                "3": "Campimetría por confrontación.",
+                "4": "Simetría y motilidad facial."
+              }
+            },
+            "1": {
+              "question": "Al pedirle al señor C.J.M. que sonría o muestre los dientes, los movimientos faciales son simétricos y sin dificultad. La anterior afirmación es:",
+              "answers": {
+                "1": "Correcta.",
+                "2": "Errónea."
+              }
+            }
+          }
+        },
+        "area4": {
+          "screenTitle": "Caso 1. Fuerza muscular",
+          "dialog": {
+            "0": "Señor C.J.M. por favor, extienda sus piernas."
+          },
+          "followUpDialog": {
+            "0": "Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha.",
+            "1": "Espasticidad grado 3, es decir la pierna derecha está contraída, rígida, se nota un poco más corta que no puede levantar.",
+            "2": "Mientras que la pierna derecha la puede movilizar y si se le hace fuerte la resiste."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo plantar.",
+                "2": "Fuerza muscular.",
+                "3": "Palpación percusión.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Miembro inferior derecho espástico (músculos contraídos) que no puede levantar, miembro inferior izquierdo con arco de movimiento completo contra gravedad y resistencia.",
+                "2": "Miembro inferior derecho e izquierdo con arco de movimiento completo contra gravedad y resistencia."
               }
             }
           }

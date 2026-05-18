@@ -25,10 +25,18 @@ const scene3AssessmentAreas: Scene3AssessmentArea[] = [
     flowId: "area2",
   },
   {
+    id: "area3",
+    titleKey: "case1.scene3.assessmentAreas.area3.title",
+    descriptionKey: "case1.scene3.assessmentAreas.area3.description",
+    iconName: "happy-outline",
+    flowId: "area3",
+  },
+  {
     id: "area4",
     titleKey: "case1.scene3.assessmentAreas.area4.title",
     descriptionKey: "case1.scene3.assessmentAreas.area4.description",
-    iconName: "swap-horizontal-outline",
+    iconName: "walk-outline",
+    flowId: "area4",
   },
   {
     id: "area5",
@@ -37,21 +45,15 @@ const scene3AssessmentAreas: Scene3AssessmentArea[] = [
     iconName: "water-outline",
   },
   {
+    id: "area6",
+    titleKey: "case1.scene3.assessmentAreas.area6.title",
+    descriptionKey: "case1.scene3.assessmentAreas.area6.description",
+    iconName: "walk-outline",
+  },
+  {
     id: "area7",
     titleKey: "case1.scene3.assessmentAreas.area7.title",
     descriptionKey: "case1.scene3.assessmentAreas.area7.description",
-    iconName: "document-text-outline",
-  },
-  {
-    id: "area8",
-    titleKey: "case1.scene3.assessmentAreas.area8.title",
-    descriptionKey: "case1.scene3.assessmentAreas.area8.description",
-    iconName: "document-text-outline",
-  },
-  {
-    id: "area9",
-    titleKey: "case1.scene3.assessmentAreas.area9.title",
-    descriptionKey: "case1.scene3.assessmentAreas.area9.description",
     iconName: "document-text-outline",
   },
 ];
