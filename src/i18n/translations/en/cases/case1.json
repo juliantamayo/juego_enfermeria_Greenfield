@@ -253,8 +253,8 @@
           "description": "Facial asymmetry"
         },
         "area4": {
-          "title": "Area 4",
-          "description": "Middle right zone"
+          "title": "Muscle strength",
+          "description": "Muscle spasticity"
         },
         "area5": {
           "title": "Area 5",
@@ -374,18 +374,28 @@
         "area4": {
           "screenTitle": "Case 1. Muscle Strength",
           "dialog": {
-            "0": "Draft: start the muscle strength assessment.",
-            "1": "Draft: record the findings observed during the muscle strength test."
+            "0": "Mr. C.J.M. please extend your legs."
           },
           "followUpDialog": {
-            "0": "Draft: add the clinical explanation for muscle strength here."
+            "0": "Grade 2 muscle strength in the right lower limb - right hemiparesis.",
+            "1": "Grade 3 spasticity, meaning the right leg is contracted, rigid, appears slightly shorter, and cannot be lifted.",
+            "2": "Meanwhile, he can move the right leg and resists when force is applied."
           },
           "quiz": {
             "0": {
-              "question": "Draft: what is the name of the assessment test performed?",
+              "question": "What is the name of the assessment test the nurse just performed?",
               "answers": {
-                "1": "Muscle strength.",
-                "2": "Facial sensitivity."
+                "1": "Plantar reflex.",
+                "2": "Muscle strength.",
+                "3": "Palpation percussion.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Spastic right lower limb (contracted muscles) that he cannot lift, and left lower limb with full range of motion against gravity and resistance.",
+                "2": "Right and left lower limbs with full range of motion against gravity and resistance."
               }
             }
           }

@@ -253,8 +253,8 @@
           "description": "Asimetría facial"
         },
         "area4": {
-          "title": "Área 4",
-          "description": "Zona media derecha"
+          "title": "Fuerza muscular",
+          "description": "Espasticidad muscular"
         },
         "area5": {
           "title": "Área 5",
@@ -374,18 +374,28 @@
         "area4": {
           "screenTitle": "Caso 1. Fuerza muscular",
           "dialog": {
-            "0": "Bosquejo: iniciar la valoración de fuerza muscular.",
-            "1": "Bosquejo: registrar los hallazgos observados durante la prueba de fuerza muscular."
+            "0": "Señor C.J.M. por favor, extienda sus piernas."
           },
           "followUpDialog": {
-            "0": "Bosquejo: agregar aquí la explicación clínica de la fuerza muscular."
+            "0": "Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha.",
+            "1": "Espasticidad grado 3, es decir la pierna derecha está contraída, rígida, se nota un poco más corta que no puede levantar.",
+            "2": "Mientras que la pierna derecha la puede movilizar y si se le hace fuerte la resiste."
           },
           "quiz": {
             "0": {
-              "question": "Bosquejo: ¿cuál es el nombre de la prueba de valoración realizada?",
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
               "answers": {
-                "1": "Fuerza muscular.",
-                "2": "Sensibilidad facial."
+                "1": "Reflejo plantar.",
+                "2": "Fuerza muscular.",
+                "3": "Palpación percusión.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Miembro inferior derecho espástico (músculos contraídos) que no puede levantar, miembro inferior izquierdo con arco de movimiento completo contra gravedad y resistencia.",
+                "2": "Miembro inferior derecho e izquierdo con arco de movimiento completo contra gravedad y resistencia."
               }
             }
           }

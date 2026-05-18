@@ -35,7 +35,7 @@ const scene3AssessmentAreas: Scene3AssessmentArea[] = [
     id: "area4",
     titleKey: "case1.scene3.assessmentAreas.area4.title",
     descriptionKey: "case1.scene3.assessmentAreas.area4.description",
-    iconName: "swap-horizontal-outline",
+    iconName: "walk-outline",
     flowId: "area4",
   },
   {
