@@ -1,9 +1,10 @@
 import React, { useMemo, useState } from "react";
-import { ImageBackground, ScrollView, StyleSheet, View } from "react-native";
+import { ImageBackground, StyleSheet, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import Header from "@shared/components/header/header.component";
 import Button from "@shared/components/button/button.component";
+import SafeScrollView from "@shared/components/safeScrollView/safe-scroll-view.component";
 import Summary from "@shared/components/summary/summary.component";
 import Message from "@shared/components/message/message.component";
 import CheckboxOption, { CheckboxOptionStatus } from "@shared/components/checkboxOption/checkbox-option.component";
@@ -158,13 +159,10 @@ const Scene4Screen = () => {
         ]}
       />
 
-      <ScrollView
+      <SafeScrollView
         style={GlobalStyles.scrollBase}
-        contentContainerStyle={[
-          GlobalStyles.scrollContentBase,
-          styles.scrollContent,
-          { paddingBottom: FOOTER_RESERVED_SPACE + insets.bottom },
-        ]}
+        contentContainerStyle={[GlobalStyles.scrollContentBase, styles.scrollContent]}
+        bottomOffset={FOOTER_RESERVED_SPACE}
       >
         <Summary
           eyebrow={t("case1.scene4.summary.eyebrow")}
@@ -188,7 +186,7 @@ const Scene4Screen = () => {
             />
           ))}
         </View>
-      </ScrollView>
+      </SafeScrollView>
 
       <View style={[styles.footer, { paddingBottom: Spacing.base + insets.bottom }]}>
         {hasValidated ? (

@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from "react";
-import { Alert, ImageBackground, ScrollView, StyleSheet, View } from "react-native";
+import { Alert, ImageBackground, StyleSheet, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { useTranslation } from "react-i18next";
 import Header from "@shared/components/header/header.component";
+import SafeScrollView from "@shared/components/safeScrollView/safe-scroll-view.component";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { Colors, GlobalStyles, Spacing } from "@styles-theme";
@@ -89,9 +90,10 @@ const Scene2Screen = () => {
         ]}
       />
       <View style={GlobalStyles.fullWidthContainer}>
-        <ScrollView
+        <SafeScrollView
           style={GlobalStyles.scrollBase}
           contentContainerStyle={[GlobalStyles.scrollContentBase, styles.scrollContent]}
+          bottomOffset={Spacing.lg}
         >
           {case1Scene2Questions.map((question) => {
             const isCompleted = completedQuestionIds.includes(question.id);
@@ -106,7 +108,7 @@ const Scene2Screen = () => {
               />
             );
           })}
-        </ScrollView>
+        </SafeScrollView>
       </View>
     </ImageBackground>
   );
