@@ -59,6 +59,33 @@ const question = {
   completed: "#82e0aa",
 };
 
+const message = {
+  info: {
+    background: "#eff6ff",
+    border: "#bfdbfe",
+    title: text.default,
+    text: text.bodyText,
+  },
+  success: {
+    background: "#ecfdf5",
+    border: "#22c55e",
+    title: text.default,
+    text: brand.greenDark,
+  },
+  warning: {
+    background: "#fffbeb",
+    border: "#fbbf24",
+    title: text.default,
+    text: text.bodyText,
+  },
+  error: {
+    background: "#fef2f2",
+    border: status.error,
+    title: text.default,
+    text: "#b91c1c",
+  },
+};
+
 const Colors = {
   brand,
   text,
@@ -68,6 +95,7 @@ const Colors = {
   grayscale,
   status,
   question,
+  message,
 };
 
 export default Colors;
