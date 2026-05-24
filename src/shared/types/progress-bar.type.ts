@@ -5,4 +5,5 @@ export interface ProgressBarProps {
   max: number;
   label?: string;
   style?: StyleProp<ViewStyle>;
+  trackWrapperStyle?: StyleProp<ViewStyle>;
 }

@@ -12,6 +12,10 @@ export const styles = StyleSheet.create({
     fontWeight: Typography.fontWeight.bold,
     textAlign: "center",
   },
+  trackWrapper: {
+    width: "100%",
+    paddingHorizontal: Spacing.base,
+  },
   track: {
     width: "100%",
     height: 6,

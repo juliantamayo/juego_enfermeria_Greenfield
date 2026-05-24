@@ -1,5 +1,8 @@
 ﻿{
   "case1": {
+    "menu": {
+      "progress": "Case progress: {{percentage}}%"
+    },
     "scene1": {
       "screenTitle": "Case 1. Case Introduction",
       "title": "Case introduction",
@@ -694,7 +697,71 @@
     },
     "scene6": {
       "screenTitle": "Case 1. Nursing Care Process",
-      "title": "Nursing Care Process"
+      "title": "Nursing Care Process",
+      "labels": {
+        "nandaTag": "NANDA label",
+        "code": "Code",
+        "diagnosis": "Diagnosis"
+      },
+      "sections": {
+        "definition": "NANDA definition",
+        "relatedTo": "Related to",
+        "evidencedBy": "Evidenced by"
+      },
+      "actions": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "diagnoses": {
+        "powerlessness": {
+          "diagnosis": "Powerlessness.",
+          "definition": "Experience of lack of control over a situation, including the perception that one's own actions do not significantly affect the outcome.",
+          "relatedTo": "Complexity of the therapeutic regimen.",
+          "evidencedBy": "- Frustration due to inability to perform tasks previously performed.\n- Dependence.\n- Insufficient sense of control."
+        },
+        "anxiety": {
+          "diagnosis": "Anxiety",
+          "definition": "Vague and uneasy feeling of discomfort or threat accompanied by an autonomic response, whose origin is often nonspecific or unknown to the person; feeling of apprehension caused by anticipation of danger.\nIt is an alert signal that warns of imminent danger and allows the person to take measures to face the threat.",
+          "relatedTo": "- Situational crisis.\n- Major changes. (e.g. health status)",
+          "evidencedBy": "- Irritability.\n- Altered attention.\n- Confusion.\n- Decreased ability to solve problems.\n- Decreased perceptual field.\n- Concern about changes in life events."
+        },
+        "ineffectiveCoping": {
+          "diagnosis": "Ineffective coping.",
+          "definition": "Inability to make a valid appraisal of stressors, inadequate choices of practiced responses and/or inability to use available resources.",
+          "relatedTo": "- Situational crisis.\n- Uncertainty.\n- Insufficient sense of control.",
+          "evidencedBy": "- Change in communication pattern.\n- Inability to meet basic needs.\n- Insufficient problem resolution."
+        },
+        "ineffectiveHealthManagement": {
+          "diagnosis": "Ineffective health management.",
+          "definition": "Pattern of regulation and integration into daily life of a therapeutic regimen for treatment of illness and its sequelae that is unsatisfactory for meeting specific health goals.",
+          "relatedTo": "- Complexity of the therapeutic regimen.\n- Excessive demands.\n- Powerlessness.\n- Perception of severity of condition.",
+          "evidencedBy": "- Does not include treatment regimen in daily life.\n- Difficulties with prescribed treatment."
+        },
+        "impairedPhysicalMobility": {
+          "diagnosis": "Impaired physical mobility.",
+          "definition": "Limitation in independent, purposeful physical movement of the body or of one or more extremities.",
+          "relatedTo": "- Neuromuscular impairment.\n- Sensoriperceptual impairment.\n- Decreased muscle strength.\n- Decreased endurance.\n- Decreased muscle control.",
+          "evidencedBy": "- Alterations in gait.\n- Increased reaction time.\n- Difficulty turning.\n- Discomfort.\n- Decreased fine motor skills.\n- Decreased gross motor skills.\n- Slowed movement.\n- Postural instability.\n- Limited range of motion.\n- Uncoordinated movements.\n- Spastic movements."
+        },
+        "impairedVerbalCommunication": {
+          "diagnosis": "Impaired verbal communication.",
+          "definition": "Decreased, delayed, or absent ability to receive, process, transmit and/or use a symbol system.",
+          "relatedTo": "- Central nervous system impairment.\n- Altered perception.",
+          "evidencedBy": "- Difficulty expressing thoughts verbally (aphasia, apraxia).\n- Difficulty forming words (dysarthria).\n- Difficulty maintaining communication.\n- Disorientation in time."
+        },
+        "feedingSelfCareDeficit": {
+          "diagnosis": "Self-care deficit: feeding.",
+          "definition": "Impaired ability to perform or complete feeding activities independently.",
+          "relatedTo": "- Neuromuscular impairment.\n- Perceptual disorders.",
+          "evidencedBy": "- Impaired ability to feed oneself a complete meal.\n- Impaired ability to swallow food."
+        },
+        "dressingSelfCareDeficit": {
+          "diagnosis": "Self-care deficit: dressing.",
+          "definition": "Impaired ability to perform or complete dressing and grooming activities independently.",
+          "relatedTo": "- Neuromuscular impairment.\n- Perceptual disorders.",
+          "evidencedBy": "- Impaired ability to put on necessary clothing items. (e.g., shirt, socks, shoes).\n- Impaired ability to remove necessary clothing items. (e.g., shirt, socks, shoes)."
+        }
+      }
     }
   }
 }

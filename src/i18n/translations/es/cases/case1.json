@@ -1,5 +1,8 @@
 ﻿{
   "case1": {
+    "menu": {
+      "progress": "Progreso del caso: {{percentage}}%"
+    },
     "scene1": {
       "screenTitle": "Caso 1. Introducción al Caso",
       "title": "Introducción al caso",
@@ -694,7 +697,71 @@
     },
     "scene6": {
       "screenTitle": "Caso 1. Proceso de Atención de Enfermería",
-      "title": "Proceso de Atención de Enfermería"
+      "title": "Proceso de Atención de Enfermería",
+      "labels": {
+        "nandaTag": "Etiqueta Nanda",
+        "code": "Código",
+        "diagnosis": "Diagnóstico"
+      },
+      "sections": {
+        "definition": "Definición Nanda",
+        "relatedTo": "R/C Relacionado con",
+        "evidencedBy": "E/P Evidenciado por"
+      },
+      "actions": {
+        "previous": "Anterior",
+        "next": "Siguiente"
+      },
+      "diagnoses": {
+        "powerlessness": {
+          "diagnosis": "Impotencia.",
+          "definition": "Experiencia de falta de control sobre una situación, incluyendo la percepción de que las propias acciones no afectan significativamente al resultado.",
+          "relatedTo": "Complejidad del régimen terapéutico.",
+          "evidencedBy": "- Frustración por la incapacidad para realizar las tareas que se realizaban previamente.\n- Dependencia.\n- Insuficiente sentido de control."
+        },
+        "anxiety": {
+          "diagnosis": "Ansiedad",
+          "definition": "Sensación vaga e intranquilizadora de malestar o amenaza acompañada de una respuesta autónoma, el origen de la cual con frecuencia es inespecífico o desconocido para la persona; sentimiento de aprensión causado por la anticipación de un peligro.\nEs una señal de alerta que advierte de un peligro inminente y permite a la persona tomar medidas para afrontar la amenaza.",
+          "relatedTo": "- Crisis situacional.\n- Grandes cambios. (p. ej. el estado de salud)",
+          "evidencedBy": "- Irritabilidad.\n- Alteración en la atención.\n- Confusión.\n- Disminución de la habilidad para resolver problemas.\n- Disminución del campo perceptivo.\n- Preocupación por los cambios en acontecimientos vitales."
+        },
+        "ineffectiveCoping": {
+          "diagnosis": "Afrontamiento ineficaz.",
+          "definition": "Incapacidad para formular una apreciación válida de los agentes estresantes, elecciones inadecuadas de respuestas llevadas a la práctica y/o incapacidad para utilizar los recursos disponibles.",
+          "relatedTo": "- Crisis situacional.\n- Incertidumbre.\n- Insuficiente sentido de control.",
+          "evidencedBy": "- Cambio en el patrón de la comunicación.\n- Incapacidad para satisfacer las necesidades básicas.\n- Insuficiente resolución de los problemas."
+        },
+        "ineffectiveHealthManagement": {
+          "diagnosis": "Gestión ineficaz de la salud.",
+          "definition": "Patrón de regulación e integración en la vida diaria de un régimen terapéutico para el tratamiento de la enfermedad y sus secuelas que no es adecuado para alcanzar los objetivos de salud específicos.",
+          "relatedTo": "- Complejidad del régimen terapéutico.\n- Demandas excesivas.\n- Impotencia.\n- Percepción de la gravedad de su condición.",
+          "evidencedBy": "- No incluye el régimen de tratamiento en la vida diaria.\n- Dificultades con el tratamiento prescrito."
+        },
+        "impairedPhysicalMobility": {
+          "diagnosis": "Deterioro de la movilidad física.",
+          "definition": "Limitación del movimiento físico independiente intencionado del cuerpo o de una o más extremidades.",
+          "relatedTo": "- Deterioro neuromuscular.\n- Deterioro sensorio perceptivo.\n- Disminución de la fuerza muscular.\n- Disminución de la resistencia.\n- Disminución del control muscular.",
+          "evidencedBy": "- Alteraciones en la marcha.\n- Aumento del tiempo de reacción.\n- Dificultad para girarse.\n- Disconfort.\n- Disminución de las habilidades motoras finas.\n- Disminución de las habilidades motoras gruesas.\n- Enlentecimiento del movimiento.\n- Inestabilidad postural.\n- Limitación de la amplitud de movimientos.\n- Movimientos descoordinados.\n- Movimientos espásticos."
+        },
+        "impairedVerbalCommunication": {
+          "diagnosis": "Deterioro de la comunicación verbal.",
+          "definition": "Disminución, retraso o carencia de la capacidad para recibir, procesar, transmitir y/o usar un sistema de símbolos.",
+          "relatedTo": "- Deterioro del sistema nervioso central.\n- Alteración en la percepción.",
+          "evidencedBy": "- Dificultad para expresar los pensamientos verbalmente (afasia, apraxia).\n- Dificultad para formar palabras (disartria).\n- Dificultad para mantener la comunicación.\n- Desorientación en el tiempo."
+        },
+        "feedingSelfCareDeficit": {
+          "diagnosis": "Déficit de autocuidado: alimentación.",
+          "definition": "Deterioro de la capacidad para realizar o completar por uno mismo las actividades de autoalimentación.",
+          "relatedTo": "- Deterioro neuromuscular.\n- Desórdenes perceptuales.",
+          "evidencedBy": "- Deterioro de la capacidad para autoalimentarse con una comida completa.\n- Deterioro de la capacidad para deglutir los alimentos."
+        },
+        "dressingSelfCareDeficit": {
+          "diagnosis": "Déficit de autocuidado: vestido.",
+          "definition": "Deterioro de la capacidad para realizar o completar por uno mismo las actividades de vestido y arreglo personal.",
+          "relatedTo": "- Deterioro neuromuscular.\n- Desórdenes perceptuales.",
+          "evidencedBy": "- Deterioro de la capacidad de ponerse las prendas de vestir necesarias. (p. ej., camisa, calcetines, zapatos).\n- Deterioro de la capacidad para quitarse las prendas de vestir necesarias. (p. ej., camisa, calcetines, zapatos)."
+        }
+      }
     }
   }
 }
