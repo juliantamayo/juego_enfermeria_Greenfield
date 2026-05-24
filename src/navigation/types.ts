@@ -9,7 +9,7 @@ export type CaseSceneScreenName =
   | "Scene4Screen"
   | "Scene5Screen"
   | "Scene6Screen";
-export type SceneCompleteReturnScreenName = CaseMenuScreenName | "Scene2Screen" | "Scene3Screen";
+export type SceneCompleteReturnScreenName = CaseMenuScreenName | "Scene2Screen" | "Scene3Screen" | "Scene4Screen";
 
 export type RootStackParamList = {
   Home: undefined;

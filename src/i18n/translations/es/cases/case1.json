@@ -490,7 +490,72 @@
         }
       }
     },
-    "scene4": "Valoración",
+    "scene4": {
+      "screenTitle": "Caso 1. Valoración",
+      "title": "Valoración",
+      "summary": {
+        "eyebrow": "Valoración",
+        "title": "Hallazgos en el paciente",
+        "description": "Selecciona todos los hallazgos que correspondan al caso clínico.",
+        "counterLabel": "Seleccionados"
+      },
+      "messages": {
+        "emptySelection": {
+          "title": "Selecciona al menos un hallazgo",
+          "text": "No ha seleccionado ningún hallazgo."
+        },
+        "review": {
+          "title": "Hay respuestas por revisar",
+          "selectFindings": "Selecciona los hallazgos que correspondan al caso clínico.",
+          "missingOrIncorrect": "Una o más opciones seleccionadas no corresponden al caso, o faltan hallazgos por seleccionar.",
+          "correctBeforeContinue": "Corrige tus respuestas antes de continuar."
+        },
+        "completed": {
+          "title": "Hallazgos completos",
+          "text": "Todos los hallazgos seleccionados corresponden al caso clínico."
+        },
+        "readyToCorrect": {
+          "title": "Listo para corregir",
+          "text": "Se limpiaron tus respuestas. Selecciona nuevamente desde cero."
+        }
+      },
+      "feedback": {
+        "correct": "Correcto",
+        "incorrect": "No corresponde al caso"
+      },
+      "actions": {
+        "validate": "Validar respuestas",
+        "correct": "Corregir",
+        "continue": "Continuar"
+      },
+      "findings": {
+        "confusionState": "Estado de confusión.",
+        "independentPatient": "Paciente independiente.",
+        "timePlaceDisorientation": "Desorientado alopsiquicamente (tiempo y lugar).",
+        "painSigns": "Signos y síntomas de dolor.",
+        "bradypsychia": "Bradipsiquia.",
+        "acalculia": "Acalculia.",
+        "cognitivelyOriented": "Cognitivamente orientado.",
+        "expressiveAphasiaVerbalApraxia": "Afasia de expresión y apraxia verbal.",
+        "epigastralgia": "Paciente con epigastralgia.",
+        "rightArmHemiparesisSpasticity": "Fuerza muscular grado 2 en brazo derecho - hemiparesia derecha, Espasticidad grado 3 en brazo derecho.",
+        "leftUpperLimbStrength": "Fuerza muscular de miembro superior izquierdo grado 5.",
+        "rightHemineglectHypoesthesia": "Heminegligencia e hipoestesia derecha.",
+        "leftHomonymousHemianopsia": "Hemianopsia homónima izquierda.",
+        "rightHomonymousHemianopsia": "Hemianopsia homónima derecha.",
+        "rightPalpebralPtosis": "Ptosis palpebral derecha.",
+        "leftPalpebralPtosis": "Ptosis palpebral izquierda.",
+        "facialMotilityAlteration": "Los músculos de la frente, superciliar y orbicular de los párpados se encuentran sólo levemente afectados, borramiento del surco nasogeniano, al pedirle al señor C.J.M que sonría o muestre los dientes, la boca se desvía hacia el lado izquierdo que mantiene la fuerza muscular.",
+        "rightLowerLimbHemiparesisSpasticity": "Fuerza muscular grado 2 en miembro inferior derecho - hemiparesia derecha, Espasticidad grado 3.",
+        "dependentPatient": "Paciente dependiente.",
+        "hemiplegicGait": "Marcha hemipléjica.",
+        "leftUpperLimbAstereognosis": "Astereognosia táctil en miembro superior izquierdo.",
+        "rightUpperLimbAstereognosis": "Astereognosia táctil en miembro superior derecho.",
+        "leftUpperLimbStereognosis": "Estereognosia en miembro superior izquierdo.",
+        "rightUpperLimbStereognosis": "Estereognosia en miembro superior derecho.",
+        "rightHemiparesisLovett": "Paciente con - hemiparesia derecha fuerza muscular lovet 2, Espasticidad grado 3 y fuerza muscular en miembro inferior izquierdo grado 5 lovet."
+      }
+    },
     "scene5": "Quiz",
     "scene6": "Proceso de Atención de Enfermería"
   }

@@ -490,7 +490,72 @@
         }
       }
     },
-    "scene4": "Assessment",
+    "scene4": {
+      "screenTitle": "Case 1. Assessment",
+      "title": "Assessment",
+      "summary": {
+        "eyebrow": "Assessment",
+        "title": "Patient findings",
+        "description": "Select all findings that correspond to the clinical case.",
+        "counterLabel": "Selected"
+      },
+      "messages": {
+        "emptySelection": {
+          "title": "Select at least one finding",
+          "text": "You have not selected any finding."
+        },
+        "review": {
+          "title": "Some answers need review",
+          "selectFindings": "Select the findings that correspond to the clinical case.",
+          "missingOrIncorrect": "One or more selected options do not correspond to the case, or some findings are still missing.",
+          "correctBeforeContinue": "Correct your answers before continuing."
+        },
+        "completed": {
+          "title": "Findings completed",
+          "text": "All selected findings correspond to the clinical case."
+        },
+        "readyToCorrect": {
+          "title": "Ready to correct",
+          "text": "Your answers were cleared. Select again from scratch."
+        }
+      },
+      "feedback": {
+        "correct": "Correct",
+        "incorrect": "Does not correspond to the case"
+      },
+      "actions": {
+        "validate": "Validate answers",
+        "correct": "Correct",
+        "continue": "Continue"
+      },
+      "findings": {
+        "confusionState": "Confusion state.",
+        "independentPatient": "Independent patient.",
+        "timePlaceDisorientation": "Allopsychic disorientation (time and place).",
+        "painSigns": "Signs and symptoms of pain.",
+        "bradypsychia": "Bradypsychia.",
+        "acalculia": "Acalculia.",
+        "cognitivelyOriented": "Cognitively oriented.",
+        "expressiveAphasiaVerbalApraxia": "Expressive aphasia and verbal apraxia.",
+        "epigastralgia": "Patient with epigastralgia.",
+        "rightArmHemiparesisSpasticity": "Grade 2 muscle strength in the right arm - right hemiparesis, grade 3 spasticity in the right arm.",
+        "leftUpperLimbStrength": "Grade 5 muscle strength in the left upper limb.",
+        "rightHemineglectHypoesthesia": "Right hemineglect and hypoesthesia.",
+        "leftHomonymousHemianopsia": "Left homonymous hemianopsia.",
+        "rightHomonymousHemianopsia": "Right homonymous hemianopsia.",
+        "rightPalpebralPtosis": "Right palpebral ptosis.",
+        "leftPalpebralPtosis": "Left palpebral ptosis.",
+        "facialMotilityAlteration": "The forehead, superciliary, and orbicularis oculi muscles are only mildly affected, with flattening of the nasolabial fold; when Mr. C.J.M. is asked to smile or show his teeth, the mouth deviates toward the left side, which maintains muscle strength.",
+        "rightLowerLimbHemiparesisSpasticity": "Grade 2 muscle strength in the right lower limb - right hemiparesis, grade 3 spasticity.",
+        "dependentPatient": "Dependent patient.",
+        "hemiplegicGait": "Hemiplegic gait.",
+        "leftUpperLimbAstereognosis": "Tactile astereognosis in the left upper limb.",
+        "rightUpperLimbAstereognosis": "Tactile astereognosis in the right upper limb.",
+        "leftUpperLimbStereognosis": "Stereognosis in the left upper limb.",
+        "rightUpperLimbStereognosis": "Stereognosis in the right upper limb.",
+        "rightHemiparesisLovett": "Patient with right hemiparesis, Lovett grade 2 muscle strength, grade 3 spasticity, and Lovett grade 5 muscle strength in the left lower limb."
+      }
+    },
     "scene5": "Quiz",
     "scene6": "Nursing Care Process"
   }
