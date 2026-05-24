@@ -520,7 +520,7 @@
         }
       },
       "feedback": {
-        "correct": "Correct",
+        "correct": "Try again",
         "incorrect": "Does not correspond to the case"
       },
       "actions": {
@@ -556,8 +556,146 @@
         "rightHemiparesisLovett": "Patient with right hemiparesis, Lovett grade 2 muscle strength, grade 3 spasticity, and Lovett grade 5 muscle strength in the left lower limb."
       }
     },
-    "scene5": "Quiz",
-    "scene6": "Nursing Care Process"
+    "scene5": {
+      "screenTitle": "Case 1. Quiz",
+      "title": "Quiz",
+      "summary": {
+        "eyebrow": "Quiz",
+        "title": "Quiz",
+        "description": "Answer all questions. When you finish, you will see how many answers were correct and incorrect.",
+        "counterLabel": "Answered"
+      },
+      "questionCounter": "Question {{current}} of {{total}}",
+      "results": {
+        "correct": "Correct",
+        "incorrect": "Incorrect"
+      },
+      "messages": {
+        "emptyQuiz": {
+          "title": "Quiz pending",
+          "text": "There are no questions configured for this scene yet."
+        },
+        "pending": {
+          "title": "Some questions are pending",
+          "text": "Answer all questions before validating."
+        },
+        "review": {
+          "title": "Some answers need review",
+          "text": "Correct: {{correct}}. Incorrect: {{incorrect}}. You can try again or return to the menu to review the case.",
+          "saveBlocked": "You must answer everything correctly to save the scene."
+        },
+        "completed": {
+          "title": "Quiz completed",
+          "text": "Correct: {{correct}}. Incorrect: {{incorrect}}."
+        },
+        "readyToCorrect": {
+          "title": "Ready to correct",
+          "text": "Your answers were cleared. Answer again from scratch."
+        }
+      },
+      "actions": {
+        "validate": "Validate answers",
+        "correct": "Try again",
+        "backToMenu": "Back to menu",
+        "save": "Continue"
+      },
+      "quiz": {
+        "question1": {
+          "question": "What is praxis?",
+          "answers": {
+            "1": "It is the ability to recognize complex sensory stimuli.",
+            "2": "It is the ability to perform tasks that require remembering previously learned patterns or movement sequences.",
+            "3": "It is the ability to draw or build figures or shapes in two or three dimensions.",
+            "4": "It is the ability to plan and carry out sequential tasks within a given period of time."
+          }
+        },
+        "question2": {
+          "question": "What is recall?",
+          "answers": {
+            "1": "It is orientation toward a specific objective or the process of drawing real conclusions from the production of ideas, symbols, and associations.",
+            "2": "The ability to generalize, judge real situations, and act based on established cultural values.",
+            "3": "It is an affective movement that appears as a reaction to external or internal stimuli.",
+            "4": "It refers to recovering or accessing information that was previously registered and stored. It brings long-term memory content into short-term memory."
+          }
+        },
+        "question3": {
+          "question": "How do you assess the sensory function of cranial nerve VII?",
+          "answers": {
+            "1": "Explore taste on each half of the tongue, in its anterior two thirds.",
+            "2": "Explore the tongue and whether its two halves are equal and symmetrical.",
+            "3": "Explore the immediate contraction of the posterior pharyngeal wall.",
+            "4": "Explore taste in the posterior third of the tongue."
+          }
+        },
+        "question4": {
+          "question": "Which tests are part of vestibular nerve assessment?",
+          "answers": {
+            "1": "Whispered voice test, Weber test.",
+            "2": "Barany pointing deviation test, Romberg maneuver.",
+            "3": "Rinne test, Romberg maneuver.",
+            "4": "Schwabach test, clock tick test."
+          }
+        },
+        "question5": {
+          "question": "What characteristics does a normal standing attitude or posture have?",
+          "answers": {
+            "1": "Head forward, flat thorax, relaxed abdomen, exaggerated spinal curvatures.",
+            "2": "Head slightly forward, thorax slightly low, spinal curvatures slightly increased.",
+            "3": "Adequate alignment of body parts. When the patient faces the nurse at a distance of about 2 m, there is alignment and symmetry of the shoulders, iliac crests, and knees, which should be at the same level. In lateral position, an imaginary line can be drawn through the earlobe, shoulder, hip, femoral trochanter, center of the knee, and in front of the ankle.",
+            "4": "Head excessively forward, depressed thorax, extremely exaggerated spinal curvatures."
+          }
+        },
+        "question6": {
+          "question": "Which parts make up the stance phase in the gait cycle?",
+          "answers": {
+            "1": "Initial swing, mid-stance, terminal swing.",
+            "2": "Foot flat, initial swing, toe-off.",
+            "3": "Heel contact, mid-swing, terminal stance.",
+            "4": "Heel contact, foot flat, mid-stance, terminal stance, toe-off."
+          }
+        },
+        "question7": {
+          "question": "What is the gait phase characterized by rapid acceleration of the end of the leg immediately after the toes leave the ground called?",
+          "answers": {
+            "1": "Toe-off.",
+            "2": "Initial swing.",
+            "3": "Heel contact.",
+            "4": "Foot flat."
+          }
+        },
+        "question8": {
+          "question": "What is the ability to perform alternating rhythmic voluntary movements with functionally opposing muscle groups, assessed with the rapid alternating movements test, called?",
+          "answers": {
+            "1": "Diadochokinesia.",
+            "2": "Metria.",
+            "3": "Ataxia.",
+            "4": "Apraxia."
+          }
+        },
+        "question9": {
+          "question": "Which type of sensitivity begins in receptors located in ligaments, tendons, muscles, and bones?",
+          "answers": {
+            "1": "Superficial sensitivity.",
+            "2": "Deep sensitivity.",
+            "3": "Pain sensitivity.",
+            "4": "Cortical sensitivity."
+          }
+        },
+        "question10": {
+          "question": "What concept defines decreased sensitivity to pain?",
+          "answers": {
+            "1": "Algesia.",
+            "2": "Anesthesia.",
+            "3": "Analgesia.",
+            "4": "Hypoalgesia."
+          }
+        }
+      }
+    },
+    "scene6": {
+      "screenTitle": "Case 1. Nursing Care Process",
+      "title": "Nursing Care Process"
+    }
   }
 }
 

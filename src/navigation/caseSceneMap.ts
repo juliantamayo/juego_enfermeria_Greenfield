@@ -16,8 +16,8 @@ export const CASES_SCENES: CaseSceneMap = {
     { id: "scene2", titleKey: "case1.scene2.title", screen: "Scene2Screen" },
     { id: "scene3", titleKey: "case1.scene3.title", screen: "Scene3Screen" },
     { id: "scene4", titleKey: "case1.scene4.title", screen: "Scene4Screen" },
-    { id: "scene5", titleKey: "case1.scene5", screen: "Scene5Screen" },
-    { id: "scene6", titleKey: "case1.scene6", screen: "Scene6Screen" },
+    { id: "scene5", titleKey: "case1.scene5.title", screen: "Scene5Screen" },
+    { id: "scene6", titleKey: "case1.scene6.title", screen: "Scene6Screen" },
     //   ],
     //   case2: [
     //     { id: "scene1", titleKey: "cases.case2.scene1", screen: "Scene1Case2" },
