@@ -12,7 +12,7 @@ import { ButtonType } from "@shared/enums/button-type.enum";
 import { MessageVariant } from "@shared/enums/message-variant.enum";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
-import { Colors, GlobalStyles, Radius, Spacing } from "@styles-theme";
+import { Colors, GlobalStyles, Spacing } from "@styles-theme";
 import scene4Findings from "./data/scene4Findings";
 
 const CASE_ID = "case1";
@@ -46,6 +46,10 @@ const Scene4Screen = () => {
     [correctFindingIds, selectedFindingIds]
   );
   const hasCompletedFindings = selectedIncorrectIds.length === 0 && missingCorrectIds.length === 0;
+  const hasSelectedFindings = selectedFindingIds.length > 0;
+  const hasReviewedSelection = hasValidated && hasSelectedFindings;
+  const shouldShowCorrectAction = hasReviewedSelection && !hasCompletedFindings;
+  const shouldShowContinueAction = hasReviewedSelection && hasCompletedFindings;
 
   const toggleFinding = (findingId: string) => {
     setHasValidated(false);
@@ -60,7 +64,7 @@ const Scene4Screen = () => {
   const getOptionStatus = (findingId: string, isCorrect: boolean) => {
     const isSelected = selectedFindingIds.includes(findingId);
 
-    if (!hasValidated) {
+    if (!hasReviewedSelection) {
       return CheckboxOptionStatus.DEFAULT;
     }
 
@@ -74,7 +78,7 @@ const Scene4Screen = () => {
   const getOptionFeedback = (findingId: string, isCorrect: boolean) => {
     const isSelected = selectedFindingIds.includes(findingId);
 
-    if (!hasValidated || !isSelected) {
+    if (!hasReviewedSelection || !isSelected) {
       return undefined;
     }
 
@@ -182,30 +186,33 @@ const Scene4Screen = () => {
               selected={selectedFindingIds.includes(finding.id)}
               status={getOptionStatus(finding.id, finding.correct)}
               feedback={getOptionFeedback(finding.id, finding.correct)}
-              onPress={hasValidated ? undefined : () => toggleFinding(finding.id)}
+              onPress={hasReviewedSelection ? undefined : () => toggleFinding(finding.id)}
             />
           ))}
         </View>
       </SafeScrollView>
 
       <View style={[styles.footer, { paddingBottom: Spacing.base + insets.bottom }]}>
-        {hasValidated ? (
-          <View style={styles.actionsRow}>
-            <Button
-              text={t("case1.scene4.actions.correct")}
-              type={ButtonType.SECONDARY}
-              style={[styles.actionButton, styles.correctButton]}
-              textStyle={styles.correctButtonText}
-              onPress={handleCorrect}
-            />
-            <Button
-              text={t("case1.scene4.actions.continue")}
-              type={ButtonType.PRIMARY}
-              style={styles.actionButton}
-              onPress={handleContinue}
-            />
-          </View>
-        ) : (
+        {shouldShowCorrectAction && (
+          <Button
+            text={t("case1.scene4.actions.correct")}
+            type={ButtonType.SECONDARY}
+            style={[styles.button, styles.correctButton]}
+            textStyle={styles.correctButtonText}
+            onPress={handleCorrect}
+          />
+        )}
+
+        {shouldShowContinueAction && (
+          <Button
+            text={t("case1.scene4.actions.continue")}
+            type={ButtonType.PRIMARY}
+            style={styles.button}
+            onPress={handleContinue}
+          />
+        )}
+
+        {!shouldShowCorrectAction && !shouldShowContinueAction && (
           <Button
             text={t("case1.scene4.actions.validate")}
             type={ButtonType.PRIMARY}
@@ -246,20 +253,6 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     paddingHorizontal: Spacing.base,
     paddingTop: Spacing.base,
-  },
-  actionsRow: {
-    width: "100%",
-    flexDirection: "row",
-    gap: Spacing.md,
-  },
-  actionButton: {
-    flex: 1,
-    borderRadius: Radius.xl,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.18,
-    shadowRadius: 4,
-    elevation: 4,
   },
   correctButton: {
     backgroundColor: Colors.grayscale.gray100,
