@@ -1,14 +1,16 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
 import Button from "@shared/components/button/button.component";
 import FeedbackAlert from "@shared/components/feedbackAlert/feedback-alert.component";
 import Message from "@shared/components/message/message.component";
 import ProgressBar from "@shared/components/progressBar/progress-bar.component";
+import QuizQuestion from "@shared/components/quizQuestion/quiz-question.component";
 import SafeScrollView from "@shared/components/safeScrollView/safe-scroll-view.component";
 import { ButtonType } from "@shared/enums/button-type.enum";
 import { MessageVariant } from "@shared/enums/message-variant.enum";
+import type { QuizQuestionAnswer } from "@shared/types/quiz-question.type";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { Colors, GlobalStyles, Radius, Spacing, Typography } from "@styles-theme";
@@ -127,6 +129,14 @@ const Scene5Screen = () => {
     }, 850);
   };
 
+  const handleQuizAnswerPress = (answer: QuizQuestionAnswer) => {
+    if (!currentQuestion) {
+      return;
+    }
+
+    handleAnswerPress(currentQuestion.id, answer.id, answer.correct);
+  };
+
   const handleCorrect = () => {
     setSelectedAnswers({});
     setCurrentQuestionIndex(0);
@@ -191,29 +201,17 @@ const Scene5Screen = () => {
         )}
 
         {!hasValidated && currentQuestion && (
-          <>
-            <View style={styles.questionCard}>
-              <Text style={styles.question}>{t(currentQuestion.questionKey)}</Text>
-              <Text style={styles.instruction}>{t("case1.scene5.summary.description")}</Text>
-            </View>
-
-            <View style={styles.answers}>
-              {currentQuestion.answers.map((answer, index) => (
-                <TouchableOpacity
-                  key={answer.id}
-                  activeOpacity={0.7}
-                  disabled={!!feedback}
-                  onPress={() => handleAnswerPress(currentQuestion.id, answer.id, answer.correct)}
-                  style={styles.answer}
-                >
-                  <View style={styles.answerBadge}>
-                    <Text style={styles.answerBadgeText}>{String.fromCharCode(65 + index)}</Text>
-                  </View>
-                  <Text style={styles.answerText}>{t(answer.textKey)}</Text>
-                </TouchableOpacity>
-              ))}
-            </View>
-          </>
+          <QuizQuestion
+            question={t(currentQuestion.questionKey)}
+            instruction={t("common.quiz.instruction")}
+            answers={currentQuestion.answers.map((answer) => ({
+              id: answer.id,
+              text: t(answer.textKey),
+              correct: answer.correct,
+            }))}
+            disabled={!!feedback}
+            onAnswerPress={handleQuizAnswerPress}
+          />
         )}
       </SafeScrollView>
       {(shouldShowCorrectAction || shouldShowSaveAction) && (
@@ -288,92 +286,6 @@ const styles = StyleSheet.create({
     color: Colors.brand.primaryDark,
     fontSize: Typography.fontSize.xl,
     fontWeight: Typography.fontWeight.bold,
-  },
-  questions: {
-    width: "100%",
-    gap: Spacing.md,
-  },
-  questionCard: {
-    width: "100%",
-    backgroundColor: Colors.background.default,
-    borderColor: Colors.grayscale.gray200,
-    borderRadius: Radius.xl,
-    borderWidth: 1,
-    padding: Spacing.base,
-  },
-  questionCounter: {
-    color: Colors.brand.primaryDark,
-    fontSize: Typography.fontSize.sm,
-    fontWeight: Typography.fontWeight.bold,
-    marginBottom: Spacing.sm,
-  },
-  question: {
-    color: Colors.text.default,
-    fontSize: Typography.fontSize.mlg,
-    fontWeight: Typography.fontWeight.bold,
-    lineHeight: 24,
-    marginBottom: Spacing.base,
-    textAlign: "center",
-  },
-  instruction: {
-    color: Colors.grayscale.gray600,
-    fontSize: Typography.fontSize.sm,
-    lineHeight: 20,
-    textAlign: "center",
-  },
-  answers: {
-    gap: Spacing.sm,
-  },
-  answer: {
-    width: "100%",
-    alignItems: "center",
-    backgroundColor: Colors.background.default,
-    borderColor: Colors.grayscale.gray200,
-    borderRadius: Radius.md,
-    borderWidth: 1,
-    flexDirection: "row",
-    gap: Spacing.md,
-    paddingHorizontal: Spacing.base,
-    paddingVertical: Spacing.md,
-  },
-  answerBadge: {
-    width: 28,
-    height: 28,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#e2e8f0",
-    borderRadius: Radius.full,
-  },
-  answerBadgeText: {
-    color: Colors.text.bodyText,
-    fontSize: Typography.fontSize.xs,
-    fontWeight: Typography.fontWeight.bold,
-  },
-  answerSelected: {
-    backgroundColor: Colors.message.success.background,
-    borderColor: Colors.brand.primary,
-  },
-  answerCorrect: {
-    backgroundColor: Colors.message.success.background,
-    borderColor: Colors.message.success.border,
-  },
-  answerIncorrect: {
-    backgroundColor: Colors.message.error.background,
-    borderColor: Colors.message.error.border,
-  },
-  answerDisabled: {
-    backgroundColor: Colors.grayscale.gray100,
-  },
-  answerText: {
-    flex: 1,
-    color: Colors.text.default,
-    fontSize: Typography.fontSize.md,
-    fontWeight: Typography.fontWeight.bold,
-    lineHeight: 22,
-    textAlign: "center",
-  },
-  answerDisabledText: {
-    color: Colors.grayscale.gray600,
   },
   footer: {
     width: "100%",

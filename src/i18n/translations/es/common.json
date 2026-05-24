@@ -10,6 +10,10 @@
       "nurse": "ENFERMERA",
       "patientCjm": "SEÑOR C.J.M"
     },
+    "quiz": {
+      "instruction": "Selecciona una respuesta para continuar.",
+      "questionCounter": "Pregunta {{current}} de {{total}}"
+    },
     "sceneComplete": {
       "title": "Escena completada",
       "message": "Guarda tu progreso para habilitar la siguiente escena.",

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors, Radius, Spacing, Typography } from "@styles-theme";
+import { Spacing } from "@styles-theme";
 
 const questionFlowStyles = StyleSheet.create({
   quizContainer: {
@@ -14,33 +14,10 @@ const questionFlowStyles = StyleSheet.create({
   },
   quizContent: {
     flexGrow: 1,
-    gap: Spacing.sm,
+    gap: Spacing.base,
     justifyContent: "flex-start",
     paddingBottom: Spacing.lg,
-  },
-  quizCounter: {
-    alignSelf: "center",
-    color: Colors.brand.primary,
-    fontSize: Typography.fontSize.xl,
-    fontWeight: Typography.fontWeight.bold,
-    marginTop: Spacing.sm,
-  },
-  quizQuestion: {
-    backgroundColor: Colors.brand.primaryDark,
-    borderRadius: Radius.md,
-    color: Colors.text.inverse,
-    fontSize: Typography.fontSize.mlg,
-    fontWeight: Typography.fontWeight.bold,
-    padding: Spacing.md,
-    textAlign: "center",
-  },
-  answerButton: {
-    width: "100%",
-    paddingVertical: Spacing.md,
-  },
-  answerText: {
-    fontSize: Typography.fontSize.md,
-    textAlign: "center",
+    paddingTop: Spacing.xl,
   },
 });
 

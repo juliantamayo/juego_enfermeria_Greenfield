@@ -10,6 +10,10 @@
       "nurse": "NURSE",
       "patientCjm": "MR. C.J.M"
     },
+    "quiz": {
+      "instruction": "Select an answer to continue.",
+      "questionCounter": "Question {{current}} of {{total}}"
+    },
     "sceneComplete": {
       "title": "Scene completed",
       "message": "Save your progress to unlock the next scene.",
