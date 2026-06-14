@@ -4,11 +4,13 @@
       "home": "Evaluation Game",
       "settings": "Settings",
       "caseMenu": "Case Studies Menu",
-      "Case1Menu": "Menu Case 1"
+      "Case1Menu": "Menu Case 1",
+      "Case2Menu": "Menu Case 2"
     },
     "roles": {
       "nurse": "NURSE",
-      "patientCjm": "MR. C.J.M"
+      "patientCjm": "MR. C.J.M",
+      "patientPcp": "MR. P.C.P"
     },
     "quiz": {
       "instruction": "Select an answer to continue.",
