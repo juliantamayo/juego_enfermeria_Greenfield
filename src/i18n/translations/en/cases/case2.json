@@ -1,0 +1,117 @@
+{
+  "case2": {
+    "menu": {
+      "progress": "Case progress: {{percentage}}%"
+    },
+    "scene1": {
+      "screenTitle": "Case 2. Case Introduction",
+      "title": "Case Introduction",
+      "dialog": {
+        "0": "Hello, I am Nurse Leidy.",
+        "1": "Your mission will be to accompany me as I assess the patients assigned to us.",
+        "2": "You will also identify the priority nursing diagnosis according to each patient's needs.",
+        "3": "Mr. P.C.P., age 55, is attending the outpatient clinic for his first adult health appointment.",
+        "4": "The patient said that he would like a head-to-toe assessment to learn about his current health.",
+        "5": "He says he is motivated to take better care of himself each day and to learn how to do so.",
+        "6": "Mr. P.C.P. is in good health and maintains a good relationship with his family.",
+        "7": "He works as an engineer. His socioeconomic situation is good. He enjoys reading and is right-handed. He is active, thoughtful, and walks without difficulty.",
+        "8": "He says he feels healthy and calm and is satisfied with his life."
+      }
+    },
+    "scene2": {
+      "screenTitle": "Case 2. Questions for the patient",
+      "title": "Questions for the Patient",
+      "questions": {
+        "question1": "1. Well, Mr. P.C.P., what brings you here today?",
+        "question2": "2. Do you know the difference between these two objects?",
+        "question3": "3. Tell me, sir, what year did you graduate as an engineer?",
+        "question4": "4. What is your relationship with your wife like? Do you feel loved by her and your daughters?",
+        "question5": "5. How many hours do you sleep at night, and how do you feel after sleeping those hours?"
+      },
+      "questionDialogs": {
+        "question1": {
+          "screenTitle": "Case 2. Question 1",
+          "dialog": {
+            "0": "Good morning, Mr. P.C.P. What brings you here today?",
+            "1": "Well, miss, I came to find out how my health is."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental status area is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Calculation.",
+                "2": "Orientation.",
+                "3": "Memory.",
+                "4": "Appearance and attitude."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient is well dressed and clean, with his shirt tucked in and his hair neatly combed.",
+            "1": "He appears cheerful, speaks clearly with an appropriate tone, has a stable gait, and responds spontaneously without hesitation."
+          }
+        },
+        "question2": {
+          "screenTitle": "Case 2. Question 2",
+          "dialog": {
+            "0": "Mr. P.C.P., do you know the difference between a TV and a radio?",
+            "1": "Miss, television allows us to see images and a variety of programs.",
+            "2": "And on the radio, we hear the same things presented on television, but without images.",
+            "3": "That is correct, sir.",
+            "4": "And tell me, do you like your job? What plans do you have for the future?",
+            "5": "I like my job very much and do things with passion. My wish for the future is to earn my pension and spend time with my family."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental status area is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Judgment.",
+                "2": "Orientation.",
+                "3": "Consciousness.",
+                "4": "Facies."
+              }
+            },
+            "1": {
+              "question": "What functions does the mental area of judgment perform?",
+              "answers": {
+                "1": "Interpreting situations.",
+                "2": "Generalizing and judging situations.",
+                "3": "Maintaining alertness.",
+                "4": "Controlling emotions."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient demonstrates preserved judgment."
+          }
+        }
+      },
+      "placeholder": {
+        "dialog": {
+          "0": "The dialogue for this question is ready to be configured."
+        },
+        "quiz": {
+          "question": "Provisional question content.",
+          "answers": {
+            "continue": "Continue"
+          }
+        },
+        "followUpDialog": {
+          "0": "Question completed."
+        }
+      }
+    },
+    "scene3": {
+      "title": "Assessment Tests"
+    },
+    "scene4": {
+      "title": "Assessment"
+    },
+    "scene5": {
+      "title": "Quiz"
+    },
+    "scene6": {
+      "title": "Nursing Care Process"
+    }
+  }
+}

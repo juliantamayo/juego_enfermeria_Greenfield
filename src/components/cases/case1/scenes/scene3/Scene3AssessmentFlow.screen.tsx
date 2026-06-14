@@ -6,7 +6,10 @@ import { useTranslation } from "react-i18next";
 import Header from "@shared/components/header/header.component";
 import Button from "@shared/components/button/button.component";
 import FeedbackAlert from "@shared/components/feedbackAlert/feedback-alert.component";
+import ProgressBar from "@shared/components/progressBar/progress-bar.component";
+import QuizQuestion from "@shared/components/quizQuestion/quiz-question.component";
 import { ButtonType } from "@shared/enums/button-type.enum";
+import type { QuizQuestionAnswer } from "@shared/types/quiz-question.type";
 import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import type { RootStackParamList } from "@navigation/types";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
@@ -58,7 +61,6 @@ const Scene3AssessmentFlowScreen = () => {
       : currentAssessmentFlow.dialog;
   const currentDialog = activeDialogEntries[phase === "followUpDialog" ? followUpDialogStep : dialogStep];
   const currentQuiz = currentAssessmentFlow.quiz[quizStep];
-  const correctCount = quizStep;
   const totalCount = currentAssessmentFlow.quiz.length;
   const shuffledAnswers = useMemo(
     () => shuffleAnswers(currentQuiz.answers),
@@ -147,6 +149,10 @@ const Scene3AssessmentFlowScreen = () => {
     }, FEEDBACK_DELAY_MS);
   };
 
+  const handleQuizAnswerPress = (answer: QuizQuestionAnswer) => {
+    handleAnswerPress(answer.correct);
+  };
+
   return (
     <ImageBackground
       source={showQuiz ? quizBackgroundImage : currentDialog.image}
@@ -177,19 +183,22 @@ const Scene3AssessmentFlowScreen = () => {
         <View style={showQuiz ? questionFlowStyles.quizPanel : dialogStyles.panel}>
           {showQuiz ? (
             <ScrollView style={dialogStyles.scroll} contentContainerStyle={questionFlowStyles.quizContent}>
-              <Text style={questionFlowStyles.quizQuestion}>{t(currentQuiz.questionKey)}</Text>
-              {shuffledAnswers.map((answer) => (
-                <Button
-                  key={answer.id}
-                  style={questionFlowStyles.answerButton}
-                  text={t(answer.textKey)}
-                  textStyle={questionFlowStyles.answerText}
-                  type={ButtonType.PRIMARY_TRANSPARENT}
-                  disabled={!!feedback}
-                  onPress={() => handleAnswerPress(answer.correct)}
-                />
-              ))}
-              <Text style={questionFlowStyles.quizCounter}>{`${correctCount}/${totalCount}`}</Text>
+              <ProgressBar
+                value={quizStep + 1}
+                max={totalCount}
+                label={t("common.quiz.questionCounter", { current: quizStep + 1, total: totalCount })}
+              />
+              <QuizQuestion
+                question={t(currentQuiz.questionKey)}
+                instruction={t("common.quiz.instruction")}
+                answers={shuffledAnswers.map((answer) => ({
+                  id: answer.id,
+                  text: t(answer.textKey),
+                  correct: answer.correct,
+                }))}
+                disabled={!!feedback}
+                onAnswerPress={handleQuizAnswerPress}
+              />
             </ScrollView>
           ) : (
             <ScrollView style={dialogStyles.scroll} contentContainerStyle={dialogStyles.scrollContent}>

@@ -6,15 +6,18 @@ import enCommon from './translations/en/common.json';
 import enSettings from './translations/en/settings.json';
 import enCasesShared from './translations/en/cases/shared.json';
 import enCase1 from './translations/en/cases/case1.json';
+import enCase2 from './translations/en/cases/case2.json';
 import esCommon from './translations/es/common.json';
 import esSettings from './translations/es/settings.json';
 import esCasesShared from './translations/es/cases/shared.json';
 import esCase1 from './translations/es/cases/case1.json';
+import esCase2 from './translations/es/cases/case2.json';
 
 const en = {
   ...enCommon,
   ...enSettings,
   ...enCase1,
+  ...enCase2,
   cases: {
     ...enCasesShared.cases,
   },
@@ -24,6 +27,7 @@ const es = {
   ...esCommon,
   ...esSettings,
   ...esCase1,
+  ...esCase2,
   cases: {
     ...esCasesShared.cases,
   },

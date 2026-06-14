@@ -4,11 +4,17 @@
       "home": "Juego Valoración",
       "settings": "Configuración",
       "caseMenu": "Menú Casos de Estudio",
-      "Case1Menu": "Menú Caso 1"
+      "Case1Menu": "Menú Caso 1",
+      "Case2Menu": "Menú Caso 2"
     },
     "roles": {
       "nurse": "ENFERMERA",
-      "patientCjm": "SEÑOR C.J.M"
+      "patientCjm": "SEÑOR C.J.M",
+      "patientPcp": "SEÑOR P.C.P"
+    },
+    "quiz": {
+      "instruction": "Selecciona una respuesta para continuar.",
+      "questionCounter": "Pregunta {{current}} de {{total}}"
     },
     "sceneComplete": {
       "title": "Escena completada",

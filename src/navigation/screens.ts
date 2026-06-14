@@ -17,6 +17,9 @@ import Scene4Screen from "@components/cases/case1/scenes/scene4/Scene4.screen";
 import Scene5Screen from "@components/cases/case1/scenes/scene5/Scene5.screen";
 import Scene6Screen from "@components/cases/case1/scenes/scene6/Scene6.screen";
 import Case2MenuScreen from "@components/cases/case2/Case2Menu.screen";
+import Case2Scene1Screen from "@components/cases/case2/scenes/scene1/Scene1.screen";
+import Case2Scene2Screen from "@components/cases/case2/scenes/scene2/Scene2.screen";
+import Case2Scene2QuestionFlowScreen from "@components/cases/case2/scenes/scene2/Scene2QuestionFlow.screen";
 import Case3MenuScreen from "@components/cases/case3/Case3Menu.screen";
 
 // Defines the structure for each screen entry used in the navigation stack.
@@ -52,6 +55,9 @@ export const screens: ScreenEntry[] = [
   {
     name: "Case2Menu",
     component: Case2MenuScreen,
+    options: {
+      headerBackVisible: false,
+    },
   },
   {
     name: "Case3Menu",
@@ -60,6 +66,27 @@ export const screens: ScreenEntry[] = [
   {
     name: "Scene1Screen",
     component: Scene1Screen,
+    options: {
+      headerBackVisible: false,
+    },
+  },
+  {
+    name: "Case2Scene1Screen",
+    component: Case2Scene1Screen,
+    options: {
+      headerBackVisible: false,
+    },
+  },
+  {
+    name: "Case2Scene2Screen",
+    component: Case2Scene2Screen,
+    options: {
+      headerBackVisible: false,
+    },
+  },
+  {
+    name: "Case2Scene2QuestionFlowScreen",
+    component: Case2Scene2QuestionFlowScreen,
     options: {
       headerBackVisible: false,
     },

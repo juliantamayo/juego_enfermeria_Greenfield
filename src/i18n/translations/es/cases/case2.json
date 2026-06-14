@@ -1,0 +1,117 @@
+{
+  "case2": {
+    "menu": {
+      "progress": "Progreso del caso: {{percentage}}%"
+    },
+    "scene1": {
+      "screenTitle": "Caso 2. Introducción al Caso",
+      "title": "Introducción al Caso",
+      "dialog": {
+        "0": "Hola, soy la enfermera Leidy",
+        "1": "Su misión será acompañarme a valorar los pacientes que nos asignen.",
+        "2": "E identificar el diagnóstico de enfermería prioritario según las necesidades del paciente.",
+        "3": "El Señor P.C.P de 55 años, asiste al servicio de consulta externa en cita por primera vez de adultez.",
+        "4": "El paciente dijo que desea ser valorado de pies a cabeza para saber cómo está.",
+        "5": "Dice que lo motiva cuidarse cada día más y aprender cómo hacerlo.",
+        "6": "El Señor P.C.P cuenta con un adecuado estado de salud, mantiene buena relación familiar.",
+        "7": "Trabaja como ingeniero. Su situación socioeconómica es buena. Le gusta leer, es diestro. Persona activa, pensante, camina adecuadamente.",
+        "8": "Dice que se siente sano y tranquilo, vive satisfecho con su vida."
+      }
+    },
+    "scene2": {
+      "screenTitle": "Caso 2. Preguntas al paciente",
+      "title": "Preguntas a Paciente",
+      "questions": {
+        "question1": "1. Bueno señor P.C.P., ¿qué lo trae por estos lares?",
+        "question2": "2. ¿Sabe usted cuál es la diferencia entre estos dos objetos?",
+        "question3": "3. Cuénteme señor, ¿en qué año se graduó como ingeniero?",
+        "question4": "4. ¿Cómo es la relación con su esposa? ¿Se siente querido por ella y por sus hijas?",
+        "question5": "5. ¿Cuántas horas duerme durante las noches y cómo se siente después de dormir esas horas?"
+      },
+      "questionDialogs": {
+        "question1": {
+          "screenTitle": "Caso 2. Pregunta 1",
+          "dialog": {
+            "0": "Buen día señor P.C.P. ¿Qué lo trae por estos lares?",
+            "1": "Bien señorita, vengo para saber ¿cómo me encuentro de salud?"
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Cálculo.",
+                "2": "Orientación.",
+                "3": "Memoria.",
+                "4": "Porte y actitud."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Es un paciente que se encuentra bien vestido, limpio, con la camisa por dentro y bien peinado (aliñado).",
+            "1": "Se le ve alegre, con buen lenguaje y entendible (tono adecuado), con marcha estable y espontáneo en lo que responde sin titubear."
+          }
+        },
+        "question2": {
+          "screenTitle": "Caso 2. Pregunta 2",
+          "dialog": {
+            "0": "Señor P.C.P., ¿sabe usted cuál es la diferencia entre la TV y una radio?",
+            "1": "Señorita, por medio de la televisión vemos imágenes y variedad de programación.",
+            "2": "Y por radio escuchamos lo mismo que se presenta en el televisor, pero sin imágenes.",
+            "3": "Es correcto, señor.",
+            "4": "Y cuénteme, ¿le gusta su trabajo? ¿Qué planes tiene para el futuro?",
+            "5": "Mi trabajo me gusta mucho y hago las cosas con pasión. Mi deseo en el futuro es lograr mi pensión y compartir con mi familia."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Juicio.",
+                "2": "Orientación.",
+                "3": "Conciencia.",
+                "4": "Fascies."
+              }
+            },
+            "1": {
+              "question": "¿Qué funciones desempeña el área mental del juicio?",
+              "answers": {
+                "1": "Interpretar las situaciones.",
+                "2": "Generalizar y juzgar situaciones.",
+                "3": "Mantiene el estado de alerta.",
+                "4": "Controlar las emociones."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "El paciente presenta un juicio conservado."
+          }
+        }
+      },
+      "placeholder": {
+        "dialog": {
+          "0": "El diálogo de esta pregunta está listo para ser configurado."
+        },
+        "quiz": {
+          "question": "Contenido provisional de la pregunta.",
+          "answers": {
+            "continue": "Continuar"
+          }
+        },
+        "followUpDialog": {
+          "0": "Pregunta completada."
+        }
+      }
+    },
+    "scene3": {
+      "title": "Pruebas de Valoración"
+    },
+    "scene4": {
+      "title": "Valoración"
+    },
+    "scene5": {
+      "title": "Quiz"
+    },
+    "scene6": {
+      "title": "Proceso de Atención de Enfermería"
+    }
+  }
+}

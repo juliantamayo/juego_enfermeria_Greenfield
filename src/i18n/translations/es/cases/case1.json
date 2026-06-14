@@ -1,5 +1,8 @@
 ﻿{
   "case1": {
+    "menu": {
+      "progress": "Progreso del caso: {{percentage}}%"
+    },
     "scene1": {
       "screenTitle": "Caso 1. Introducción al Caso",
       "title": "Introducción al caso",
@@ -556,8 +559,210 @@
         "rightHemiparesisLovett": "Paciente con - hemiparesia derecha fuerza muscular lovet 2, Espasticidad grado 3 y fuerza muscular en miembro inferior izquierdo grado 5 lovet."
       }
     },
-    "scene5": "Quiz",
-    "scene6": "Proceso de Atención de Enfermería"
+    "scene5": {
+      "screenTitle": "Caso 1. Quiz",
+      "title": "Quiz",
+      "summary": {
+        "eyebrow": "Quiz",
+        "title": "Quiz",
+        "description": "Responde todas las preguntas. Al finalizar verás cuántas respuestas fueron correctas e incorrectas.",
+        "counterLabel": "Respondidas"
+      },
+      "questionCounter": "Pregunta {{current}} de {{total}}",
+      "results": {
+        "correct": "Correctas",
+        "incorrect": "Erróneas"
+      },
+      "messages": {
+        "emptyQuiz": {
+          "title": "Quiz pendiente",
+          "text": "Aún no hay preguntas configuradas para esta escena."
+        },
+        "pending": {
+          "title": "Hay preguntas pendientes",
+          "text": "Responde todas las preguntas antes de validar."
+        },
+        "review": {
+          "title": "Hay respuestas por revisar",
+          "text": "Correctas: {{correct}}. Erróneas: {{incorrect}}. Puedes intentarlo de nuevo o volver al menú para repasar el caso.",
+          "saveBlocked": "Debes responder todo correctamente para guardar la escena."
+        },
+        "completed": {
+          "title": "Quiz completado",
+          "text": "Correctas: {{correct}}. Erróneas: {{incorrect}}."
+        },
+        "readyToCorrect": {
+          "title": "Listo para corregir",
+          "text": "Se limpiaron tus respuestas. Responde nuevamente desde cero."
+        }
+      },
+      "actions": {
+        "validate": "Validar respuestas",
+        "correct": "Volver a intentar",
+        "backToMenu": "Volver al menú",
+        "save": "Continuar"
+      },
+      "quiz": {
+        "question1": {
+          "question": "¿Qué es la praxia?",
+          "answers": {
+            "1": "Es la capacidad de reconocer estímulos sensoriales complejos.",
+            "2": "Es la capacidad para realizar tareas que requieren recordar patrones previamente aprendidos o secuencias de movimientos.",
+            "3": "Es la capacidad para dibujar o construir figuras o formas en dos o tres dimensiones.",
+            "4": "Es la capacidad de planificar y llevar a cabo tareas secuenciales en un periodo de tiempo determinado."
+          }
+        },
+        "question2": {
+          "question": "¿Qué es evocación?",
+          "answers": {
+            "1": "Es la orientación hacia un objetivo específico o la conducción a sacar conclusiones reales a partir de la producción de ideas, símbolos y asociaciones.",
+            "2": "Capacidad para generalizar, juzgar situaciones reales y actuar con base en valores culturales establecidos.",
+            "3": "Es un movimiento afectivo que se presenta como la reacción ante estímulos externos o internos.",
+            "4": "Se refiere al hecho de recuperar o acceder a la información que, en su momento, fue registrada y almacenada. Es traer a la memoria de corto plazo contenidos de la memoria de largo plazo."
+          }
+        },
+        "question3": {
+          "question": "¿Cómo valora la función sensorial del par craneal VII?",
+          "answers": {
+            "1": "Explorar el gusto de cada hemilengua, en sus dos tercios anteriores.",
+            "2": "Exploración de la lengua y si sus dos mitades son iguales y simétricas.",
+            "3": "Exploración de la contracción inmediata de la pared posterior de la faringe.",
+            "4": "Exploración del gusto en el tercio posterior de la lengua."
+          }
+        },
+        "question4": {
+          "question": "¿Qué pruebas hacen parte de la valoración del nervio vestibular?",
+          "answers": {
+            "1": "Prueba de la voz cuchicheada, Prueba de Weber.",
+            "2": "Prueba de desviación del índice de Barany, Maniobra de Romberg.",
+            "3": "Prueba de Rinne, Maniobra de Romberg.",
+            "4": "Prueba de Schwabach, Prueba del tic-tac del reloj."
+          }
+        },
+        "question5": {
+          "question": "¿Qué características tiene una actitud o postura de pie normal?",
+          "answers": {
+            "1": "Cabeza hacia delante, tórax plano, abdomen relajado, curvaturas de la espalda exageradas.",
+            "2": "Cabeza ligeramente hacia delante, Tórax ligeramente bajo, curvaturas de la espalda ligeramente aumentadas.",
+            "3": "Alineación adecuada de las partes del cuerpo. Al estar el paciente frente al enfermero y a una distancia de unos 2 m hay alineación y simetría de los hombros, crestas iliacas y rodillas, que deben estar al mismo nivel, respectivamente. Al estar en posición lateral puede trazarse una línea imaginaria que pase por el lóbulo de la oreja, el hombro, la cadera, el trocánter femoral, el centro de la rodilla y delante del tobillo.",
+            "4": "Cabeza exageradamente hacia delante, Tórax deprimido, curvaturas de la espalda extremadamente exageradas."
+          }
+        },
+        "question6": {
+          "question": "¿Qué partes componen la fase de apoyo en el ciclo de la marcha?",
+          "answers": {
+            "1": "Balanceo inicial, apoyo medio, balanceo terminal.",
+            "2": "Apoyo plantar, balanceo inicial, despegue.",
+            "3": "Contacto del talón, balanceo medio, apoyo terminal.",
+            "4": "Contacto del talón, apoyo plantar, apoyo medio, apoyo terminal, despegue."
+          }
+        },
+        "question7": {
+          "question": "¿Cómo se llama la fase de la marcha que se caracteriza por la rápida aceleración del extremo de la pierna inmediatamente después de que los dedos dejan el suelo?",
+          "answers": {
+            "1": "Despegue.",
+            "2": "Balanceo inicial.",
+            "3": "Contacto del talón.",
+            "4": "Apoyo plantar."
+          }
+        },
+        "question8": {
+          "question": "¿Cómo se llama la capacidad de ejercer movimientos voluntarios rítmicos alternos con grupos musculares funcionalmente opuestos, que se valora con “prueba de movimientos alternantes rápidos”?",
+          "answers": {
+            "1": "Diadococinesia.",
+            "2": "Metria.",
+            "3": "Ataxia.",
+            "4": "Apraxia."
+          }
+        },
+        "question9": {
+          "question": "¿Cuál es el tipo de sensibilidad que se inicia en los receptores localizados en ligamentos, tendones, músculos y huesos?",
+          "answers": {
+            "1": "Sensibilidad superficial.",
+            "2": "Sensibilidad profunda.",
+            "3": "Sensibilidad dolorosa.",
+            "4": "Sensibilidad cortical."
+          }
+        },
+        "question10": {
+          "question": "¿Cuál es el concepto para definir la disminución de la sensibilidad al dolor?",
+          "answers": {
+            "1": "Algesia.",
+            "2": "Anestesia.",
+            "3": "Analgesia.",
+            "4": "Hipoalgesia."
+          }
+        }
+      }
+    },
+    "scene6": {
+      "screenTitle": "Caso 1. Proceso de Atención de Enfermería",
+      "title": "Proceso de Atención de Enfermería",
+      "labels": {
+        "nandaTag": "Etiqueta Nanda",
+        "code": "Código",
+        "diagnosis": "Diagnóstico"
+      },
+      "sections": {
+        "definition": "Definición Nanda",
+        "relatedTo": "R/C Relacionado con",
+        "evidencedBy": "E/P Evidenciado por"
+      },
+      "actions": {
+        "previous": "Anterior",
+        "next": "Siguiente"
+      },
+      "diagnoses": {
+        "powerlessness": {
+          "diagnosis": "Impotencia.",
+          "definition": "Experiencia de falta de control sobre una situación, incluyendo la percepción de que las propias acciones no afectan significativamente al resultado.",
+          "relatedTo": "Complejidad del régimen terapéutico.",
+          "evidencedBy": "- Frustración por la incapacidad para realizar las tareas que se realizaban previamente.\n- Dependencia.\n- Insuficiente sentido de control."
+        },
+        "anxiety": {
+          "diagnosis": "Ansiedad",
+          "definition": "Sensación vaga e intranquilizadora de malestar o amenaza acompañada de una respuesta autónoma, el origen de la cual con frecuencia es inespecífico o desconocido para la persona; sentimiento de aprensión causado por la anticipación de un peligro.\nEs una señal de alerta que advierte de un peligro inminente y permite a la persona tomar medidas para afrontar la amenaza.",
+          "relatedTo": "- Crisis situacional.\n- Grandes cambios. (p. ej. el estado de salud)",
+          "evidencedBy": "- Irritabilidad.\n- Alteración en la atención.\n- Confusión.\n- Disminución de la habilidad para resolver problemas.\n- Disminución del campo perceptivo.\n- Preocupación por los cambios en acontecimientos vitales."
+        },
+        "ineffectiveCoping": {
+          "diagnosis": "Afrontamiento ineficaz.",
+          "definition": "Incapacidad para formular una apreciación válida de los agentes estresantes, elecciones inadecuadas de respuestas llevadas a la práctica y/o incapacidad para utilizar los recursos disponibles.",
+          "relatedTo": "- Crisis situacional.\n- Incertidumbre.\n- Insuficiente sentido de control.",
+          "evidencedBy": "- Cambio en el patrón de la comunicación.\n- Incapacidad para satisfacer las necesidades básicas.\n- Insuficiente resolución de los problemas."
+        },
+        "ineffectiveHealthManagement": {
+          "diagnosis": "Gestión ineficaz de la salud.",
+          "definition": "Patrón de regulación e integración en la vida diaria de un régimen terapéutico para el tratamiento de la enfermedad y sus secuelas que no es adecuado para alcanzar los objetivos de salud específicos.",
+          "relatedTo": "- Complejidad del régimen terapéutico.\n- Demandas excesivas.\n- Impotencia.\n- Percepción de la gravedad de su condición.",
+          "evidencedBy": "- No incluye el régimen de tratamiento en la vida diaria.\n- Dificultades con el tratamiento prescrito."
+        },
+        "impairedPhysicalMobility": {
+          "diagnosis": "Deterioro de la movilidad física.",
+          "definition": "Limitación del movimiento físico independiente intencionado del cuerpo o de una o más extremidades.",
+          "relatedTo": "- Deterioro neuromuscular.\n- Deterioro sensorio perceptivo.\n- Disminución de la fuerza muscular.\n- Disminución de la resistencia.\n- Disminución del control muscular.",
+          "evidencedBy": "- Alteraciones en la marcha.\n- Aumento del tiempo de reacción.\n- Dificultad para girarse.\n- Disconfort.\n- Disminución de las habilidades motoras finas.\n- Disminución de las habilidades motoras gruesas.\n- Enlentecimiento del movimiento.\n- Inestabilidad postural.\n- Limitación de la amplitud de movimientos.\n- Movimientos descoordinados.\n- Movimientos espásticos."
+        },
+        "impairedVerbalCommunication": {
+          "diagnosis": "Deterioro de la comunicación verbal.",
+          "definition": "Disminución, retraso o carencia de la capacidad para recibir, procesar, transmitir y/o usar un sistema de símbolos.",
+          "relatedTo": "- Deterioro del sistema nervioso central.\n- Alteración en la percepción.",
+          "evidencedBy": "- Dificultad para expresar los pensamientos verbalmente (afasia, apraxia).\n- Dificultad para formar palabras (disartria).\n- Dificultad para mantener la comunicación.\n- Desorientación en el tiempo."
+        },
+        "feedingSelfCareDeficit": {
+          "diagnosis": "Déficit de autocuidado: alimentación.",
+          "definition": "Deterioro de la capacidad para realizar o completar por uno mismo las actividades de autoalimentación.",
+          "relatedTo": "- Deterioro neuromuscular.\n- Desórdenes perceptuales.",
+          "evidencedBy": "- Deterioro de la capacidad para autoalimentarse con una comida completa.\n- Deterioro de la capacidad para deglutir los alimentos."
+        },
+        "dressingSelfCareDeficit": {
+          "diagnosis": "Déficit de autocuidado: vestido.",
+          "definition": "Deterioro de la capacidad para realizar o completar por uno mismo las actividades de vestido y arreglo personal.",
+          "relatedTo": "- Deterioro neuromuscular.\n- Desórdenes perceptuales.",
+          "evidencedBy": "- Deterioro de la capacidad de ponerse las prendas de vestir necesarias. (p. ej., camisa, calcetines, zapatos).\n- Deterioro de la capacidad para quitarse las prendas de vestir necesarias. (p. ej., camisa, calcetines, zapatos)."
+        }
+      }
+    }
   }
 }
 
