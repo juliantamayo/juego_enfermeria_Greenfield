@@ -1,55 +1,72 @@
 ---
 name: git-changes
-description: Generate a short, reviewer-friendly PR description for the current branch against origin/master.
+description: Generate a short, reviewer-friendly development summary in a text file.
 agent: agent
-tools: ['edit/createFile', 'edit/createDirectory', 'search', 'runCommands', 'githubRepo']
-model: Gemini 3.1 Pro (Preview) (copilot)
+tools: ['edit/createFile', 'search', 'runCommands']
 ---
 
-Instruction: Act as a senior software developer preparing an exemplary pull request (PR) for your team. Your goal is to make the reviewer's life easier by giving them all the context they need.
+Act as a senior software developer preparing an exemplary pull request
+description. Make the reviewer's work easier by clearly explaining the
+development that was implemented.
 
-First, detect the current Git branch name and execute this command, replacing `<current-branch>` with that branch name:
+Analyze the current development against the local `master` branch:
 
 ```bash
-git log -p origin/master..origin/<current-branch> > changes.txt
+git diff --stat master...HEAD
+git diff --name-status master...HEAD
+git diff master...HEAD
+git diff --stat
+git diff --name-status
+git diff
 ```
 
-Run the command regardless of whether `changes.txt` already exists.
+Generate or replace a file named `git-changes.txt` in the repository root.
 
-Based solely on the content of the generated `changes.txt` file, create a complete PR description in a file named `changes.md`.
+## Safety Rules
 
-Finally, after generating `changes.md`, delete the `changes.txt` file.
+- Git commands must be read-only.
+- Never run `git fetch`, `git pull`, `git merge`, `git rebase`, `git commit`,
+  `git push`, `git switch`, `git checkout`, or `git reset`.
+- Do not modify source files.
+- Creating or replacing `git-changes.txt` is the only allowed file change.
 
-Description Requirements:
+## Description Requirements
 
-- Format: Strictly Markdown. The `changes.md` file must contain only the PR description Markdown.
 - Language: English.
-- Style: Professional, clear, and friendly.
-- Size: Short, summarized, coherent, and relevant.
-- No Citing Sources: Do not mention that the description is based on `changes.txt`, and do not cite any sources. The result must be the PR description itself.
+- Format: Plain text using the exact structure below.
+- Style: Professional, clear, concise, and friendly.
+- Focus only on the development implemented and its impact.
+- Do not mention branches, commits, Git status, or uncommitted changes.
+- Do not include the full raw diff.
+- Mention validation results only when verified during the current session.
+- Include the screenshots placeholder when the changes affect the user interface.
 
-The Markdown structure must be as follows:
+```text
+<conventional-commit-style title>
 
-```markdown
-# <conventional-commit-style title>
+PURPOSE
 
-## Purpose
+<In one or two sentences, explain the high-level purpose of the development and
+the problem it solves.>
 
-<In one or two sentences, infer and explain the high-level purpose of this PR. What problem is it solving? Why was this change necessary?>
+SUMMARY OF CHANGES
 
-## Summary of Changes
+- <Summarize the key implemented changes and their impact.>
 
-- <Summarize the key changes. Base this on the commit messages and diffs, but rephrase them to be easy for a reviewer to understand.>
+GUIDE FOR THE REVIEWER
 
-## Guide for the Reviewer
+<Recommend a logical review order using the most important modified files.
+Explain briefly what the reviewer should verify in each area.>
 
-<Analyze the modified files in the diff and suggest a logical review order. Example: "I recommend starting with `file_A.js` to see the new data model, and then continuing with `file_B.js`, where the logic is implemented.">
+SCREENSHOTS
 
-<If the changes are front-end, add this placeholder:>
+- Before: Add screenshot or recording here.
+- After: Add screenshot or recording here.
 
-Screenshots:
+VALIDATION
 
-- Before: _Add screenshot or recording here._
-- After: _Add screenshot or recording here._
+- <Verified validation command and result, or "Not verified.">
 ```
 
+After creating `git-changes.txt`, respond only with a short confirmation that
+includes the generated file path. Do not paste the full report in the chat.
