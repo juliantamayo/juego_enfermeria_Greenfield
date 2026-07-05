@@ -84,6 +84,75 @@
           "followUpDialog": {
             "0": "El paciente presenta un juicio conservado."
           }
+        },
+        "question3": {
+          "screenTitle": "Caso 2. Pregunta 3",
+          "dialog": {
+            "0": "Cuénteme, señor, ¿en qué año se graduó como ingeniero?",
+            "1": "Señorita, yo me gradué en el año 87; era muy jovencito.",
+            "2": "Y ¿hace cuántos años trabaja en su empresa?",
+            "3": "Yo trabajo en la empresa desde hace ya 30 años.",
+            "4": "Señor P.C.P., ¿me puede decir cuántas horas tiene un día y cómo se llama su mascota?",
+            "5": "Señorita, el día tiene 24 horas y mi perrita se llama Lulú. ¿Por qué me pregunta eso?"
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Memoria.",
+                "2": "Afecto y área psicomotora.",
+                "3": "Pensamiento.",
+                "4": "Conciencia."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "El paciente recuerda fácilmente hechos pasados, actuales e información dada en el momento.",
+            "1": "Tiene una memoria conservada, con la capacidad de recordar y dar respuestas automáticamente."
+          }
+        },
+        "question4": {
+          "screenTitle": "Caso 2. Pregunta 4",
+          "dialog": {
+            "0": "Señor P.C.P., cuénteme, ¿cómo es la relación con su esposa? ¿Se siente querido por ella y por sus hijas?",
+            "1": "La relación familiar con mis hijas y mi esposa es la más maravillosa; ellas están muy pendientes de mí.",
+            "2": "Mi esposa me demuestra su amor todos los días."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Sensibilidad.",
+                "2": "Lenguaje y evocación.",
+                "3": "Afecto.",
+                "4": "Cálculo."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Hallazgo de la pregunta 4 pendiente por configurar."
+          }
+        },
+        "question5": {
+          "screenTitle": "Caso 2. Pregunta 5",
+          "dialog": {
+            "0": "Señor P.C.P., ¿cuántas horas duerme durante las noches y cómo se siente después de dormir esas horas? ¿Tiene pesadillas que lo despiertan?",
+            "1": "Duermo alrededor de 8 horas continuas, duermo plácidamente y cuando me despierto me siento muy bien. No he tenido pesadillas que me despierten."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es la esfera mental que el enfermero está valorando en la escena anterior?",
+              "answers": {
+                "1": "Porte y actitud.",
+                "2": "Orientación.",
+                "3": "Sueño.",
+                "4": "Área psicomotora."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Paciente que presenta un patrón de sueño sin alteraciones. Se observa alerta al momento de la valoración; no se evidencian cansancio ni ojeras."
+          }
         }
       },
       "placeholder": {
@@ -102,13 +171,681 @@
       }
     },
     "scene3": {
-      "title": "Pruebas de Valoración"
+      "screenTitle": "Caso 2. Pruebas de valoración",
+      "title": "Pruebas de Valoración",
+      "assessmentAreas": {
+        "area1": { "title": "Identificación de olores", "description": "Valoración del sentido del olfato" },
+        "area2": { "title": "Sensibilidad térmica y táctil", "description": "Valoración de respuestas sensitivas" },
+        "area3": { "title": "Palpación y percusión", "description": "Valoración de la cavidad oral" },
+        "area4": { "title": "Trofismo lingual", "description": "Valoración de lengua y fuerza muscular" },
+        "area5": { "title": "Conducción auditiva", "description": "Comparación de la conducción aérea y ósea" },
+        "area6": { "title": "Percepción auditiva", "description": "Comparación del sonido entre ambos oídos" },
+        "area7": { "title": "Respuesta refleja del brazo", "description": "Valoración de la respuesta muscular" },
+        "area8": { "title": "Respuesta refleja del brazo", "description": "Valoración de la respuesta muscular" },
+        "area9": { "title": "Respuesta de la muñeca", "description": "Valoración de flexión y supinación" },
+        "area10": { "title": "Respuesta de la rodilla", "description": "Valoración de extensión y contracción muscular" },
+        "area11": { "title": "Respuesta del tobillo", "description": "Valoración de la respuesta refleja" },
+        "area12": { "title": "Respuesta abdominal", "description": "Valoración de estímulos cutáneos" },
+        "area13": { "title": "Respuesta plantar", "description": "Valoración de la respuesta del pie" },
+        "area14": { "title": "Discriminación táctil", "description": "Valoración de puntos de contacto" },
+        "area15": { "title": "Reconocimiento táctil", "description": "Identificación de objetos con las manos" }
+      },
+      "assessmentDialogs": {
+        "area1": {
+          "screenTitle": "Caso 2. Identificación de olores",
+          "dialog": {
+            "0": "Señor P.C.P., ¿puede identificar este olor?",
+            "1": "Mmmm... huele a café, señorita.",
+            "2": "Es correcto, señor P.C.P."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Estereognosia.",
+                "2": "Campimetría por confrontación.",
+                "3": "Discriminación de dos puntos.",
+                "4": "Frascos con sustancias de olores conocidos."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "El paciente identifica los diferentes olores.",
+                "2": "El paciente es incapaz de identificar los diferentes olores."
+              }
+            },
+            "2": {
+              "question": "¿El enfermero podría usar amoniaco, vinagre o formol como sustancia para que olfatee el paciente?",
+              "answers": {
+                "1": "Sí, ya que esta sustancia no afecta las terminaciones sensitivas del V par.",
+                "2": "No, ya que esta sustancia irritaría las terminaciones sensitivas del I par.",
+                "3": "No, ya que esta sustancia irritaría las terminaciones sensitivas del IV par.",
+                "4": "No, ya que esta sustancia irritaría las terminaciones sensitivas del V par."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Se evidencia la diferenciación de los olores proporcionados."
+          }
+        },
+        "area2": {
+          "screenTitle": "Caso 2. Sensibilidad térmica y táctil",
+          "dialog": {
+            "0": "Señor P.C.P., ¿qué siente cuando le acerco este objeto?",
+            "1": "Está frío, señorita.",
+            "2": "Y ahora, señor P.C.P., ¿qué siente?",
+            "3": "Se siente cálido.",
+            "4": "Voy ahora a pasar una torunda de algodón cerca de su ojo.",
+            "5": "Se deben evidenciar el parpadeo y el lagrimeo.",
+            "6": "Ahora pasaré la torunda de algodón en punta cerca de las fosas nasales.",
+            "7": "Se evidencia el estornudo."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Sensación térmica y táctil.",
+                "2": "Simetría y motilidad facial.",
+                "3": "Estereognosia.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Cuál es el número del par craneal que el enfermero está valorando?",
+              "answers": {
+                "1": "I.",
+                "2": "V.",
+                "3": "III.",
+                "4": "IV."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Cuando se pasa la torunda de algodón en punta cerca de las fosas nasales, se evidencia el estornudo.",
+            "1": "Se evidencian el parpadeo y el lagrimeo, con salida de lágrimas en el ángulo interno del ojo cerca de la nariz.",
+            "2": "Se evidencia sensación de calor y frío en áreas simétricas de ambas hemicaras o hemicuerpos derecho e izquierdo.",
+            "3": "Los hallazgos son normales en el paciente."
+          }
+        },
+        "area3": {
+          "screenTitle": "Caso 2. Palpación y percusión",
+          "dialog": {
+            "0": "Por favor, señor P.C.P., abra su boca.",
+            "1": "Por favor, señor P.C.P., mantenga la boca entreabierta."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Palpación profunda.",
+                "2": "Sensibilidad facial.",
+                "3": "Palpación y percusión.",
+                "4": "Simetría y motilidad facial."
+              }
+            },
+            "1": {
+              "question": "Al realizar la percusión a nivel del mentón con la ayuda del martillo de reflejos, se puede evidenciar una contracción rápida en ambos lados del músculo masetero. Esta afirmación es:",
+              "answers": {
+                "1": "Correcta.",
+                "2": "Errónea."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Se valora al paciente con simetría facial y contracción simétrica de la mandíbula.",
+            "1": "Se evidencia la contracción rápida en ambos lados del músculo masetero.",
+            "2": "Ambos son hallazgos normales del paciente P.C.P."
+          }
+        },
+        "area4": {
+          "screenTitle": "Caso 2. Trofismo lingual",
+          "dialog": {
+            "0": "Por favor, señor P.C.P., abra su boca y saque la lengua.",
+            "1": "Ahora, por favor, presione con la lengua la pared de sus mejillas."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Trofismo y simetría de la lengua.",
+                "2": "Fuerza muscular.",
+                "3": "Sensibilidad táctil.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "No se evidencia la fuerza de la lengua ejercida hacia las mejillas.",
+                "2": "Se observa que la punta de la lengua se encuentra desviada.",
+                "3": "Se evidencia simetría en ambas hemilenguas."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Durante la valoración por medio de la inspección se evidencia simetría en ambas hemilenguas.",
+            "1": "Se observa también que la punta de la lengua se encuentra centrada.",
+            "2": "Durante la valoración por medio de la palpación y tocando las mejillas en la parte externa, se evidencia la fuerza de la lengua ejercida hacia las mejillas."
+          }
+        },
+        "area5": {
+          "screenTitle": "Caso 2. Conducción auditiva",
+          "dialog": {
+            "0": "Señor P.C.P., avíseme inmediatamente cuando deje de percibir el sonido.",
+            "1": "Lo escucho más cuando está frente a mi oído."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Discriminación de dos puntos.",
+                "2": "Weber.",
+                "3": "Rinne.",
+                "4": "Reflejo cremastérico."
+              }
+            },
+            "1": {
+              "question": "Para considerar un hallazgo normal en el paciente debe predominar por más segundos la conducción aérea que la ósea. La afirmación anterior es:",
+              "answers": {
+                "1": "Verdadera.",
+                "2": "Falsa."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "El paciente escucha más los ruidos del diapasón en el aire (18 segundos) que en la conducción ósea (8 segundos).",
+            "1": "Se puede evidenciar que la conducción aérea es la que más predomina.",
+            "2": "Este es un hallazgo normal para el paciente."
+          }
+        },
+        "area6": {
+          "screenTitle": "Caso 2. Percepción auditiva",
+          "dialog": {
+            "0": "Señor P.C.P., dígame: ¿dónde siente el sonido?",
+            "1": "¿Lo oye en ambos oídos o lo siente más intenso en un oído que en otro?",
+            "2": "Señorita, lo escucho igual en ambos oídos."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Discriminación de dos puntos.",
+                "2": "Weber.",
+                "3": "Rinne.",
+                "4": "Reflejo cremastérico."
+              }
+            },
+            "1": {
+              "question": "Se dice que el Weber está lateralizado cuando:",
+              "answers": {
+                "1": "Se oye de inmediato y por igual en ambos oídos.",
+                "2": "Se siente más intenso o solo se oye en uno de los oídos."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "El paciente no lateraliza, ya que percibe las vibraciones en ambos oídos."
+          }
+        },
+        "area7": {
+          "screenTitle": "Caso 2. Respuesta refleja del brazo",
+          "dialog": {
+            "0": "Señor P.C.P., por favor ubíquese de forma cómoda.",
+            "1": "Doble levemente el brazo derecho, elevándolo a nivel del corazón.",
+            "2": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo tricipital.",
+                "2": "Reflejo bicipital.",
+                "3": "Reflejo supinador.",
+                "4": "Reflejo plantar."
+              }
+            },
+            "1": {
+              "question": "¿El reflejo bicipital pone en evidencia las raíces C5 y C6 del raquis cervical y produce la flexión del antebrazo sobre el brazo?",
+              "answers": {
+                "1": "Verdadero.",
+                "2": "Falso."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Se evidencia una flexión leve hacia el hombro; se realiza el mismo procedimiento en el otro brazo."
+          }
+        },
+        "area8": {
+          "screenTitle": "Caso 2. Respuesta refleja del brazo",
+          "dialog": {
+            "0": "Señor P.C.P., por favor siéntese cómodo y relaje el brazo.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo tricipital.",
+                "2": "Reflejo bicipital.",
+                "3": "Reflejo supinador.",
+                "4": "Reflejo plantar."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Al percutir el tendón del bíceps, no se consigue la extensión del antebrazo por encima del brazo.",
+                "2": "Al percutir el tendón del tríceps, se consigue la extensión del antebrazo por encima del brazo."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Al realizar la prueba, el paciente presenta una extensión del antebrazo por encima del brazo.",
+            "1": "Se valora como hallazgo normal."
+          }
+        },
+        "area9": {
+          "screenTitle": "Caso 2. Respuesta de la muñeca",
+          "dialog": {
+            "0": "Señor P.C.P., por favor, ahí sentado, apoye el brazo sobre el abdomen.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo cremastérico.",
+                "2": "Reflejo rotuliano.",
+                "3": "Reflejo supinador.",
+                "4": "Reflejo plantar."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Se evidencia la flexión y la supinación de la muñeca.",
+                "2": "No se logra evidenciar la flexión y supinación de la muñeca."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Al realizar la prueba se evidencia la flexión y la supinación de la muñeca."
+          }
+        },
+        "area10": {
+          "screenTitle": "Caso 2. Respuesta de la rodilla",
+          "dialog": {
+            "0": "Señor P.C.P., ahora le voy a pedir que por favor relaje la pierna y descuélguela levemente.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo cremastérico.",
+                "2": "Reflejo bicipital.",
+                "3": "Reflejo supinador.",
+                "4": "Reflejo rotuliano."
+              }
+            },
+            "1": {
+              "question": "¿Qué se puede asumir con los hallazgos del paciente?",
+              "answers": {
+                "1": "Son hallazgos anormales ya que no se observa la contracción de los cuádriceps con extensión de la rodilla.",
+                "2": "Son hallazgos normales ya que se observa la contracción de los cuádriceps con extensión de la rodilla."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "¡Es correcto! Los hallazgos normales se observan con la contracción de los cuádriceps con extensión de la rodilla."
+          }
+        },
+        "area11": {
+          "screenTitle": "Caso 2. Respuesta del tobillo",
+          "dialog": {
+            "0": "Señor P.C.P., por favor ubíquese sobre la camilla, arrodillado, con los pies por fuera de la misma.",
+            "1": "Por favor tenga mucho cuidado.",
+            "2": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo tricipital.",
+                "2": "Reflejo bicipital.",
+                "3": "Reflejo aquíleo.",
+                "4": "Reflejo plantar."
+              }
+            },
+            "1": {
+              "question": "¿El reflejo aquíleo se busca percutiendo el tendón de Aquiles?",
+              "answers": {
+                "1": "Falso.",
+                "2": "Verdadero."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "¡Es correcto! Este reflejo se busca percutiendo el tendón de Aquiles y se puede evidenciar la flexión plantar."
+          }
+        },
+        "area12": {
+          "screenTitle": "Caso 2. Respuesta abdominal",
+          "dialog": {
+            "0": "Señor P.C.P., por favor retírese la camisa y recuéstese sobre la camilla.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo de estimulación cutánea.",
+                "2": "Reflejo bicipital.",
+                "3": "Reflejo supinador.",
+                "4": "Reflejo cremastérico."
+              }
+            },
+            "1": {
+              "question": "¿Es correcto afirmar que el paciente no refleja la contracción muscular subyacente moviendo la pared abdominal y arrastra el ombligo hacia el lado estimulado?",
+              "answers": {
+                "1": "Es falso, sí se refleja la contracción.",
+                "2": "Es correcto, no se evidencia la contracción."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "¡Es correcto! Durante la valoración se puede evidenciar el movimiento de la pared abdominal hacia el lado que se está estimulando con el lápiz."
+          }
+        },
+        "area13": {
+          "screenTitle": "Caso 2. Respuesta plantar",
+          "dialog": {
+            "0": "Señor P.C.P., por favor manténgase recostado y estire las piernas.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Reflejo tricipital.",
+                "2": "Reflejo bicipital.",
+                "3": "Reflejo supinador.",
+                "4": "Reflejo plantar."
+              }
+            },
+            "1": {
+              "question": "¿Se puede asumir que los hallazgos del paciente son normales?",
+              "answers": {
+                "1": "Sí, ya que se evidencia la flexión plantar de los dedos de los pies en forma de abanico.",
+                "2": "No, ya que el pie no debería flexionarse de esa manera."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "¡Tu respuesta fue correcta! El paciente presenta un hallazgo normal, pues se evidencia la flexión plantar de los dedos de los pies en forma de abanico."
+          }
+        },
+        "area14": {
+          "screenTitle": "Caso 2. Discriminación táctil",
+          "dialog": {
+            "0": "Señor P.C.P., por favor mire hacia al frente y dígame: ¿cuántos puntos de contacto siente?",
+            "1": "Sí señorita, siento 2 puntos.",
+            "2": "¿A qué distancia los siente?",
+            "3": "Como a una distancia de 3 cm aproximadamente."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Sensibilidad táctil.",
+                "2": "Palpación.",
+                "3": "Discriminación de 2 puntos.",
+                "4": "Movilidad activa."
+              }
+            },
+            "1": {
+              "question": "¿La prueba de discriminación de 2 puntos debe realizarse comparando áreas simétricas del cuerpo, por ejemplo ambas manos o brazos?",
+              "answers": {
+                "1": "Es correcto, se debe realizar en ambas partes del cuerpo.",
+                "2": "No es necesario."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "El paciente tiene la capacidad de discriminar los dos puntos en ambas partes del cuerpo, siendo simétrico y considerado un hallazgo normal."
+          }
+        },
+        "area15": {
+          "screenTitle": "Caso 2. Reconocimiento táctil",
+          "dialog": {
+            "0": "Señor P.C.P., ¿puede usted identificar el objeto que pongo en sus manos?",
+            "1": "Sí señorita, se siente como una llave."
+          },
+          "quiz": {
+            "0": {
+              "question": "¿Cuál es el nombre de la prueba de valoración que acaba de realizar el enfermero?",
+              "answers": {
+                "1": "Motilidad extrínseca del ojo.",
+                "2": "Campimetría por confrontación.",
+                "3": "Sensibilidad térmica.",
+                "4": "Estereognosia."
+              }
+            },
+            "1": {
+              "question": "¿Si el paciente identifica los objetos proporcionados en una sola mano se considera como un hallazgo normal?",
+              "answers": {
+                "1": "Sí, lo importante es que identifique el objeto que fue puesto en su mano.",
+                "2": "No, para considerarlo un hallazgo normal debe identificar los objetos proporcionados en ambas manos."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "¡Tu respuesta es correcta! Cuando el paciente identifica los objetos proporcionados en ambas manos consideramos un hallazgo normal, el cual es el caso del señor P.C.P."
+          }
+        }
+      },
+      "placeholder": {
+        "dialog": {
+          "0": "La prueba de valoración está lista para ser configurada."
+        },
+        "quiz": {
+          "question": "Contenido provisional de la prueba de valoración.",
+          "answers": {
+            "continue": "Continuar"
+          }
+        },
+        "followUpDialog": {
+          "0": "Prueba de valoración completada."
+        }
+      }
     },
     "scene4": {
-      "title": "Valoración"
+      "screenTitle": "Caso 2. Valoración",
+      "title": "Valoración",
+      "summary": {
+        "eyebrow": "Valoración",
+        "title": "Hallazgos en el paciente",
+        "description": "Selecciona todos los hallazgos que correspondan al caso clínico.",
+        "counterLabel": "Seleccionados"
+      },
+      "messages": {
+        "emptySelection": {
+          "title": "Selecciona al menos un hallazgo",
+          "text": "No has seleccionado ningún hallazgo."
+        },
+        "review": {
+          "title": "Hay respuestas por revisar",
+          "selectFindings": "Selecciona los hallazgos que correspondan al caso clínico.",
+          "missingOrIncorrect": "Una o más opciones seleccionadas no corresponden al caso, o faltan hallazgos por seleccionar.",
+          "correctBeforeContinue": "Corrige tus respuestas antes de continuar."
+        },
+        "completed": {
+          "title": "Valoración completada",
+          "text": "Seleccionaste correctamente los hallazgos del paciente."
+        },
+        "readyToCorrect": {
+          "title": "Inténtalo de nuevo",
+          "text": "Revisa los hallazgos y selecciona únicamente los que correspondan al caso."
+        }
+      },
+      "feedback": {
+        "correct": "Correcto",
+        "incorrect": "No corresponde al caso"
+      },
+      "actions": {
+        "validate": "Validar respuestas",
+        "correct": "Corregir",
+        "continue": "Continuar"
+      },
+      "findings": {
+        "adequateHealthStatus": "Cuenta con un adecuado estado de salud.",
+        "activeIndependent": "Es una persona activa, pensante, camina adecuadamente y es independiente.",
+        "preservedSensoryPerception": "Ve bien de cerca y lejos, percibe olores, sabores y la sensación táctil y dolorosa sin dificultad en todas las áreas del cuerpo.",
+        "timePlaceDisorientation": "Desorientado alopsíquicamente (tiempo y lugar).",
+        "appropriateEmotionalResponses": "Las respuestas emocionales son acordes al funcionamiento normal en su vida cotidiana y la expresión gestual corresponde a la reacción emocional verbalizada.",
+        "adequateAppearanceAndGait": "Paciente bien vestido, alegre, con buen lenguaje entendible, marcha estable y respuestas espontáneas sin titubear.",
+        "painFacies": "Facies de dolor.",
+        "conservedMemory": "Memoria conservada.",
+        "allopsychicDisorientation": "Desorientado alopsíquicamente.",
+        "conservedJudgment": "Juicio conservado.",
+        "bradypsychia": "Bradipsiquia.",
+        "sleepPatternWithoutAlterations": "Patrón de sueño sin alteraciones.",
+        "odorDifferentiation": "Capacidad de diferenciación de olores.",
+        "odorDifferentiationInability": "Incapacidad de diferenciación de olores.",
+        "cottonStimulusResponses": "Al estímulo con la torunda de algodón cerca de las fosas nasales presenta estornudo, parpadeo y lagrimeo.",
+        "heatColdIdentification": "Identificación de sensación de calor y frío en áreas simétricas.",
+        "facialSymmetryJawContraction": "En la palpación se evidencia simetría facial y contracción de la mandíbula de manera simétrica.",
+        "expressiveAphasiaVerbalApraxia": "Afasia de expresión y apraxia verbal.",
+        "facialAsymmetryJawContraction": "Asimetría facial y contracción de la mandíbula de manera asimétrica.",
+        "masseterQuickContraction": "En la percusión se evidencia contracción rápida en ambos lados del músculo maseterino.",
+        "hemilingualSymmetry": "Durante la valoración por medio de la inspección se evidencia simetría en ambas hemilenguas.",
+        "deviatedTongueTip": "Punta de la lengua desviada, sin capacidad de ejercer fuerza hacia las mejillas.",
+        "centeredTongueStrength": "La punta de la lengua se encuentra centrada, con fuerza de la lengua ejercida hacia las mejillas.",
+        "boneConductionPredominates": "La conducción ósea es la que más predomina.",
+        "airConductionPredominates": "La conducción aérea es la que más predomina.",
+        "rightAuditoryLateralization": "Paciente que lateraliza de lado derecho.",
+        "noTuningForkLateralization": "El paciente no lateraliza las vibraciones del diapasón.",
+        "slightShoulderFlexion": "Se evidencia una flexión leve hacia el hombro.",
+        "tricepsForearmExtension": "Al percutir el tendón del tríceps se consigue la extensión del antebrazo por encima del brazo.",
+        "kneeFlexion": "Al percutir el punto medio de la rodilla se evidencia la flexión de la rodilla.",
+        "plantarFlexionFoot": "Se puede evidenciar el movimiento del pie en flexión plantar.",
+        "abdominalWallMovement": "Movimiento de la pared abdominal hacia el lado que se está estimulando con el lápiz.",
+        "fanLikeToeFlexion": "Flexión plantar de los dedos de los pies en forma de abanico.",
+        "twoPointDiscrimination": "El paciente tiene la capacidad de discriminar los dos puntos en ambas partes del cuerpo, siendo simétrico.",
+        "bilateralAstereognosis": "Astereognosia en ambos brazos.",
+        "bilateralStereognosis": "Estereognosia en ambos brazos."
+      }
     },
     "scene5": {
-      "title": "Quiz"
+      "screenTitle": "Caso 2. Quiz",
+      "title": "Quiz",
+      "summary": {
+        "eyebrow": "Quiz",
+        "title": "Quiz",
+        "description": "Responde todas las preguntas. Al finalizar verás cuántas respuestas fueron correctas e incorrectas.",
+        "counterLabel": "Respondidas"
+      },
+      "questionCounter": "Pregunta {{current}} de {{total}}",
+      "results": {
+        "correct": "Correctas",
+        "incorrect": "Erróneas"
+      },
+      "messages": {
+        "emptyQuiz": {
+          "title": "Quiz pendiente",
+          "text": "Aún no hay preguntas configuradas para esta escena."
+        },
+        "pending": {
+          "title": "Hay preguntas pendientes",
+          "text": "Responde todas las preguntas antes de validar."
+        },
+        "review": {
+          "title": "Hay respuestas por revisar",
+          "text": "Correctas: {{correct}}. Erróneas: {{incorrect}}. Puedes intentarlo de nuevo o volver al menú para repasar el caso.",
+          "saveBlocked": "Debes responder todo correctamente para guardar la escena."
+        },
+        "completed": {
+          "title": "Quiz completado",
+          "text": "Correctas: {{correct}}. Erróneas: {{incorrect}}."
+        },
+        "readyToCorrect": {
+          "title": "Listo para corregir",
+          "text": "Se limpiaron tus respuestas. Responde nuevamente desde cero."
+        }
+      },
+      "actions": {
+        "validate": "Validar respuestas",
+        "correct": "Volver a intentar",
+        "backToMenu": "Volver al menú",
+        "save": "Continuar"
+      },
+      "quiz": {
+        "question1": {
+          "question": "¿Por qué es importante valorar en el señor P.C.P el área psicomotora?",
+          "answers": {
+            "1": "La observación de la conducta motora del señor P.C.P nos determina su capacidad para estar listo a responder, ante una situación en forma inmediata.",
+            "2": "La observación de la conducta motora del señor P.C.P nos determina su capacidad para el desempeño de sus actividades diarias como el trabajo, el sueño, vestirse, alimentarse entre otros.",
+            "3": "La observación de la conducta motora del señor P.C.P nos determina su capacidad para actuar, con base en valores culturales establecidos, para generalizar y juzgar situaciones reales.",
+            "4": "La observación de la conducta motora del señor P.C.P nos determina su capacidad para producir ideas y si el contenido producido es acorde con la realidad."
+          }
+        },
+        "question2": {
+          "question": "Para valorar el quinto par craneal, se le pide al paciente que:",
+          "answers": {
+            "1": "Saque la lengua.",
+            "2": "Que ría forzadamente.",
+            "3": "Que arrugue las cejas.",
+            "4": "Lleve la mandíbula hacia adelante."
+          }
+        },
+        "question3": {
+          "question": "Cuando existen lesiones del oído medio predominando la conducción ósea sobre la aérea (CO > CA), ¿qué tipo de Rinne identificamos?",
+          "answers": {
+            "1": "Rinne negativo.",
+            "2": "Rinne atenuado.",
+            "3": "Rinne interrumpido.",
+            "4": "Rinne prolongado."
+          }
+        },
+        "question4": {
+          "question": "¿Qué valora el enfermero en la movilidad pasiva?",
+          "answers": {
+            "1": "Grado de contracción muscular.",
+            "2": "Compromiso del centro vasomotor.",
+            "3": "Amplitud de movimiento.",
+            "4": "Grado de resistencia muscular."
+          }
+        },
+        "question5": {
+          "question": "¿Qué es la hipertonía?",
+          "answers": {
+            "1": "Desarrollo muscular eutrófico.",
+            "2": "Aumento del tono muscular.",
+            "3": "Inflamación del músculo.",
+            "4": "Disminución del tono muscular."
+          }
+        },
+        "question6": {
+          "question": "La fuerza muscular grado 4 corresponde a:",
+          "answers": {
+            "1": "Arco completo de movimiento contra gravedad y contra resistencia fuerte.",
+            "2": "Arco de movimiento contra gravedad, pero no contra resistencia.",
+            "3": "Arco total de movimiento contra gravedad y contra cierta resistencia.",
+            "4": "Arco de movimiento amplio, eliminando la acción de la gravedad."
+          }
+        },
+        "question7": {
+          "question": "El reflejo patelar es producto de percutir:",
+          "answers": {
+            "1": "Tendón del tríceps.",
+            "2": "Tendón del cuádriceps.",
+            "3": "Tendón de Aquiles.",
+            "4": "Tendón del bíceps."
+          }
+        }
+      }
     },
     "scene6": {
       "title": "Proceso de Atención de Enfermería"
