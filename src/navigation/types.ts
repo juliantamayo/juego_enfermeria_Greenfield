@@ -10,13 +10,19 @@ export type CaseSceneScreenName =
   | "Scene5Screen"
   | "Scene6Screen"
   | "Case2Scene1Screen"
-  | "Case2Scene2Screen";
+  | "Case2Scene2Screen"
+  | "Case2Scene3Screen"
+  | "Case2Scene4Screen"
+  | "Case2Scene5Screen";
 export type SceneCompleteReturnScreenName =
   | CaseMenuScreenName
   | "Scene2Screen"
   | "Scene3Screen"
   | "Scene4Screen"
-  | "Case2Scene2Screen";
+  | "Case2Scene2Screen"
+  | "Case2Scene3Screen"
+  | "Case2Scene4Screen"
+  | "Case2Scene5Screen";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -45,6 +51,12 @@ export type RootStackParamList = {
   Scene6Screen: undefined;
   Case2Scene1Screen: undefined;
   Case2Scene2Screen: undefined;
+  Case2Scene3Screen: undefined;
+  Case2Scene4Screen: undefined;
+  Case2Scene5Screen: undefined;
+  Case2Scene3AssessmentFlowScreen: {
+    assessmentId: string;
+  };
   Case2Scene2QuestionFlowScreen: {
     questionId: string;
   };

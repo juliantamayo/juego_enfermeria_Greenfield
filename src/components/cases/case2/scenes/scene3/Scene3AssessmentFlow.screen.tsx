@@ -14,20 +14,20 @@ import { useAppNavigation } from "@navigation/hooks/useAppNavigation";
 import type { RootStackParamList } from "@navigation/types";
 import { useScreenTitle } from "@shared/hooks/useScreenTitle";
 import { GlobalStyles } from "@styles-theme";
-import scene2QuestionFlows from "./data/questionFlows";
-import case2Scene2Questions from "./data/scene2Questions";
 import { dialogStyles } from "../../../shared/styles/dialog.styles";
-import { questionFlowStyles } from "./styles/question-flow.styles";
+import { questionFlowStyles } from "../scene2/styles/question-flow.styles";
+import scene3AssessmentFlows from "./data/assessmentFlows";
+import scene3AssessmentAreas from "./data/scene3AssessmentAreas";
 import { getSavedQuestionIds, saveQuestionProgress } from "../../../shared/utils/questionProgress.utils";
 
+type Scene3AssessmentFlowRouteProp = RouteProp<RootStackParamList, "Case2Scene3AssessmentFlowScreen">;
+type AssessmentPhase = "dialog" | "quiz" | "followUpDialog";
+
 const CASE_ID = "case2";
-const SCENE_ID = "scene2";
+const SCENE_ID = "scene3";
 const quizBackgroundImage = require("@images/layout/background.png");
 const FEEDBACK_DELAY_MS = 800;
-const requiredQuestionIds = case2Scene2Questions.map((question) => question.id);
-
-type QuestionFlowRouteProp = RouteProp<RootStackParamList, "Case2Scene2QuestionFlowScreen">;
-type QuestionPhase = "dialog" | "quiz" | "followUpDialog";
+const requiredAssessmentIds = scene3AssessmentAreas.map((area) => area.id);
 
 const shuffleAnswers = <T,>(answers: T[]) => {
   const shuffledAnswers = [...answers];
@@ -40,41 +40,67 @@ const shuffleAnswers = <T,>(answers: T[]) => {
   return shuffledAnswers;
 };
 
-const Case2Scene2QuestionFlowScreen = () => {
+const Scene3AssessmentFlowScreen = () => {
   const { t } = useTranslation();
   const navigation = useAppNavigation();
-  const route = useRoute<QuestionFlowRouteProp>();
-  const { questionId } = route.params;
+  const route = useRoute<Scene3AssessmentFlowRouteProp>();
+  const { assessmentId } = route.params;
   const [dialogStep, setDialogStep] = useState(0);
   const [quizStep, setQuizStep] = useState(0);
   const [followUpDialogStep, setFollowUpDialogStep] = useState(0);
-  const [phase, setPhase] = useState<QuestionPhase>("dialog");
+  const [phase, setPhase] = useState<AssessmentPhase>("dialog");
   const [feedback, setFeedback] = useState<"correct" | "incorrect" | null>(null);
   const feedbackTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  useScreenTitle(`case2.scene2.questionDialogs.${questionId}.screenTitle`);
-
-  const currentQuestionFlow = scene2QuestionFlows[questionId];
-  const showQuiz = phase === "quiz";
-  const activeDialogEntries =
-    phase === "followUpDialog" ? currentQuestionFlow.followUpDialog ?? currentQuestionFlow.dialog : currentQuestionFlow.dialog;
-  const currentDialog = activeDialogEntries[phase === "followUpDialog" ? followUpDialogStep : dialogStep];
-  const currentQuiz = currentQuestionFlow.quiz[quizStep];
-  const shuffledAnswers = useMemo(
-    () => shuffleAnswers(currentQuiz.answers),
-    [currentQuiz.answers, questionId, quizStep, phase],
+  const configuredAssessmentIds = [
+    "area1",
+    "area2",
+    "area3",
+    "area4",
+    "area5",
+    "area6",
+    "area7",
+    "area8",
+    "area9",
+    "area10",
+    "area11",
+    "area12",
+    "area13",
+    "area14",
+    "area15",
+  ];
+  useScreenTitle(
+    configuredAssessmentIds.includes(assessmentId)
+      ? `case2.scene3.assessmentDialogs.${assessmentId}.screenTitle`
+      : `case2.scene3.assessmentAreas.${assessmentId}.title`,
   );
 
-  const finishQuestionFlow = async () => {
-    await saveQuestionProgress(CASE_ID, SCENE_ID, questionId);
-    const savedQuestionIds = await getSavedQuestionIds(CASE_ID, SCENE_ID);
-    const hasCompletedAllQuestions = requiredQuestionIds.every((id) => savedQuestionIds.includes(id));
+  const currentAssessmentFlow = scene3AssessmentFlows[assessmentId];
+  const showQuiz = phase === "quiz";
+  const activeDialogEntries =
+    phase === "followUpDialog"
+      ? (currentAssessmentFlow.followUpDialog ?? currentAssessmentFlow.dialog)
+      : currentAssessmentFlow.dialog;
+  const currentDialog = activeDialogEntries[phase === "followUpDialog" ? followUpDialogStep : dialogStep];
+  const currentQuiz = currentAssessmentFlow.quiz[quizStep];
+  const totalCount = currentAssessmentFlow.quiz.length;
+  const shuffledAnswers = useMemo(
+    () => shuffleAnswers(currentQuiz.answers),
+    [currentQuiz.answers, assessmentId, quizStep, phase],
+  );
 
-    if (hasCompletedAllQuestions) {
+  const finishAssessmentFlow = async () => {
+    await saveQuestionProgress(CASE_ID, SCENE_ID, assessmentId);
+    const savedAssessmentIds = await getSavedQuestionIds(CASE_ID, SCENE_ID);
+    const hasCompletedAllAssessments = requiredAssessmentIds.every((requiredAssessmentId) =>
+      savedAssessmentIds.includes(requiredAssessmentId),
+    );
+
+    if (hasCompletedAllAssessments) {
       navigation.navigate("SceneCompleteScreen", {
         caseId: CASE_ID,
         completedSceneId: SCENE_ID,
-        nextSceneId: "scene3",
-        returnScreen: "Case2Scene2Screen",
+        nextSceneId: "scene4",
+        returnScreen: "Case2Scene3Screen",
       });
       return;
     }
@@ -83,62 +109,95 @@ const Case2Scene2QuestionFlowScreen = () => {
   };
 
   const handleDialogNext = () => {
-    const currentStep = phase === "followUpDialog" ? followUpDialogStep : dialogStep;
-    const nextStep = currentStep + 1;
+    if (phase === "followUpDialog") {
+      const nextStep = followUpDialogStep + 1;
 
-    if (nextStep < activeDialogEntries.length) {
-      phase === "followUpDialog" ? setFollowUpDialogStep(nextStep) : setDialogStep(nextStep);
+      if (nextStep >= activeDialogEntries.length) {
+        finishAssessmentFlow().catch((error) => console.error("Error finishing assessment flow", error));
+      } else {
+        setFollowUpDialogStep(nextStep);
+      }
+
       return;
     }
 
-    if (phase === "followUpDialog") {
-      finishQuestionFlow().catch((error) => console.error("Error finishing question flow", error));
-    } else {
+    const nextStep = dialogStep + 1;
+
+    if (nextStep >= currentAssessmentFlow.dialog.length) {
       setPhase("quiz");
+      return;
     }
+
+    setDialogStep(nextStep);
   };
 
-  useEffect(
-    () => () => {
+  useEffect(() => {
+    return () => {
       if (feedbackTimeoutRef.current) {
         clearTimeout(feedbackTimeoutRef.current);
       }
-    },
-    [],
-  );
+    };
+  }, []);
 
   const handleAnswerPress = (isCorrect?: boolean) => {
-    if (feedback) return;
+    if (feedback) {
+      return;
+    }
+
     setFeedback(isCorrect ? "correct" : "incorrect");
 
-    feedbackTimeoutRef.current = setTimeout(async () => {
+    feedbackTimeoutRef.current = setTimeout(() => {
       setFeedback(null);
 
       if (!isCorrect) {
         setPhase("dialog");
-        setDialogStep(Math.max(currentQuestionFlow.dialog.length - 1, 0));
+        setDialogStep(Math.max(currentAssessmentFlow.dialog.length - 1, 0));
         return;
       }
 
       const nextQuizStep = quizStep + 1;
-      if (nextQuizStep < currentQuestionFlow.quiz.length) {
-        setQuizStep(nextQuizStep);
-      } else if (currentQuestionFlow.followUpDialog?.length) {
-        setPhase("followUpDialog");
+
+      if (nextQuizStep >= currentAssessmentFlow.quiz.length) {
+        if (currentAssessmentFlow.followUpDialog?.length) {
+          setFollowUpDialogStep(0);
+          setPhase("followUpDialog");
+        } else {
+          finishAssessmentFlow().catch((error) => console.error("Error finishing assessment flow", error));
+        }
       } else {
-        await finishQuestionFlow();
+        setQuizStep(nextQuizStep);
       }
     }, FEEDBACK_DELAY_MS);
   };
 
-  const backgroundImage = showQuiz ? quizBackgroundImage : currentDialog.image;
+  const handleQuizAnswerPress = (answer: QuizQuestionAnswer) => {
+    handleAnswerPress(answer.correct);
+  };
 
   return (
-    <ImageBackground source={backgroundImage} style={GlobalStyles.container} resizeMode={showQuiz ? "cover" : "contain"}>
+    <ImageBackground
+      source={showQuiz ? quizBackgroundImage : currentDialog.image}
+      style={GlobalStyles.container}
+      resizeMode={showQuiz ? "cover" : "contain"}
+    >
       {!showQuiz && (
         <Header
-          leftButtons={[{ iconName: "arrow-undo-outline", onPress: () => navigation.goBack() }]}
-          rightButtons={[{ iconName: "help-outline", onPress: () => console.log("Help clicked") }]}
+          leftButtons={[
+            {
+              iconName: "arrow-undo-outline",
+              onPress: () => navigation.goBack(),
+            },
+          ]}
+          rightButtons={[
+            {
+              iconName: "help-outline",
+              onPress: () => console.log("Help clicked"),
+            },
+            {
+              iconName: "reader-outline",
+              onPress: () => console.log("Reader clicked"),
+            },
+          ]}
         />
       )}
       <View style={showQuiz ? questionFlowStyles.quizContainer : dialogStyles.container}>
@@ -147,8 +206,8 @@ const Case2Scene2QuestionFlowScreen = () => {
             <ScrollView style={dialogStyles.scroll} contentContainerStyle={questionFlowStyles.quizContent}>
               <ProgressBar
                 value={quizStep + 1}
-                max={currentQuestionFlow.quiz.length}
-                label={t("common.quiz.questionCounter", { current: quizStep + 1, total: currentQuestionFlow.quiz.length })}
+                max={totalCount}
+                label={t("common.quiz.questionCounter", { current: quizStep + 1, total: totalCount })}
               />
               <QuizQuestion
                 question={t(currentQuiz.questionKey)}
@@ -159,24 +218,15 @@ const Case2Scene2QuestionFlowScreen = () => {
                   correct: answer.correct,
                 }))}
                 disabled={!!feedback}
-                onAnswerPress={(answer: QuizQuestionAnswer) => handleAnswerPress(answer.correct)}
+                onAnswerPress={handleQuizAnswerPress}
               />
             </ScrollView>
           ) : (
             <ScrollView style={dialogStyles.scroll} contentContainerStyle={dialogStyles.scrollContent}>
-              <Text
-                style={[
-                  dialogStyles.dialogText,
-                  currentDialog.speaker === "patientPcp" && dialogStyles.patientDialogText,
-                ]}
-              >
-                {t(`common.roles.${currentDialog.speaker}`)}
-              </Text>
+              <Text style={dialogStyles.dialogText}>{t(`common.roles.${currentDialog.speaker}`)}</Text>
               <Button
                 style={dialogStyles.dialogButton}
-                text={t(
-                  `case2.scene2.questionDialogs.${questionId}.${phase === "followUpDialog" ? "followUpDialog" : "dialog"}.${currentDialog.id}`,
-                )}
+                text={t(currentDialog.textKey ?? "case2.scene3.placeholder.dialog.0")}
                 type={ButtonType.PRIMARY_TRANSPARENT}
                 onPress={handleDialogNext}
               />
@@ -189,4 +239,4 @@ const Case2Scene2QuestionFlowScreen = () => {
   );
 };
 
-export default Case2Scene2QuestionFlowScreen;
+export default Scene3AssessmentFlowScreen;

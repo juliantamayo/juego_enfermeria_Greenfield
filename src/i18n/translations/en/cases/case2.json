@@ -84,6 +84,75 @@
           "followUpDialog": {
             "0": "The patient demonstrates preserved judgment."
           }
+        },
+        "question3": {
+          "screenTitle": "Case 2. Question 3",
+          "dialog": {
+            "0": "Tell me, sir, what year did you graduate as an engineer?",
+            "1": "Miss, I graduated in 1987; I was very young.",
+            "2": "And how many years have you worked at your company?",
+            "3": "I have worked at the company for 30 years.",
+            "4": "Mr. P.C.P., can you tell me how many hours there are in a day and what your pet's name is?",
+            "5": "Miss, there are 24 hours in a day, and my little dog's name is Lulú. Why do you ask?"
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental status area is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Memory.",
+                "2": "Affect and psychomotor activity.",
+                "3": "Thought.",
+                "4": "Consciousness."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient easily recalls past and current events, as well as information provided at the time.",
+            "1": "He demonstrates preserved memory, with the ability to recall information and respond automatically."
+          }
+        },
+        "question4": {
+          "screenTitle": "Case 2. Question 4",
+          "dialog": {
+            "0": "Mr. P.C.P., tell me, what is your relationship with your wife like? Do you feel loved by her and your daughters?",
+            "1": "My family relationship with my daughters and my wife is wonderful; they are always attentive to me.",
+            "2": "My wife shows me her love every day."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental status area is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Sensitivity.",
+                "2": "Language and recall.",
+                "3": "Affect.",
+                "4": "Calculation."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Question 4 assessment finding pending configuration."
+          }
+        },
+        "question5": {
+          "screenTitle": "Case 2. Question 5",
+          "dialog": {
+            "0": "Mr. P.C.P., how many hours do you sleep at night, and how do you feel after sleeping those hours? Do you have nightmares that wake you up?",
+            "1": "I sleep continuously for around 8 hours, sleep peacefully, and feel very well when I wake up. I have not had nightmares that wake me up."
+          },
+          "quiz": {
+            "0": {
+              "question": "Which mental status area is the nurse assessing in the previous scene?",
+              "answers": {
+                "1": "Appearance and attitude.",
+                "2": "Orientation.",
+                "3": "Sleep.",
+                "4": "Psychomotor activity."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient demonstrates an undisturbed sleep pattern. He appears alert during the assessment, with no evidence of fatigue or dark circles under his eyes."
+          }
         }
       },
       "placeholder": {
@@ -102,13 +171,681 @@
       }
     },
     "scene3": {
-      "title": "Assessment Tests"
+      "screenTitle": "Case 2. Assessment Tests",
+      "title": "Assessment Tests",
+      "assessmentAreas": {
+        "area1": { "title": "Odor identification", "description": "Assessment of the sense of smell" },
+        "area2": { "title": "Thermal and tactile sensitivity", "description": "Assessment of sensory responses" },
+        "area3": { "title": "Palpation and percussion", "description": "Assessment of the oral cavity" },
+        "area4": { "title": "Lingual trophism", "description": "Assessment of tongue and muscle strength" },
+        "area5": { "title": "Auditory conduction", "description": "Comparison of air and bone conduction" },
+        "area6": { "title": "Auditory perception", "description": "Comparison of sound between both ears" },
+        "area7": { "title": "Arm reflex response", "description": "Assessment of the muscular response" },
+        "area8": { "title": "Arm reflex response", "description": "Assessment of the muscular response" },
+        "area9": { "title": "Wrist response", "description": "Assessment of flexion and supination" },
+        "area10": { "title": "Knee response", "description": "Assessment of extension and muscle contraction" },
+        "area11": { "title": "Ankle response", "description": "Assessment of the reflex response" },
+        "area12": { "title": "Abdominal response", "description": "Assessment of cutaneous stimuli" },
+        "area13": { "title": "Plantar response", "description": "Assessment of the foot response" },
+        "area14": { "title": "Tactile discrimination", "description": "Assessment of contact points" },
+        "area15": { "title": "Tactile recognition", "description": "Identification of objects with the hands" }
+      },
+      "assessmentDialogs": {
+        "area1": {
+          "screenTitle": "Case 2. Odor identification",
+          "dialog": {
+            "0": "Mr. P.C.P., can you identify this smell?",
+            "1": "Mmmm... it smells like coffee, miss.",
+            "2": "That is correct, Mr. P.C.P."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Stereognosis.",
+                "2": "Confrontation visual field testing.",
+                "3": "Two-point discrimination.",
+                "4": "Containers with familiar-smelling substances."
+              }
+            },
+            "1": {
+              "question": "What can be concluded from the patient's findings?",
+              "answers": {
+                "1": "The patient identifies the different smells.",
+                "2": "The patient is unable to identify the different smells."
+              }
+            },
+            "2": {
+              "question": "Could the nurse use ammonia, vinegar, or formaldehyde as a substance for the patient to smell?",
+              "answers": {
+                "1": "Yes, because this substance does not affect the sensory endings of cranial nerve V.",
+                "2": "No, because this substance would irritate the sensory endings of cranial nerve I.",
+                "3": "No, because this substance would irritate the sensory endings of cranial nerve IV.",
+                "4": "No, because this substance would irritate the sensory endings of cranial nerve V."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient demonstrates the ability to distinguish the provided smells."
+          }
+        },
+        "area2": {
+          "screenTitle": "Case 2. Thermal and tactile sensitivity",
+          "dialog": {
+            "0": "Mr. P.C.P., what do you feel when I bring this object close to you?",
+            "1": "It is cold, miss.",
+            "2": "And now, Mr. P.C.P., what do you feel?",
+            "3": "It feels warm.",
+            "4": "I will now pass a cotton swab near your eye.",
+            "5": "Blinking and tearing should be observed.",
+            "6": "Now I will pass the pointed cotton swab near the nostrils.",
+            "7": "A sneeze is observed."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Thermal and tactile sensation.",
+                "2": "Facial symmetry and movement.",
+                "3": "Stereognosis.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "Which cranial nerve number is the nurse assessing?",
+              "answers": {
+                "1": "I.",
+                "2": "V.",
+                "3": "III.",
+                "4": "IV."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Passing the pointed cotton swab near the nostrils elicits a sneeze.",
+            "1": "Blinking and tearing are observed, with tears appearing at the inner corner of the eye near the nose.",
+            "2": "The patient senses heat and cold in symmetrical areas on both sides of the face and body.",
+            "3": "The patient's findings are normal."
+          }
+        },
+        "area3": {
+          "screenTitle": "Case 2. Palpation and percussion",
+          "dialog": {
+            "0": "Please open your mouth, Mr. P.C.P.",
+            "1": "Please keep your mouth partially open, Mr. P.C.P."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse just performed?",
+              "answers": {
+                "1": "Deep palpation.",
+                "2": "Facial sensitivity.",
+                "3": "Palpation and percussion.",
+                "4": "Facial symmetry and movement."
+              }
+            },
+            "1": {
+              "question": "When percussion is performed at the chin using a reflex hammer, a rapid contraction can be observed on both sides of the masseter muscle. This statement is:",
+              "answers": {
+                "1": "Correct.",
+                "2": "Incorrect."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient demonstrates facial symmetry and symmetrical jaw contraction.",
+            "1": "A rapid contraction is observed on both sides of the masseter muscle.",
+            "2": "Both are normal findings for patient P.C.P."
+          }
+        },
+        "area4": {
+          "screenTitle": "Case 2. Lingual trophism",
+          "dialog": {
+            "0": "Please open your mouth and stick out your tongue, Mr. P.C.P.",
+            "1": "Now, please press your tongue against the inside of your cheeks."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Tongue trophism and symmetry.",
+                "2": "Muscle strength.",
+                "3": "Tactile sensitivity.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "The force exerted by the tongue against the cheeks is not evident.",
+                "2": "The tip of the tongue is observed to be deviated.",
+                "3": "Symmetry is evident in both halves of the tongue."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "During the inspection assessment, symmetry is evident in both halves of the tongue.",
+            "1": "The tip of the tongue is also observed to be centered.",
+            "2": "During the palpation assessment, while touching the outside of the cheeks, the force exerted by the tongue against the cheeks is evident."
+          }
+        },
+        "area5": {
+          "screenTitle": "Case 2. Auditory conduction",
+          "dialog": {
+            "0": "Mr. P.C.P., let me know immediately when you stop hearing the sound.",
+            "1": "I hear it better when it is in front of my ear."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Two-point discrimination.",
+                "2": "Weber.",
+                "3": "Rinne.",
+                "4": "Cremasteric reflex."
+              }
+            },
+            "1": {
+              "question": "For the patient's finding to be considered normal, air conduction must last longer than bone conduction. The previous statement is:",
+              "answers": {
+                "1": "True.",
+                "2": "False."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient hears the tuning fork sound longer through air conduction (18 seconds) than through bone conduction (8 seconds).",
+            "1": "Air conduction is shown to be predominant.",
+            "2": "This is a normal finding for the patient."
+          }
+        },
+        "area6": {
+          "screenTitle": "Case 2. Auditory perception",
+          "dialog": {
+            "0": "Mr. P.C.P., tell me: where do you hear the sound?",
+            "1": "Do you hear it in both ears, or does it sound louder in one ear than the other?",
+            "2": "Miss, I hear it equally in both ears."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Two-point discrimination.",
+                "2": "Weber.",
+                "3": "Rinne.",
+                "4": "Cremasteric reflex."
+              }
+            },
+            "1": {
+              "question": "The Weber test is considered lateralized when:",
+              "answers": {
+                "1": "The sound is heard immediately and equally in both ears.",
+                "2": "The sound is perceived more intensely or is heard only in one ear."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient does not lateralize because the vibrations are perceived in both ears."
+          }
+        },
+        "area7": {
+          "screenTitle": "Case 2. Arm reflex response",
+          "dialog": {
+            "0": "Mr. P.C.P., please position yourself comfortably.",
+            "1": "Slightly bend your right arm and raise it to heart level.",
+            "2": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Triceps reflex.",
+                "2": "Biceps reflex.",
+                "3": "Supinator reflex.",
+                "4": "Plantar reflex."
+              }
+            },
+            "1": {
+              "question": "Does the biceps reflex assess the C5 and C6 roots of the cervical spine and produce flexion of the forearm over the arm?",
+              "answers": {
+                "1": "True.",
+                "2": "False."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "A slight flexion toward the shoulder is observed; the same procedure is performed on the other arm."
+          }
+        },
+        "area8": {
+          "screenTitle": "Case 2. Arm reflex response",
+          "dialog": {
+            "0": "Mr. P.C.P., please sit comfortably and relax your arm.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Triceps reflex.",
+                "2": "Biceps reflex.",
+                "3": "Supinator reflex.",
+                "4": "Plantar reflex."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "When the biceps tendon is percussed, extension of the forearm over the arm is not achieved.",
+                "2": "When the triceps tendon is percussed, extension of the forearm over the arm is achieved."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "During the test, the patient presents extension of the forearm over the arm.",
+            "1": "This is assessed as a normal finding."
+          }
+        },
+        "area9": {
+          "screenTitle": "Case 2. Wrist response",
+          "dialog": {
+            "0": "Mr. P.C.P., please remain seated and rest your arm on your abdomen.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Cremasteric reflex.",
+                "2": "Patellar reflex.",
+                "3": "Supinator reflex.",
+                "4": "Plantar reflex."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "Flexion and supination of the wrist are evident.",
+                "2": "Flexion and supination of the wrist are not evident."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "During the test, flexion and supination of the wrist are evident."
+          }
+        },
+        "area10": {
+          "screenTitle": "Case 2. Knee response",
+          "dialog": {
+            "0": "Mr. P.C.P., now I am going to ask you to please relax your leg and let it hang slightly.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Cremasteric reflex.",
+                "2": "Biceps reflex.",
+                "3": "Supinator reflex.",
+                "4": "Patellar reflex."
+              }
+            },
+            "1": {
+              "question": "What can be assumed from the patient's findings?",
+              "answers": {
+                "1": "These are abnormal findings because contraction of the quadriceps with knee extension is not observed.",
+                "2": "These are normal findings because contraction of the quadriceps with knee extension is observed."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "That is correct. Normal findings are observed with contraction of the quadriceps and extension of the knee."
+          }
+        },
+        "area11": {
+          "screenTitle": "Case 2. Ankle response",
+          "dialog": {
+            "0": "Mr. P.C.P., please position yourself on the examination table, kneeling, with your feet hanging off the edge.",
+            "1": "Please be very careful.",
+            "2": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Triceps reflex.",
+                "2": "Biceps reflex.",
+                "3": "Achilles reflex.",
+                "4": "Plantar reflex."
+              }
+            },
+            "1": {
+              "question": "Is the Achilles reflex elicited by percussing the Achilles tendon?",
+              "answers": {
+                "1": "False.",
+                "2": "True."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "That is correct. This reflex is elicited by percussing the Achilles tendon, and plantar flexion can be observed."
+          }
+        },
+        "area12": {
+          "screenTitle": "Case 2. Abdominal response",
+          "dialog": {
+            "0": "Mr. P.C.P., please remove your shirt and lie down on the examination table.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Cutaneous stimulation reflex.",
+                "2": "Biceps reflex.",
+                "3": "Supinator reflex.",
+                "4": "Cremasteric reflex."
+              }
+            },
+            "1": {
+              "question": "Is it correct to state that the patient does not show the underlying muscle contraction by moving the abdominal wall and pulling the navel toward the stimulated side?",
+              "answers": {
+                "1": "It is false; the contraction is reflected.",
+                "2": "It is correct; the contraction is not evident."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "That is correct. During the assessment, movement of the abdominal wall toward the side being stimulated with the pencil can be observed."
+          }
+        },
+        "area13": {
+          "screenTitle": "Case 2. Plantar response",
+          "dialog": {
+            "0": "Mr. P.C.P., please remain lying down and stretch out your legs.",
+            "1": "..."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Triceps reflex.",
+                "2": "Biceps reflex.",
+                "3": "Supinator reflex.",
+                "4": "Plantar reflex."
+              }
+            },
+            "1": {
+              "question": "Can it be assumed that the patient's findings are normal?",
+              "answers": {
+                "1": "Yes, because plantar flexion of the toes in a fan-like pattern is evident.",
+                "2": "No, because the foot should not flex that way."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Your answer was correct. The patient presents a normal finding, as plantar flexion of the toes in a fan-like pattern is evident."
+          }
+        },
+        "area14": {
+          "screenTitle": "Case 2. Tactile discrimination",
+          "dialog": {
+            "0": "Mr. P.C.P., please look straight ahead and tell me: how many contact points do you feel?",
+            "1": "Yes, miss, I feel 2 points.",
+            "2": "At what distance do you feel them?",
+            "3": "At approximately 3 cm."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Tactile sensitivity.",
+                "2": "Palpation.",
+                "3": "Two-point discrimination.",
+                "4": "Active mobility."
+              }
+            },
+            "1": {
+              "question": "Should the two-point discrimination test be performed by comparing symmetrical areas of the body, for example both hands or arms?",
+              "answers": {
+                "1": "That is correct; it should be performed on both sides of the body.",
+                "2": "It is not necessary."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "The patient is able to discriminate the two points on both sides of the body, symmetrically, which is considered a normal finding."
+          }
+        },
+        "area15": {
+          "screenTitle": "Case 2. Tactile recognition",
+          "dialog": {
+            "0": "Mr. P.C.P., can you identify the object I place in your hands?",
+            "1": "Yes, miss, it feels like a key."
+          },
+          "quiz": {
+            "0": {
+              "question": "What is the name of the assessment test the nurse has just performed?",
+              "answers": {
+                "1": "Extrinsic eye motility.",
+                "2": "Confrontation visual field testing.",
+                "3": "Thermal sensitivity.",
+                "4": "Stereognosis."
+              }
+            },
+            "1": {
+              "question": "If the patient identifies the objects provided in only one hand, is this considered a normal finding?",
+              "answers": {
+                "1": "Yes, the important thing is that the patient identifies the object placed in the hand.",
+                "2": "No, to consider it a normal finding, the patient must identify the objects provided in both hands."
+              }
+            }
+          },
+          "followUpDialog": {
+            "0": "Your answer is correct. When the patient identifies the objects provided in both hands, we consider it a normal finding, which is the case for Mr. P.C.P."
+          }
+        }
+      },
+      "placeholder": {
+        "dialog": {
+          "0": "The assessment test is ready to be configured."
+        },
+        "quiz": {
+          "question": "Provisional assessment test content.",
+          "answers": {
+            "continue": "Continue"
+          }
+        },
+        "followUpDialog": {
+          "0": "Assessment test completed."
+        }
+      }
     },
     "scene4": {
-      "title": "Assessment"
+      "screenTitle": "Case 2. Assessment",
+      "title": "Assessment",
+      "summary": {
+        "eyebrow": "Assessment",
+        "title": "Patient findings",
+        "description": "Select all findings that correspond to the clinical case.",
+        "counterLabel": "Selected"
+      },
+      "messages": {
+        "emptySelection": {
+          "title": "Select at least one finding",
+          "text": "You have not selected any finding."
+        },
+        "review": {
+          "title": "Some answers need review",
+          "selectFindings": "Select the findings that correspond to the clinical case.",
+          "missingOrIncorrect": "One or more selected options do not correspond to the case, or some findings are still missing.",
+          "correctBeforeContinue": "Correct your answers before continuing."
+        },
+        "completed": {
+          "title": "Assessment completed",
+          "text": "You correctly selected the patient's findings."
+        },
+        "readyToCorrect": {
+          "title": "Try again",
+          "text": "Review the findings and select only those that correspond to the case."
+        }
+      },
+      "feedback": {
+        "correct": "Correct",
+        "incorrect": "Does not correspond to the case"
+      },
+      "actions": {
+        "validate": "Validate answers",
+        "correct": "Correct",
+        "continue": "Continue"
+      },
+      "findings": {
+        "adequateHealthStatus": "The patient has an adequate health status.",
+        "activeIndependent": "The patient is active, thoughtful, walks adequately, and is independent.",
+        "preservedSensoryPerception": "The patient sees well near and far, perceives odors, tastes, and tactile and painful sensation without difficulty in all body areas.",
+        "timePlaceDisorientation": "Allopsychic disorientation (time and place).",
+        "appropriateEmotionalResponses": "Emotional responses are consistent with normal daily functioning, and gestural expression corresponds to the verbalized emotional reaction.",
+        "adequateAppearanceAndGait": "The patient is well dressed, cheerful, has clear understandable language, stable gait, and spontaneous answers without hesitation.",
+        "painFacies": "Pain facies.",
+        "conservedMemory": "Conserved memory.",
+        "allopsychicDisorientation": "Allopsychic disorientation.",
+        "conservedJudgment": "Conserved judgment.",
+        "bradypsychia": "Bradypsychia.",
+        "sleepPatternWithoutAlterations": "Sleep pattern without alterations.",
+        "odorDifferentiation": "Ability to differentiate odors.",
+        "odorDifferentiationInability": "Inability to differentiate odors.",
+        "cottonStimulusResponses": "With cotton stimulation near the nostrils, sneezing, blinking, and tearing are present.",
+        "heatColdIdentification": "Identification of heat and cold sensation in symmetrical areas.",
+        "facialSymmetryJawContraction": "Palpation shows facial symmetry and symmetrical jaw contraction.",
+        "expressiveAphasiaVerbalApraxia": "Expressive aphasia and verbal apraxia.",
+        "facialAsymmetryJawContraction": "Facial asymmetry and asymmetrical jaw contraction.",
+        "masseterQuickContraction": "Percussion shows rapid contraction on both sides of the masseter muscle.",
+        "hemilingualSymmetry": "During inspection, symmetry is evident in both halves of the tongue.",
+        "deviatedTongueTip": "Deviated tongue tip, without the ability to exert force toward the cheeks.",
+        "centeredTongueStrength": "The tongue tip is centered, with tongue force exerted toward the cheeks.",
+        "boneConductionPredominates": "Bone conduction predominates.",
+        "airConductionPredominates": "Air conduction predominates.",
+        "rightAuditoryLateralization": "The patient lateralizes to the right side.",
+        "noTuningForkLateralization": "The patient does not lateralize the tuning fork vibrations.",
+        "slightShoulderFlexion": "Slight flexion toward the shoulder is evident.",
+        "tricepsForearmExtension": "When the triceps tendon is percussed, extension of the forearm over the arm is achieved.",
+        "kneeFlexion": "When the midpoint of the knee is percussed, knee flexion is evident.",
+        "plantarFlexionFoot": "Movement of the foot in plantar flexion can be observed.",
+        "abdominalWallMovement": "Movement of the abdominal wall toward the side being stimulated with the pencil.",
+        "fanLikeToeFlexion": "Plantar flexion of the toes in a fan-like pattern.",
+        "twoPointDiscrimination": "The patient can discriminate the two points on both sides of the body, symmetrically.",
+        "bilateralAstereognosis": "Astereognosis in both arms.",
+        "bilateralStereognosis": "Stereognosis in both arms."
+      }
     },
     "scene5": {
-      "title": "Quiz"
+      "screenTitle": "Case 2. Quiz",
+      "title": "Quiz",
+      "summary": {
+        "eyebrow": "Quiz",
+        "title": "Quiz",
+        "description": "Answer all questions. When you finish, you will see how many answers were correct and incorrect.",
+        "counterLabel": "Answered"
+      },
+      "questionCounter": "Question {{current}} of {{total}}",
+      "results": {
+        "correct": "Correct",
+        "incorrect": "Incorrect"
+      },
+      "messages": {
+        "emptyQuiz": {
+          "title": "Quiz pending",
+          "text": "There are no questions configured for this scene yet."
+        },
+        "pending": {
+          "title": "Some questions are pending",
+          "text": "Answer all questions before validating."
+        },
+        "review": {
+          "title": "Some answers need review",
+          "text": "Correct: {{correct}}. Incorrect: {{incorrect}}. You can try again or return to the menu to review the case.",
+          "saveBlocked": "You must answer everything correctly to save the scene."
+        },
+        "completed": {
+          "title": "Quiz completed",
+          "text": "Correct: {{correct}}. Incorrect: {{incorrect}}."
+        },
+        "readyToCorrect": {
+          "title": "Ready to correct",
+          "text": "Your answers were cleared. Answer again from scratch."
+        }
+      },
+      "actions": {
+        "validate": "Validate answers",
+        "correct": "Try again",
+        "backToMenu": "Back to menu",
+        "save": "Continue"
+      },
+      "quiz": {
+        "question1": {
+          "question": "Why is it important to assess Mr. P.C.P.'s psychomotor area?",
+          "answers": {
+            "1": "Observing Mr. P.C.P.'s motor behavior determines his ability to be ready to respond immediately to a situation.",
+            "2": "Observing Mr. P.C.P.'s motor behavior determines his ability to perform daily activities such as work, sleep, dressing, eating, among others.",
+            "3": "Observing Mr. P.C.P.'s motor behavior determines his ability to act based on established cultural values, generalize, and judge real situations.",
+            "4": "Observing Mr. P.C.P.'s motor behavior determines his ability to produce ideas and whether the content produced matches reality."
+          }
+        },
+        "question2": {
+          "question": "To assess the fifth cranial nerve, the patient is asked to:",
+          "answers": {
+            "1": "Stick out the tongue.",
+            "2": "Laugh forcefully.",
+            "3": "Frown.",
+            "4": "Move the jaw forward."
+          }
+        },
+        "question3": {
+          "question": "When there are middle ear lesions and bone conduction predominates over air conduction (BC > AC), what type of Rinne is identified?",
+          "answers": {
+            "1": "Negative Rinne.",
+            "2": "Attenuated Rinne.",
+            "3": "Interrupted Rinne.",
+            "4": "Prolonged Rinne."
+          }
+        },
+        "question4": {
+          "question": "What does the nurse assess during passive mobility?",
+          "answers": {
+            "1": "Degree of muscle contraction.",
+            "2": "Vasomotor center involvement.",
+            "3": "Range of motion.",
+            "4": "Degree of muscle resistance."
+          }
+        },
+        "question5": {
+          "question": "What is hypertonia?",
+          "answers": {
+            "1": "Eutrophic muscle development.",
+            "2": "Increased muscle tone.",
+            "3": "Inflammation of the muscle.",
+            "4": "Decreased muscle tone."
+          }
+        },
+        "question6": {
+          "question": "Grade 4 muscle strength corresponds to:",
+          "answers": {
+            "1": "Full range of motion against gravity and strong resistance.",
+            "2": "Range of motion against gravity, but not against resistance.",
+            "3": "Full range of motion against gravity and some resistance.",
+            "4": "Wide range of motion with gravity eliminated."
+          }
+        },
+        "question7": {
+          "question": "The patellar reflex is produced by percussing:",
+          "answers": {
+            "1": "Triceps tendon.",
+            "2": "Quadriceps tendon.",
+            "3": "Achilles tendon.",
+            "4": "Biceps tendon."
+          }
+        }
+      }
     },
     "scene6": {
       "title": "Nursing Care Process"
